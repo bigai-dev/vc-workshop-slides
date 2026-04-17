@@ -454,7 +454,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "Build it ； one prompt covers everything",
-        code: "Use the Design skill.\n\nBuild me a landing page for [YOUR COMPANY NAME]. We are a [industry] business based in [city]. We offer [2-3 key services/products].\n\nUse the attached screenshot as design reference ； match the style, layout, and feel.\n\nInclude: hero, why us, 3 features, reviews, pricing, contact, footer.\n\nAsk me if anything is unclear about my business before you start. Then set everything up from scratch. Handle the tech.",
+        code: "Use the Design skill.\n\nBuild me a landing page for [YOUR COMPANY NAME]. We are a [industry] business based in [city]. We offer [2-3 key services/products].\n\nUse the attached screenshot as design reference ； match the style, layout, and feel.\n\nInclude: hero, why us, 3 features, reviews, pricing, contact, footer.\n\nAsk me if anything is unclear about my business before you start. Then set everything up from scratch. Use Next.js + Tailwind CSS.",
         notes: [
           "The last line locks the tech stack ； \"This just makes sure everyone's on the same setup. Copy it, don't overthink.\"",
           "Remind them: drag the screenshot into the Claude chat box along with this prompt",
@@ -660,7 +660,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "THE dashboard prompt ； paste this, don't retype",
-        code: "Use the Design skill.\n\nI've attached sample-accounting.csv ； 6 months of my business transactions.\n\nFirst, check the CSV columns and ask me if anything is unclear about the data before you start.\n\nThen turn it into a dashboard showing:\n- 4 KPI cards: total revenue, total expenses, net profit, profit margin\n- A monthly profit & loss trend\n- A spending breakdown by category\n\nMake it feel like a clean executive dashboard.",
+        code: "Use the Design skill.\n\nI've attached sample-accounting.csv ； 6 months of my business transactions.\n\nFirst, check the CSV columns and ask me if anything is unclear about the data before you start.\n\nThen turn it into a dashboard showing:\n- 4 KPI cards: total revenue, total expenses, net profit, profit margin\n- A monthly profit & loss trend\n- A spending breakdown by category\n\nUse Next.js + Tailwind CSS to make it look like a clean, professional dashboard for a business owner.",
         notes: [
           "\"Drop the CSV into your project folder. Then paste this prompt. Don't rewrite it ； use mine.\"",
           "If charts don't render, paste the error Claude gives back into the same chat. Don't let students debug on their own.",
@@ -830,7 +830,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ 问题 prompt",
-        code: "Use the Design skill.\n\nI run a logistics company with 30 drivers. My daily problems:\n\n- I don't know who clocked in today\n- Drivers claim allowances on WhatsApp — I lose track\n- OT calculation is manual and always wrong\n- Payroll day takes me 2 full days\n\nI want an app my drivers can use on their phones to handle these, and a page for me (the boss) to see everyone's payroll at a glance.\n\nAsk me clarifying questions first — numbers (base salary, OT rate, allowance cap), edge cases, anything ambiguous. Then give me a plan: what pages, what each page does, what data you'll track.\n\nPrepare for Supabase.",
+        code: "Use the Design skill.\n\nI run a logistics company with 30 drivers. My daily problems:\n\n- I don't know who clocked in today\n- Drivers claim allowances on WhatsApp — I lose track\n- OT calculation is manual and always wrong\n- Payroll day takes me 2 full days\n\nI want an app my drivers can use on their phones to handle these, and a page for me (the boss) to see everyone's payroll at a glance.\n\nAsk me clarifying questions first — numbers (base salary, OT rate, allowance cap), edge cases, anything ambiguous. Then give me a plan: what pages, what each page does, what data you'll track.\n\nPrepare for Next.js + Tailwind CSS + Supabase + Vercel.",
         notes: [
           "先确认大家已经切到 Plan mode（看到 ✓）。没切到的举手。",
           "Look at it ； not a single tech word. Just business pain + the outcome.",
