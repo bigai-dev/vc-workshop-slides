@@ -35,6 +35,8 @@ export const PRE_WORKSHOP_CHECKLIST: string[] = [
   "Day 1 Build Guide 准备好，通过 WhatsApp 分享",
   "Session 6 的挑战 prompts 准备好（WhatsApp 发送）",
   "Setup 检查命令 slide,Mac 和 Windows 分开",
+  "Day -1 email ； 明天 9 点前别开 Claude（quota 5 小时一个窗口，我们 10:30 才开始 build,满格才够用）",
+  "3-5 个 Max 账号备好 ； 下午有人 quota 爆了直接 rescue（让他登到 Jay/Assistants 的账号）",
 ];
 
 export const SESSIONS: Session[] = [
@@ -95,13 +97,17 @@ export const SESSIONS: Session[] = [
         title: "1. 跟着我走的节奏",
         bullets: [
           "每个 prompt 我先示范，然后大家一起贴",
-          "慢慢来，比较快 - Quota Management",
+          "Claude Pro quota 5 小时一个窗口 ； 满格才够撑一天",
+          "你跑太快 = 下午 HR 系统直接卡死",
+          "慢慢来，比较快",
         ],
         notes: [
-          "Quota 是真的。Claude Pro 有 5-hour window limit ； 一个人狂跑会中午就爆。",
+          "Quota 是真的 ； $20 Pro Sonnet 大概 40-80 messages 一个 5 小时窗口。",
+          "Day 1 最吃 quota 是下午 Session 5 HR + Session 6 上线。",
           "直接点名：\"不要自己偷跑。跟着节奏。\"",
-          "如果有人已经在打字 ； 停他们：\"等一下。我们一起。\"",
-          "Blame shift ； 后面谁 quota 用完不能 blame workshop。",
+          "有人已经在打字 ； 停他们：\"等一下。我们一起。\"",
+          "Rescue plan ； 谁下午 quota 爆了来找 Jay/Assistant 借账号（有几个 Max plan 备用）",
+          "Blame shift ； 你不听节奏 quota 用完 = 自己的决定，不能 blame workshop。",
         ],
       },
       {
