@@ -698,8 +698,8 @@ export const SESSIONS: Session[] = [
       "Dashboard 主打 prompt（中文版）",
       "做成你自己的 ； 加自定义图表",
       "自定义图表点子清单",
-      "Pro tip ； 解释你做了什么（英文版）",
-      "Pro tip ； 解释你做了什么（中文版）",
+      "Pro tip - 解释你做了什么（英文版）",
+      "Pro tip - 解释你做了什么（中文版）",
       "Claude in Chrome ； Claude 测试你的 app（英文版）",
       "Claude in Chrome ； Claude 测试你的 app（中文版）",
       "Before/after:Excel → 你的 Dashboard",
@@ -858,7 +858,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； understand what you just built",
+        label: "💡 Pro tip - understand what you just built",
         code: "Explain what you just built in simple terms. What does each part do? Pretend I'm a business owner, not a developer.",
         notes: [
           "Powerful habit ； they should UNDERSTAND their app, not just own one",
@@ -867,7 +867,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； 搞懂你做了什么（中文版）",
+        label: "💡 Pro tip - 搞懂你做了什么（中文版）",
         code: "用白话解释你刚刚做了什么。每个部分做什么的？当我是生意老板，不是 developer。",
         notes: [
           "强大的习惯 ； 他们应该 UNDERSTAND 自己的 app，不只是拥有一个",
@@ -887,7 +887,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "Claude in Chrome ； Claude 自己测试你的 app（中文版）",
-        code: "用 Chrome 打开我的 dashboard,Screenshot 每个图表，然后告诉我有没有看起来坏掉的。",
+        code: "用 Chrome 打开我的 dashboard，Screenshot 每个图表，然后告诉我有没有看起来坏掉的。",
         notes: [
           "Jay 先在大屏幕上 demo HIS dashboard ； 然后学员试",
           "Claude 实时驱动浏览器 ； 这就是 \"my god\" 时刻",
@@ -949,12 +949,12 @@ export const SESSIONS: Session[] = [
     slides: [
       "HR 系统开场 ； 物流公司的问题",
       "一家物流公司，30 个司机的痛",
-      "4 个模块 ； 一个 app（打卡/津贴/OT/出粮）",
-      "Pro tip ； 卡在循环里？开新 session",
-      "要用的数字 ； 底薪 / OT / 津贴上限",
-      "描述 PROBLEM，不是方案（原则）",
-      "THE scaffold prompt（英文版）",
-      "THE scaffold prompt（中文版）",
+      "先切到 Plan mode（Shift+Cmd+M)",
+      "⭐ 问题 prompt（英文版）",
+      "⭐ 问题 prompt（中文版）",
+      "📖 读 Claude 的 plan",
+      "✍️ 改 plan 再执行（包含数字）",
+      "Pro tip - 卡在循环里？开新 session",
       "Claude in Chrome ； Claude 扮演 Ahmad（英文版）",
       "Claude in Chrome ； Claude 扮演 Ahmad（中文版）",
       "Milestone 3 ； 出粮自动算好",
@@ -972,7 +972,7 @@ export const SESSIONS: Session[] = [
       "观察：挑 3 个最好的 HR app，明天 showcase 用。",
     ],
     frictionPrevention: [
-      { type: "prepare", text: "把 scaffold prompt 预先分成两半：(1) 生意痛点（30 司机、打卡乱、WhatsApp 津贴、手动 OT、痛苦的出粮日）,(2) 4 模块需求（手机 app、/checkin /allowance /ot /payroll、预填 10 位马来西亚司机、数据保存等下再说）。大字体放 slide 上 ； 一行一行揭露：先讲痛苦，再讲需求。" },
+      { type: "prepare", text: "把 scaffold prompt 预先分成两半：(1) 生意痛点（30 司机、打卡乱、WhatsApp 津贴、手动 OT、痛苦的出粮日）,(2) 4 页面需求（手机 app、打卡/津贴/OT/出粮、预填 10 位马来西亚司机、数据保存等下再说）。大字体放 slide 上 ； 一行一行揭露：先讲痛苦，再讲需求。" },
       { type: "prepare", text: "4 个模块每个做好的截图。没有目标，学员会飘走。" },
       { type: "prepare", text: "Scaffold prompt 之前用口头讲清楚 4 模块 + 数字。不需要数据模型图 ； 让 Claude 从 scaffold prompt 的自然语言自己搞清楚形状。" },
       { type: "say", text: "\"司机用手机，不用笔电。每个画面都要在手机上能用。告诉 Claude:mobile-first。大按钮。手指友好。\"", timing: "3:40" },
@@ -1007,21 +1007,79 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "bullets",
-        title: "4 个模块 ； 一个 app",
+        title: "🧠 先切到 Plan mode",
         bullets: [
-          "Check-in module ； 打卡 / 下班",
-          "Allowance module ； 提交津贴申请 + 照片",
-          "OT module ； 记 OT 小时",
-          "Payroll module ； 自动加总底薪 + 津贴 + OT",
+          "Shift + ⌘ + M ； 打开 Mode 菜单",
+          "选 \"Plan mode\"（按 3)",
+          "看到 Plan mode ✓ 才贴 prompt",
+          "Plan mode = Claude 给你 plan，不会先动手",
         ],
         notes: [
-          "4 个都共用一个 \"drivers\" 名单 ； 所有页面同一批人",
-          "\"今天不担心登录或权限。先做核心。\"",
+          "投影仪示范一次 ； 按 Shift+Cmd+M,菜单弹出，按 3,回到输入框。全场跟着做。",
+          "切 mode 是 UI 动作，不是写在 prompt 里。prompt 里不用写 \"enter plan mode\"。",
+          "\"这是真正的老板工作流：你讲问题，它想方案，你批准了它才动手。\"",
+          "接下来：贴 prompt → 读 plan → 改 plan → approve。学这个流程比学任何 prompt 都值钱。",
+        ],
+      },
+      {
+        kind: "prompt",
+        label: "⭐ 问题 prompt",
+        code: "Use the Design skill.\n\nI run a logistics company with 30 drivers. My daily problems:\n\n- I don't know who clocked in today\n- Drivers claim allowances on WhatsApp — I lose track\n- OT calculation is manual and always wrong\n- Payroll day takes me 2 full days\n\nI want an app my drivers can use on their phones to handle these, and a page for me (the boss) to see everyone's payroll at a glance.\n\nGive me a plan first: what pages, what each page does, what data you'll track. Keep it simple — this is a workshop prototype.",
+        notes: [
+          "先确认大家已经切到 Plan mode（看到 ✓）。没切到的举手。",
+          "Look at it ； not a single tech word. Just business pain + the outcome.",
+          "No \"4 modules\" spec ； let Claude figure out the shape. That's the point.",
+          "Plan mode 保证 Claude 给 plan,不会直接开始 build。你读了、改了、approve 了它才写代码。",
+          "Everyone pastes now. We'll all read our plans together.",
+        ],
+      },
+      {
+        kind: "prompt",
+        label: "⭐ 问题 prompt（中文版）",
+        code: "用 Design skill。\n\n我开一间物流公司，有 30 个司机。我每天的问题：\n\n- 今天谁打卡我不知道\n- 司机在 WhatsApp 报 allowance，我追不到\n- OT 全部手算，算错是常事\n- 出粮日要我两整天\n\n我要一个 app，让司机用手机解决这些问题，也要一个页面给我老板看所有人的出粮。\n\n先给我一份 plan：有哪些页面、每个页面做什么、你会记什么数据。简单就好 ； 这是 workshop 的原型。",
+        notes: [
+          "先确认所有人已经切到 Plan mode（看到 ✓）。没切到的举手。",
+          "看 prompt ； 没一个技术词。只有生意痛苦 + 结果。",
+          "没有写 \"4 个模块\" ； 让 Claude 自己决定。这才是重点。",
+          "Plan mode 保证 Claude 给 plan,不会直接开始 build。你读了、改了、approve 了它才写代码。",
+          "所有人现在贴。等下一起读你们的 plan。",
         ],
       },
       {
         kind: "bullets",
-        title: "💡 Pro tip ； 卡在循环里？",
+        title: "📖 读 Claude 的 plan",
+        bullets: [
+          "它会列：要做哪些页面、每页做什么、记什么数据",
+          "看得懂就 OK ； 生意语言，不是代码",
+          "看不懂的部分 ； 问回 Claude \"这部分什么意思\"",
+          "不要急着 approve ； 先读一遍",
+        ],
+        notes: [
+          "第一次看 plan 有些人会慌 ； prime 他们：这是他们母语（生意话），看得懂的。",
+          "走动检查 ； 谁的 plan 只有 3 页谁的 8 页？不一样正常。",
+          "\"你是老板，它是员工。员工给你方案 ； 你看合不合理。\"",
+        ],
+      },
+      {
+        kind: "bullets",
+        title: "✍️ 改 plan 再执行",
+        bullets: [
+          "\"底薪改成 RM 1,800 / 月\"",
+          "\"OT 费率 RM 15 / 小时\"",
+          "\"津贴上限 RM 20 / 天\"",
+          "\"预填 10 个马来西亚司机名字\"",
+          "满意了 → approve，Claude 开始 build",
+        ],
+        notes: [
+          "数字是学员自己生意里要调的。今天用物流公司的数字 ； 明天他们回去改成自己的。",
+          "教他们：直接打字告诉 Claude 要改什么 ； 不要自己去动 plan。",
+          "Approve 的方式 ； Claude Code 按 \"accept plan\"，Claude desktop 回复 \"go ahead\" 或 \"build it\"。",
+          "这才是老板工作流：员工给方案 → 老板改重点 → 批准 → 员工干活。",
+        ],
+      },
+      {
+        kind: "bullets",
+        title: "💡 Pro tip - 卡在循环里？",
         bullets: [
           "Claude 一直给同样的烂答案：",
           "开一个 FRESH session",
@@ -1031,55 +1089,6 @@ export const SESSIONS: Session[] = [
         notes: [
           "做到 workshop 第 3 个 build session，有些学员会试图强行用坏掉的 prompt 硬推 Claude ； 主动处理",
           "直觉是留在同一个 session 继续试 ； 教他们放手",
-        ],
-      },
-      {
-        kind: "bullets",
-        title: "要用的数字",
-        bullets: [
-          "30 司机，多族群马来西亚名字",
-          "底薪 RM 1,800 / 月",
-          "OT 薪酬 RM 15 / 小时",
-          "津贴上限 RM 20 / 天",
-        ],
-        notes: [
-          "现在在 WhatsApp 分享物流公司小抄",
-          "这些数字会进 prompt ； 学员照抄",
-        ],
-      },
-      {
-        kind: "title",
-        emoji: "💬",
-        title: "描述 PROBLEM，不是方案",
-        subtitle: "你讲。Claude 设计。这就是 skill。",
-        notes: [
-          "关键的思维转变 ； 他们不需要知道什么是 \"table\" 或 \"data model\"",
-          "他们的工作是把生意问题讲清楚。Claude 搞定剩下的。",
-          "预告接下来的 scaffold prompt:\"你会看到这个实际运作 ； 先讲痛苦，再讲规格。\"",
-        ],
-      },
-      {
-        kind: "prompt",
-        label: "THE scaffold prompt",
-        code: "Use the Design skill.\n\nI run a logistics company with 30 drivers.\n\nMy problems:\n- I don't know who clocked in today\n- Drivers claim allowances on WhatsApp, I lose track\n- OT calculation is manual, always wrong\n- Payroll day takes me 2 full days\n\nBuild me an app designed for phones (drivers don't have laptops) with 4 modules:\n- /checkin ； clock in / out\n- /allowance ； submit a claim + photo\n- /ot ； log extra hours\n- /payroll ； auto-computes base + allowance + OT\n\nPre-fill with 10 fake drivers using Malaysian names. Don't worry about saving the data yet ； we'll add permanent storage in the next session.\n\nUse Next.js.",
-        notes: [
-          "Walk through it line-by-line reveal style ； \"First the skill, then the business pain, then the 4-module spec, then the seed data\"",
-          "Read the pain bullets out loud: \"See how specific? No tech words. Just business pain.\"",
-          "Everyone pastes now ； do it together",
-          "4:05 sync check: \"Hands up if you see all 4 modules.\" Below 70% ； pause and help.",
-          "Session 6 needs this app to exist ； don't let anyone fall behind",
-        ],
-      },
-      {
-        kind: "prompt",
-        label: "THE scaffold prompt（中文版）",
-        code: "用 Design skill。\n\n我开一间物流公司，有 30 个司机。\n\n我的问题：\n- 今天谁打卡我不知道\n- 司机在 WhatsApp 报 allowance，我追不到\n- OT 全部手算，算错是常事\n- 出粮日要我两整天\n\n帮我做一个 app，为手机设计（司机没有笔电），有 4 个模块：\n- /checkin ； 打卡 / 下班\n- /allowance ； 提交报销 + 拍照\n- /ot ； 记加班\n- /payroll ； 自动算底薪 + allowance + OT\n\n先预填 10 个假司机，用马来西亚名字。数据存储暂时不用烦 ； 下个 session 才加永久存储。\n\n用 Next.js。",
-        notes: [
-          "用一行一行揭露的方式走 ； \"先是 skill，然后是生意痛点，然后是 4 模块规格，最后是种子数据\"",
-          "把痛点 bullet 大声读出来：\"看多么具体？没有技术词。只讲生意痛苦。\"",
-          "所有人现在贴 ； 一起跟着做",
-          "4:05 同步检查：\"看到全部 4 模块的举手。\"低于 70%，暂停、协助。",
-          "Session 6 需要这个 app 存在 ； 不要让任何人掉队",
         ],
       },
       {
@@ -1133,8 +1142,8 @@ export const SESSIONS: Session[] = [
     ],
     slides: [
       "上线开场 ； 合笔电 app 就死掉",
-      "Pro tip ； 上线前安全检查（英文版）",
-      "Pro tip ； 上线前安全检查（中文版）",
+      "Pro tip - 上线前安全检查（英文版）",
+      "Pro tip - 上线前安全检查（中文版）",
       "App 怎么运作 ； 餐厅比喻",
       "Connectors = Claude 有双手",
       "Connector 健康检查 prompt（英文版）",
@@ -1203,7 +1212,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； pre-deploy check",
+        label: "💡 Pro tip - pre-deploy check",
         code: "Before we put my code online, check it for anything I shouldn't share publicly:\n- passwords or secret keys\n- customer data\n- anything a stranger shouldn't see\n\nFix whatever you find.",
         notes: [
           "CRITICAL habit ； one leaked secret can burn real money",
@@ -1213,7 +1222,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； 上线前检查（中文版）",
+        label: "💡 Pro tip - 上线前检查（中文版）",
         code: "把我的代码放上网之前，帮我检查有没有不该公开分享的东西：\n- 密码或 secret key\n- 客户资料\n- 陌生人不该看到的东西\n\n找到什么就帮我修好。",
         notes: [
           "CRITICAL 习惯 ； 一个泄露的 secret 可以烧掉真钱",
@@ -1593,10 +1602,10 @@ export const SESSIONS: Session[] = [
       "AI 之后 ； 一个周末，RM 20/月",
       "5 个 prompting 原则",
       "Bad → OK → Great prompt 对比",
-      "Pro tip ； 让 Claude 先反问你（英文版）",
-      "Pro tip ； 让 Claude 先反问你（中文版）",
-      "Pro tip ； 永远从生意背景开始（英文版）",
-      "Pro tip ； 永远从生意背景开始（中文版）",
+      "Pro tip - 让 Claude 先反问你（英文版）",
+      "Pro tip - 让 Claude 先反问你（中文版）",
+      "Pro tip - 永远从生意背景开始（英文版）",
+      "Pro tip - 永远从生意背景开始（中文版）",
       "SME 自动化蓝图（KEY SLIDE)",
       "餐饮业例子 ； POS / 库存 / Dashboard",
       "服务业例子 ； 预约 / 客户档案 / Dashboard",
@@ -1713,7 +1722,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； make Claude ask you questions first",
+        label: "💡 Pro tip - make Claude ask you questions first",
         code: "Don't start yet. Ask me questions first to make sure you understand what I want.",
         notes: [
           "This one line changes everything ； Claude clarifies before building",
@@ -1723,7 +1732,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； 让 Claude 先反问你（中文版）",
+        label: "💡 Pro tip - 让 Claude 先反问你（中文版）",
         code: "先别开始。先问我问题，确保你明白我要什么。",
         notes: [
           "这一句话改变一切 ； Claude 会在 build 前先澄清",
@@ -1733,7 +1742,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； always start with business context",
+        label: "💡 Pro tip - always start with business context",
         code: "I run [YOUR BUSINESS NAME], a [industry] business in [city]. We have [X] staff and serve [type of customers].\n\nToday I'm building [what]. I'll give you more details next.",
         notes: [
           "Every new session should start this way ； give context, Claude answers better",
@@ -1742,7 +1751,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； 永远从生意背景开始（中文版）",
+        label: "💡 Pro tip - 永远从生意背景开始（中文版）",
         code: "我开的是 [YOUR BUSINESS NAME]，一间在 [city] 的 [industry] 生意。我们有 [X] 个员工，服务的客人是 [type of customers]。\n\n今天我要做 [what]。等下给你更多细节。",
         notes: [
           "每个新 session 都应该这样开头 ； 给背景，Claude 答得更好",
@@ -2197,8 +2206,8 @@ export const SESSIONS: Session[] = [
       "一个 prompt 让它变 chio（英文版）",
       "一个 prompt 让它变 chio（中文版）",
       "从网页到手机 ； 响应式过渡",
-      "Pro tip ； 手机检查（英文版）",
-      "Pro tip ； 手机检查（中文版）",
+      "Pro tip - 手机检查（英文版）",
+      "Pro tip - 手机检查（中文版）",
       "进度追踪 ； 3 个模块全绿（庆祝）",
       "你的完整生意系统已上线",
     ],
@@ -2300,7 +2309,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； phone check",
+        label: "💡 Pro tip - phone check",
         code: "Open my app on a phone-sized screen and tell me if anything looks broken, is too small to tap, or overflows off screen. Fix any issues.",
         notes: [
           "Their customers and staff will use it on phones ； this catches issues before they do",
@@ -2309,7 +2318,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip ； 手机检查（中文版）",
+        label: "💡 Pro tip - 手机检查（中文版）",
         code: "用手机尺寸的屏幕打开我的 app，告诉我有没有看起来坏掉的、按键太小点不到的、或者溢出屏幕的。有问题就修好。",
         notes: [
           "他们的客户和员工会在手机上用 ； 这会在他们之前抓出问题",
