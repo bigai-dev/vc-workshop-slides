@@ -454,7 +454,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "Build it ； one prompt covers everything",
-        code: "Use the Design skill.\n\nBuild me a landing page for [YOUR COMPANY NAME]. We are a [industry] business based in [city]. We offer [2-3 key services/products].\n\nUse the attached screenshot as design reference ； match the style, layout, and feel.\n\nInclude: hero, why us, 3 features, reviews, pricing, contact, footer.\n\nSet everything up from scratch. Handle the tech.",
+        code: "Use the Design skill.\n\nBuild me a landing page for [YOUR COMPANY NAME]. We are a [industry] business based in [city]. We offer [2-3 key services/products].\n\nUse the attached screenshot as design reference ； match the style, layout, and feel.\n\nInclude: hero, why us, 3 features, reviews, pricing, contact, footer.\n\nAsk me if anything is unclear about my business before you start. Then set everything up from scratch. Handle the tech.",
         notes: [
           "The last line locks the tech stack ； \"This just makes sure everyone's on the same setup. Copy it, don't overthink.\"",
           "Remind them: drag the screenshot into the Claude chat box along with this prompt",
@@ -465,7 +465,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "一个 prompt 做出整个 landing page（中文版）",
-        code: "用 Design skill。\n\n帮我做一个 [YOUR COMPANY NAME] 的 landing page。我们是一间开在 [city] 的 [industry] 生意。我们提供 [2-3 key services/products]。\n\n附上的截图是设计参考 ； 风格、排版、感觉都要跟着来。\n\n要有：hero、why us、3 个 feature、reviews、pricing、contact、footer。\n\n从零开始全部 setup 好。技术的你自己搞定。",
+        code: "用 Design skill。\n\n帮我做一个 [YOUR COMPANY NAME] 的 landing page。我们是一间开在 [city] 的 [industry] 生意。我们提供 [2-3 key services/products]。\n\n附上的截图是设计参考 ； 风格、排版、感觉都要跟着来。\n\n要有：hero、why us、3 个 feature、reviews、pricing、contact、footer。\n\n开始前，如果我的生意有任何地方你不清楚，先问我。然后从零开始全部 setup 好。技术的你自己搞定。",
         notes: [
           "最后一行锁定技术栈 ； \"这只是确保大家用同一套 setup。照抄，别烦恼。\"",
           "提醒他们：把截图跟这个 prompt 一起拖进 Claude 聊天框",
@@ -660,7 +660,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "THE dashboard prompt ； paste this, don't retype",
-        code: "Use the Design skill.\n\nI've attached sample-accounting.csv ； 6 months of my business transactions.\n\nTurn it into a dashboard showing:\n- 4 KPI cards: total revenue, total expenses, net profit, profit margin\n- A monthly profit & loss trend\n- A spending breakdown by category\n\nMake it feel like a clean executive dashboard.",
+        code: "Use the Design skill.\n\nI've attached sample-accounting.csv ； 6 months of my business transactions.\n\nFirst, check the CSV columns and ask me if anything is unclear about the data before you start.\n\nThen turn it into a dashboard showing:\n- 4 KPI cards: total revenue, total expenses, net profit, profit margin\n- A monthly profit & loss trend\n- A spending breakdown by category\n\nMake it feel like a clean executive dashboard.",
         notes: [
           "\"Drop the CSV into your project folder. Then paste this prompt. Don't rewrite it ； use mine.\"",
           "If charts don't render, paste the error Claude gives back into the same chat. Don't let students debug on their own.",
@@ -669,7 +669,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "THE dashboard prompt ； 贴这个，不要重打（中文版）",
-        code: "用 Design skill。\n\n我附上 sample-accounting.csv ； 6 个月的生意交易记录。\n\n帮我做一个 dashboard，显示：\n- 4 个 KPI 卡片：总营收、总开支、净利润、利润率\n- 月度盈亏走势\n- 按类别的开支分布\n\n做成一个干净、专业的老板 dashboard 的感觉。",
+        code: "用 Design skill。\n\n我附上 sample-accounting.csv ； 6 个月的生意交易记录。\n\n先看一下 CSV 的字段，有任何不清楚的地方先问我再开始。\n\n然后帮我做一个 dashboard，显示：\n- 4 个 KPI 卡片：总营收、总开支、净利润、利润率\n- 月度盈亏走势\n- 按类别的开支分布\n\n做成一个干净、专业的老板 dashboard 的感觉。",
         notes: [
           "\"把 CSV 丢进你的项目文件夹。然后贴这个 prompt。不要自己改写 ； 用我的。\"",
           "图表渲染不出来，把 Claude 给的错误贴回同一个聊天。不要让学员自己修。",
@@ -830,7 +830,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ 问题 prompt",
-        code: "Use the Design skill.\n\nI run a logistics company with 30 drivers. My daily problems:\n\n- I don't know who clocked in today\n- Drivers claim allowances on WhatsApp — I lose track\n- OT calculation is manual and always wrong\n- Payroll day takes me 2 full days\n\nI want an app my drivers can use on their phones to handle these, and a page for me (the boss) to see everyone's payroll at a glance.\n\nGive me a plan first: what pages, what each page does, what data you'll track. Keep it simple — this is a workshop prototype.",
+        code: "Use the Design skill.\n\nI run a logistics company with 30 drivers. My daily problems:\n\n- I don't know who clocked in today\n- Drivers claim allowances on WhatsApp — I lose track\n- OT calculation is manual and always wrong\n- Payroll day takes me 2 full days\n\nI want an app my drivers can use on their phones to handle these, and a page for me (the boss) to see everyone's payroll at a glance.\n\nAsk me clarifying questions first — numbers (base salary, OT rate, allowance cap), edge cases, anything ambiguous. Then give me a plan: what pages, what each page does, what data you'll track. Keep it simple — this is a workshop prototype.",
         notes: [
           "先确认大家已经切到 Plan mode（看到 ✓）。没切到的举手。",
           "Look at it ； not a single tech word. Just business pain + the outcome.",
@@ -842,7 +842,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ 问题 prompt（中文版）",
-        code: "用 Design skill。\n\n我开一间物流公司，有 30 个司机。我每天的问题：\n\n- 今天谁打卡我不知道\n- 司机在 WhatsApp 报 allowance，我追不到\n- OT 全部手算，算错是常事\n- 出粮日要我两整天\n\n我要一个 app，让司机用手机解决这些问题，也要一个页面给我老板看所有人的出粮。\n\n先给我一份 plan：有哪些页面、每个页面做什么、你会记什么数据。简单就好 ； 这是 workshop 的原型。",
+        code: "用 Design skill。\n\n我开一间物流公司，有 30 个司机。我每天的问题：\n\n- 今天谁打卡我不知道\n- 司机在 WhatsApp 报 allowance，我追不到\n- OT 全部手算，算错是常事\n- 出粮日要我两整天\n\n我要一个 app，让司机用手机解决这些问题，也要一个页面给我老板看所有人的出粮。\n\n先问我几个问题 ； 数字（底薪、OT 费率、津贴上限）、边界情况、任何不清楚的地方。然后给我一份 plan：有哪些页面、每个页面做什么、你会记什么数据。简单就好 ； 这是 workshop 的原型。",
         notes: [
           "先确认所有人已经切到 Plan mode（看到 ✓）。没切到的举手。",
           "看 prompt ； 没一个技术词。只有生意痛苦 + 结果。",
@@ -1000,7 +1000,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ THE SUPABASE HERO PROMPT",
-        code: "Make my HR app data permanent using Supabase.\n\nRight now when I close my laptop, everything disappears. I want it to STAY ； drivers, clock-ins, allowances, OT, payroll, all of it.\n\nCall the Supabase project hr-[myname].\n\nHandle all the setup ； I just want to stop losing my data.",
+        code: "Make my HR app data permanent using Supabase.\n\nRight now when I close my laptop, everything disappears. I want it to STAY ； drivers, clock-ins, allowances, OT, payroll, all of it.\n\nFirst, look at my existing code to see what data the app actually stores. Ask me about anything ambiguous (e.g. what fields belong on each record). Then give me a plan before touching Supabase — what tables, what columns, what stays in local state.\n\nCall the Supabase project hr-[myname]. Once I approve the plan, handle all the setup ； I just want to stop losing my data.",
         notes: [
           "Everyone pastes now ； replace [myname] with your name",
           "Pure boss language ； \"stop losing my data\". Claude handles tables, schema, env vars, code changes. Students don't touch those words.",
@@ -1011,7 +1011,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ SUPABASE 主打 PROMPT（中文版）",
-        code: "用 Supabase 让我 HR app 的数据变永久。\n\n现在我合笔电，所有东西就不见。我要它 STAY ； 司机、打卡、allowance、OT、payroll，全部都要。\n\nSupabase 项目叫 hr-[myname]。\n\n全部 setup 你自己搞定 ； 我只是不想再弄丢我的数据。",
+        code: "用 Supabase 让我 HR app 的数据变永久。\n\n现在我合笔电，所有东西就不见。我要它 STAY ； 司机、打卡、allowance、OT、payroll，全部都要。\n\n先看我现有的代码，了解 app 真正存什么数据。有任何不明的地方先问我（例如每种记录该有什么字段）。然后在动 Supabase 之前，给我一份 plan ； 要哪些 table、什么 column、哪些还留在本地。\n\nSupabase 项目叫 hr-[myname]。我 approve 了 plan 你再开始 setup ； 我只是不想再弄丢我的数据。",
         notes: [
           "所有人现在贴 ； 把 [myname] 换成你的名字",
           "纯老板语言 ； \"stop losing my data\"。Claude 自己搞定 table、schema、env var、代码改动。学员不用碰那些词。",
@@ -1074,7 +1074,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ THE GITHUB PUSH PROMPT",
-        code: "Put my HR app on GitHub so Vercel can deploy it later.\n\nHere's my empty repo: [paste your repo URL here]\n\nIf GitHub asks me to sign in, walk me through it.",
+        code: "Put my HR app on GitHub so Vercel can deploy it later.\n\nHere's my empty repo: [paste your repo URL here]\n\nBefore pushing, make sure .env and any secret files are in .gitignore — I don't want my Supabase keys or any credentials on a public repo.\n\nIf GitHub asks me to sign in, walk me through it.",
         notes: [
           "Paste the link you copied into [paste your repo URL here]",
           "First push will pop GitHub sign-in ； Claude walks them through the browser popup (Windows uses Git Credential Manager, Mac uses Keychain for the real auth)",
@@ -1085,7 +1085,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ GITHUB 推送 PROMPT（中文版）",
-        code: "把我的 HR app 放上 GitHub，这样等下 Vercel 才能部署。\n\n这是我的空 repo:[paste your repo URL here]\n\n如果 GitHub 叫我登录，一步一步带我走。",
+        code: "把我的 HR app 放上 GitHub，这样等下 Vercel 才能部署。\n\n这是我的空 repo:[paste your repo URL here]\n\n推送之前，确保 .env 和任何秘密文件都在 .gitignore 里 ； 我不想把 Supabase key 或任何凭证放上公开 repo。\n\n如果 GitHub 叫我登录，一步一步带我走。",
         notes: [
           "把你复制的链接贴到 [paste your repo URL here] 那里",
           "第一次推送会弹 GitHub 登录 ； Claude 会引导他们过浏览器弹窗（Windows 用 Git Credential Manager,Mac 用 Keychain 处理真正的授权）",
@@ -1096,7 +1096,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ THE VERCEL HERO PROMPT",
-        code: "Put my HR app online using Vercel. Use my GitHub repo hr-[myname].\n\nIf the Vercel CLI isn't installed yet, install it with `npm i -g vercel`. If I'm not logged in, run `vercel login` and walk me through the browser popup.\n\nThen deploy with `vercel deploy --prod`. Auto-link the GitHub repo so future pushes auto-deploy. If it asks about team scope, pick my personal account.\n\nMake sure it still connects to Supabase the same way it does on my laptop. Give me the live URL.",
+        code: "Put my HR app online using Vercel. Use my GitHub repo hr-[myname].\n\nIf the Vercel CLI isn't installed yet, install it with `npm i -g vercel`. If I'm not logged in, run `vercel login` and walk me through the browser popup.\n\nIMPORTANT — env vars: read my .env.local, then add every Supabase variable to the Vercel project (production, preview, development) BEFORE you deploy. Deploy will fail without them. Confirm with me which keys are safe to upload if any look ambiguous.\n\nThen deploy with `vercel deploy --prod`. Auto-link the GitHub repo so future pushes auto-deploy. If it asks about team scope, pick my personal account.\n\nGive me the live URL when it's up.",
         notes: [
           "Everyone pastes now ； watch your URL appear",
           "Stealth install ； prompt quietly installs Vercel CLI + logs in if needed",
@@ -1111,7 +1111,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ VERCEL 主打 PROMPT（中文版）",
-        code: "用 Vercel 把我的 HR app 放上网。用我的 GitHub repo hr-[myname]。\n\n如果 Vercel CLI 还没装，帮我用 `npm i -g vercel` 装一下。如果我还没登录，跑 `vercel login` 然后一步一步带我走浏览器弹窗。\n\n然后跑 `vercel deploy --prod` 部署。自动把 GitHub repo link 好，这样以后 push 就自动部署。如果问我 team scope，选我个人账号。\n\n确保它还是跟我笔电上一样连到 Supabase。给我 live URL。",
+        code: "用 Vercel 把我的 HR app 放上网。用我的 GitHub repo hr-[myname]。\n\n如果 Vercel CLI 还没装，帮我用 `npm i -g vercel` 装一下。如果我还没登录，跑 `vercel login` 然后一步一步带我走浏览器弹窗。\n\n重要 ； env vars: 读我的 .env.local,然后把所有 Supabase 变量加到 Vercel 项目（production, preview, development) ； 先加再 deploy,不然一定失败。有什么 key 不确定能不能上传，先问我。\n\n然后跑 `vercel deploy --prod` 部署。自动把 GitHub repo link 好，这样以后 push 就自动部署。如果问我 team scope，选我个人账号。\n\n上线后给我 live URL。",
         notes: [
           "所有人现在贴 ； 看你的 URL 出现",
           "Stealth install ； 这个 prompt 会悄悄装 Vercel CLI + 登录",
