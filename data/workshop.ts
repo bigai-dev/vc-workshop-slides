@@ -898,24 +898,6 @@ export const SESSIONS: Session[] = [
         ],
       },
       {
-        kind: "prompt",
-        label: "Claude in Chrome ； Claude plays Ahmad",
-        code: "Open my app in Chrome, log in as Ahmad, clock in, file an RM 20 allowance claim, and log 2 hours of OT. Then open the payroll page and read me Ahmad's total.",
-        notes: [
-          "Claude drives the whole flow live ； this is the \"my god\" moment",
-          "Claude QA's the app in 30 seconds. Let the reaction happen.",
-        ],
-      },
-      {
-        kind: "prompt",
-        label: "Claude in Chrome ； Claude 扮演 Ahmad（中文版）",
-        code: "用 Chrome 打开我的 app，用 Ahmad 登录，打卡，报一个 RM 20 的 allowance，再记 2 小时 OT。然后打开 payroll 页面，念出 Ahmad 的总额。",
-        notes: [
-          "Claude 实时驱动整个流程 ； 这就是 \"my god\" 时刻",
-          "Claude 30 秒就帮 app 做了 QA。让反应发生。",
-        ],
-      },
-      {
         kind: "title",
         emoji: "🎯",
         title: "Milestone 3 ； 出粮自动算好",
@@ -1185,26 +1167,6 @@ export const SESSIONS: Session[] = [
         notes: [
           "合影是 MANDATORY ； 营销素材 + 情感锚点",
           "立刻发 WhatsApp",
-        ],
-      },
-      {
-        kind: "prompt",
-        label: "⭐ THE CLAUDE IN CHROME VICTORY LAP PROMPT",
-        code: "Open my live URL in Chrome, clock in a new driver called \"Jay Demo\", and screenshot the payroll page.",
-        notes: [
-          "Do it on YOUR OWN live app on the big screen first ； let everyone see the magic",
-          "Then ask a volunteer to run it on theirs",
-          "This is the Day 1 finale ； don't cut it for time. Push the wrap by 2 minutes if needed.",
-        ],
-      },
-      {
-        kind: "prompt",
-        label: "⭐ CLAUDE IN CHROME 胜利圈 PROMPT（中文版）",
-        code: "用 Chrome 打开我的 live URL，帮我打卡一个新司机叫 \"Jay Demo\"，然后 Screenshot payroll 页面。",
-        notes: [
-          "先在大屏幕上用 你自己的 live app 做一次 ； 让每个人看到魔法",
-          "然后请一个志愿者在他自己的上跑",
-          "这是 Day 1 终章 ； 不要为时间切掉。需要的话把收尾推后 2 分钟。",
         ],
       },
       {
