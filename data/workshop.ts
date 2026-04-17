@@ -465,7 +465,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "一个 prompt 做出整个 landing page（中文版）",
-        code: "用 Design skill。\n\n帮我做一个 [YOUR COMPANY NAME] 的 landing page。我们是一间开在 [city] 的 [industry] 生意。我们提供 [2-3 key services/products]。\n\n附上的截图是设计参考 ； 风格、排版、感觉都要跟着来。\n\n要有：hero、why us、3 个 feature、reviews、pricing、contact、footer。\n\n开始前，如果我的生意有任何地方你不清楚，先问我。然后从零开始全部 setup 好。技术的你自己搞定。",
+        code: "用 Design skill。\n\n帮我做一个 [YOUR COMPANY NAME] 的 landing page。我们是一间开在 [city] 的 [industry] 生意。我们提供 [2-3 key services/products]。\n\n附上的截图是设计参考 ； 风格、排版、感觉都要跟着来。\n\n要有：hero、why us、3 个 feature、reviews、pricing、contact、footer。\n\n开始前，如果我的生意有任何地方你不清楚，先问我。然后从零开始全部 setup 好。用 Next.js + Tailwind CSS。",
         notes: [
           "最后一行锁定技术栈 ； \"这只是确保大家用同一套 setup。照抄，别烦恼。\"",
           "提醒他们：把截图跟这个 prompt 一起拖进 Claude 聊天框",
@@ -669,7 +669,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "THE dashboard prompt ； 贴这个，不要重打（中文版）",
-        code: "用 Design skill。\n\n我附上 sample-accounting.csv ； 6 个月的生意交易记录。\n\n先看一下 CSV 的字段，有任何不清楚的地方先问我再开始。\n\n然后帮我做一个 dashboard，显示：\n- 4 个 KPI 卡片：总营收、总开支、净利润、利润率\n- 月度盈亏走势\n- 按类别的开支分布\n\n做成一个干净、专业的老板 dashboard 的感觉。",
+        code: "用 Design skill。\n\n我附上 sample-accounting.csv ； 6 个月的生意交易记录。\n\n先看一下 CSV 的字段，有任何不清楚的地方先问我再开始。\n\n然后帮我做一个 dashboard，显示：\n- 4 个 KPI 卡片：总营收、总开支、净利润、利润率\n- 月度盈亏走势\n- 按类别的开支分布\n\n用 Next.js + Tailwind CSS 做成一个干净、专业的老板 dashboard。",
         notes: [
           "\"把 CSV 丢进你的项目文件夹。然后贴这个 prompt。不要自己改写 ； 用我的。\"",
           "图表渲染不出来，把 Claude 给的错误贴回同一个聊天。不要让学员自己修。",
@@ -842,7 +842,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ 问题 prompt（中文版）",
-        code: "用 Design skill。\n\n我开一间物流公司，有 30 个司机。我每天的问题：\n\n- 今天谁打卡我不知道\n- 司机在 WhatsApp 报 allowance，我追不到\n- OT 全部手算，算错是常事\n- 出粮日要我两整天\n\n我要一个 app，让司机用手机解决这些问题，也要一个页面给我老板看所有人的出粮。\n\n先问我几个问题 ； 数字（底薪、OT 费率、津贴上限）、边界情况、任何不清楚的地方。然后给我一份 plan：有哪些页面、每个页面做什么、你会记什么数据。\n\n为 Supabase 做准备（下个 session 我会接上去）。简单就好 ； 这是 workshop 的原型。",
+        code: "用 Design skill。\n\n我开一间物流公司，有 30 个司机。我每天的问题：\n\n- 今天谁打卡我不知道\n- 司机在 WhatsApp 报 allowance，我追不到\n- OT 全部手算，算错是常事\n- 出粮日要我两整天\n\n我要一个 app，让司机用手机解决这些问题，也要一个页面给我老板看所有人的出粮。\n\n先问我几个问题 ； 数字（底薪、OT 费率、津贴上限）、边界情况、任何不清楚的地方。然后给我一份 plan：有哪些页面、每个页面做什么、你会记什么数据。\n\n用 Next.js + Tailwind CSS，为 Supabase + Vercel 做准备。简单就好 ； 这是 workshop 的原型。",
         notes: [
           "先确认所有人已经切到 Plan mode（看到 ✓）。没切到的举手。",
           "看 prompt ； 没一个技术词。只有生意痛苦 + 结果。",
