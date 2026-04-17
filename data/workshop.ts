@@ -525,7 +525,7 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "今天选：Design plugin",
         bullets: [
-          "Customize → Plugins Tab → 搜 'Design' → Install",
+          "Customize → 按 \"+\" → 按 \"Browse Plugins\" → 搜 'Design' → Install",
           "UI 评判、UX 文案、精致 UI",
           "安装后打字提到 Design 就能用",
           "例子：\"Use the Design skill. Build me a landing page for…\"",
@@ -1009,8 +1009,8 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "🧠 先切到 Plan mode",
         bullets: [
-          "Shift + ⌘ + M ； 打开 Mode 菜单",
-          "选 \"Plan mode\"（按 3)",
+          "打开 Mode 菜单",
+          "选 \"Plan mode\"",
           "看到 Plan mode ✓ 才贴 prompt",
           "Plan mode = Claude 给你 plan，不会先动手",
         ],
