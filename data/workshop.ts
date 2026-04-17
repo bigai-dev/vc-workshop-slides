@@ -1146,8 +1146,7 @@ export const SESSIONS: Session[] = [
       "Pro tip - 上线前安全检查（中文版）",
       "App 怎么运作 ； 餐厅比喻",
       "Connectors = Claude 有双手",
-      "Connector 健康检查 prompt（英文版）",
-      "Connector 健康检查 prompt（中文版）",
+      "Connector 健康检查",
       "⭐ SUPABASE 主打 prompt（英文版）",
       "⭐ SUPABASE 主打 prompt（中文版）",
       "测试 prompt ； show me the most recent check-in（英文版）",
@@ -1253,21 +1252,19 @@ export const SESSIONS: Session[] = [
         ],
       },
       {
-        kind: "prompt",
-        label: "First: health check",
-        code: "Open Claude → Settings → Connectors\n\nYou should see:\n✓ Supabase\n✓ Vercel\n✓ Claude in Chrome",
-        notes: [
-          "Everyone checks now ； expired auth mid-session is the #1 failure mode",
-          "Fix any red ticks now, not mid-prompt",
+        kind: "bullets",
+        title: "先做：Connector 健康检查",
+        bullets: [
+          "打开 Claude → Settings → Connectors",
+          "Supabase ✓",
+          "Vercel ✓",
+          "Claude in Chrome ✓",
+          "红勾现在修好，不要拖到中途",
         ],
-      },
-      {
-        kind: "prompt",
-        label: "首先：健康检查（中文版）",
-        code: "打开 Claude → Settings → Connectors\n\n你应该看到：\n✓ Supabase\n✓ Vercel\n✓ Claude in Chrome",
         notes: [
           "所有人现在检查 ； 中途授权过期是头号失败模式",
-          "任何红勾现在修好，不要拖到 prompt 中途",
+          "这不是 prompt，是动作 ； 投影仪示范一次",
+          "任何红勾举手，Assistants 过来帮授权",
         ],
       },
       {
