@@ -90,7 +90,18 @@ export const SESSIONS: Session[] = [
       { type: "do", text: "任何Setup 检查 5 分钟内修不好的 → 换到备用笔电，或跟能用的邻座配对。不要拖慢全场。", timing: "9:35" },
     ],
     slideDeck: [
-      { kind: "title", title: "Vibe Coding Workshop", subtitle: "Day 1 · 18 April 2026 · WiFi: AIM.BIG_Guest · 密码待更新", notes: ["轻音乐播放中，让大家安顿", "Assistants 帮忙处理名牌和 WiFi", "9:10 准时开始，哪怕还有人陆续到场", "记得在 workshop 开始前更新 WiFi 密码"] },
+      { kind: "title", title: "Vibe Coding Workshop", subtitle: "Day 1 · 18 April 2026", notes: ["轻音乐播放中，让大家安顿", "Assistants 帮忙处理名牌", "9:10 准时开始，哪怕还有人陆续到场"] },
+      {
+        kind: "title",
+        emoji: "📶",
+        title: "WiFi",
+        subtitle: "AIM.BIG_Guest · 密码待更新",
+        notes: [
+          "把这张 slide 开着，让学员一入场就能连上",
+          "Assistants 走动帮忙处理连不上的",
+          "记得在 workshop 开始前更新密码文字",
+        ],
+      },
       {
         kind: "bullets",
         title: "你的 2 天旅程",
@@ -120,8 +131,7 @@ export const SESSIONS: Session[] = [
         title: "1. 跟着我走的节奏",
         bullets: [
           "每个 prompt 我先示范，然后大家一起贴",
-          "你跑太快 ； 下午就 quota 不够用",
-          "提早做 = 提早卡死",
+          "慢慢来，比较快 - Quota Management",
         ],
         notes: [
           "Quota 是真的。Claude Pro 有 5-hour window limit ； 一个人狂跑会中午就爆。",
@@ -134,9 +144,8 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "2. 你会遇到错误",
         bullets: [
-          "2 天你会看到 20+ 个错误 ； 全部正常",
-          "如果今天一切顺利，明天你一个人就废了",
-          "我在这里 ； 让你看怎么处理，不是避开",
+          "遇到很多问题 = 正常",
+          "你来这里的目的不是避开错误，而是学会处理错误",
         ],
         notes: [
           "这是最重要的一条。重新定义错误：从 \"workshop 坏了\" → \"workshop 按设计在跑\"。",
@@ -149,9 +158,9 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "3. Claude 不是魔法",
         bullets: [
-          "我不是卖你一个按钮 ； 按了就有 app",
-          "教的是怎么跟 Claude 讲话 ； 讲对 = 成功",
-          "2 天不会让你变 developer ； 让你用 Claude 跑生意",
+          "Claude 很聪明，但是它不会读心术",
+          "学会怎么跟 Claude 表达需求，对的 prompt 是成功的一半",
+          "跟所有的工具一样，Claude 也需要练习才能用好",
         ],
         notes: [
           "打预防针。等下 Session 2 demo 太震撼 ； 有人会以为 \"按按钮就有 app\"。",
@@ -164,8 +173,8 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "4. 求助顺序",
         bullets: [
-          "先问 Claude ； 它知道得比你多",
-          "再问邻座 ； 可能 5 秒前刚踩过一样的坑",
+          "先问 Claude ； 它知道的比你想象的多",
+          "再问隔壁 ； 可能 5 秒前刚踩过一样的坑",
           "还不行 → 举手，Assistant 过来"
         ],
         notes: [
@@ -245,7 +254,7 @@ export const SESSIONS: Session[] = [
       { type: "do", text: "Demo 现场挂掉不要慌 ； 打开 Claude 在屏幕上修。\"看我怎么修。\"跟顺利的 demo 一样有力。" },
     ],
     slideDeck: [
-      { kind: "title", title: "Describe it. Claude builds it.", subtitle: "一句话。2 天。3 个真正上线的系统。", notes: ["停顿一下 ； 让这句话落地", "不要讲课模式。\"我示范，然后你们做。\"", "节奏要有力 ； 三段式读法：一句话（停顿）。2 天（停顿）。3 个真正上线的系统。"] },
+      { kind: "title", title: "Describe it. Claude builds it.", subtitle: "一句话，两天，至少三个真正上线的系统。", notes: ["停顿一下 ； 让这句话落地", "不要讲课模式。\"我示范，然后你们做。\"", "节奏要有力 ； 三段式读法：一句话（停顿）。2 天（停顿）。3 个真正上线的系统。"] },
       {
         kind: "bullets",
         title: "这些是我昨晚专门为你做的",
@@ -335,7 +344,7 @@ export const SESSIONS: Session[] = [
       { time: "10:20-10:30", activity: "Claude app 导览", details: "Claude 桌面 app 快速介绍：开新 session、附加文件、处理错误。Skills/Plugins/Connectors 等下真正要用时再讲。大家在自己的笔电上跟着做。" },
     ],
     slides: [
-      "Claude 快速导览开场",
+      "Claude 快速上手开场",
       "1. 开一个新 session",
       "2. 附加文件和图片",
       "3. 遇到问题的时候贴错误",
@@ -353,7 +362,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "title",
         emoji: "🖥️",
-        title: "Claude 快速导览",
+        title: "Claude 快速上手",
         subtitle: "开始 build 之前，你要知道 3 件事。",
         notes: [
           "所有人现在在笔电上打开 Claude",
@@ -503,10 +512,9 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "打开 Sidebar → Customize",
         bullets: [
-          "Skills Tab - 现成的大脑（Anthropic 官方的）",
-          "Connectors Tab - Claude 的 \"双手\"(Supabase、Vercel、Chrome)",
-          "Plugins Tab - 由多个 Skill 组成",
-          "这是你的工具架。今天我们先用一个。",
+          "Skills Tab - 现成的大脑",
+          "Connectors Tab - Claude 的 \"双手\"",
+          "Plugins Tab - 由多个 Skill 组成的工具箱",
         ],
         notes: [
           "投影仪现场操作 ； 让他们在相信之前先看到这个架子",
@@ -518,8 +526,7 @@ export const SESSIONS: Session[] = [
         title: "今天选：Design plugin",
         bullets: [
           "Customize → Plugins Tab → 搜 'Design' → Install",
-          "Anthropic 团队做的",
-          "critique、UX 文案、精致 UI",
+          "UI 评判、UX 文案、精致 UI",
           "安装后打字提到 Design 就能用",
           "例子：\"Use the Design skill. Build me a landing page for…\"",
         ],
@@ -733,7 +740,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "title",
         emoji: "🔌",
-        title: "快速回顾 ； 什么是 Connector?",
+        title: "快速回顾什么是 Connector",
         subtitle: "Claude 帮你执行原本要你手动做的事",
         notes: [
           "30 秒复习 ； workshop 前他们装过，现在要真正用",
