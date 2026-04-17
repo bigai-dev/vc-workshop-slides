@@ -454,7 +454,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "Build it ； one prompt covers everything",
-        code: "Use the Design skill.\n\nBuild me a landing page for [YOUR COMPANY NAME]. We are a [industry] business based in [city]. We offer [2-3 key services/products].\n\nUse the attached screenshot as design reference ； match the style, layout, and feel.\n\nInclude: hero, why us, 3 features, reviews, pricing, contact, footer.\n\nUse Next.js and Tailwind for the code. Set up everything from scratch.",
+        code: "Use the Design skill.\n\nBuild me a landing page for [YOUR COMPANY NAME]. We are a [industry] business based in [city]. We offer [2-3 key services/products].\n\nUse the attached screenshot as design reference ； match the style, layout, and feel.\n\nInclude: hero, why us, 3 features, reviews, pricing, contact, footer.\n\nSet everything up from scratch. Handle the tech.",
         notes: [
           "The last line locks the tech stack ； \"This just makes sure everyone's on the same setup. Copy it, don't overthink.\"",
           "Remind them: drag the screenshot into the Claude chat box along with this prompt",
@@ -465,7 +465,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "一个 prompt 做出整个 landing page（中文版）",
-        code: "用 Design skill。\n\n帮我做一个 [YOUR COMPANY NAME] 的 landing page。我们是一间开在 [city] 的 [industry] 生意。我们提供 [2-3 key services/products]。\n\n附上的截图是设计参考 ； 风格、排版、感觉都要跟着来。\n\n要有：hero、why us、3 个 feature、reviews、pricing、contact、footer。\n\n代码用 Next.js 跟 Tailwind。从零开始全部 setup 好。",
+        code: "用 Design skill。\n\n帮我做一个 [YOUR COMPANY NAME] 的 landing page。我们是一间开在 [city] 的 [industry] 生意。我们提供 [2-3 key services/products]。\n\n附上的截图是设计参考 ； 风格、排版、感觉都要跟着来。\n\n要有：hero、why us、3 个 feature、reviews、pricing、contact、footer。\n\n从零开始全部 setup 好。技术的你自己搞定。",
         notes: [
           "最后一行锁定技术栈 ； \"这只是确保大家用同一套 setup。照抄，别烦恼。\"",
           "提醒他们：把截图跟这个 prompt 一起拖进 Claude 聊天框",
@@ -660,7 +660,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "THE dashboard prompt ； paste this, don't retype",
-        code: "Use the Design skill.\n\nI have sample-accounting.csv ； 6 months of my business transactions.\n\nTurn it into a dashboard showing:\n- 4 KPI cards: total revenue, total expenses, net profit, profit margin\n- A monthly profit & loss trend\n- A spending breakdown by category\n\nUse Next.js. ",
+        code: "Use the Design skill.\n\nI've attached sample-accounting.csv ； 6 months of my business transactions.\n\nTurn it into a dashboard showing:\n- 4 KPI cards: total revenue, total expenses, net profit, profit margin\n- A monthly profit & loss trend\n- A spending breakdown by category\n\nMake it feel like a clean executive dashboard.",
         notes: [
           "\"Drop the CSV into your project folder. Then paste this prompt. Don't rewrite it ； use mine.\"",
           "If charts don't render, paste the error Claude gives back into the same chat. Don't let students debug on their own.",
@@ -669,7 +669,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "THE dashboard prompt ； 贴这个，不要重打（中文版）",
-        code: "用 Design skill。\n\n我有 sample-accounting.csv ； 6 个月的生意交易记录。\n\n帮我做一个 dashboard，显示：\n- 4 个 KPI 卡片：总营收、总开支、净利润、利润率\n- 月度盈亏走势\n- 按类别的开支分布\n\n用 Next.js。",
+        code: "用 Design skill。\n\n我附上 sample-accounting.csv ； 6 个月的生意交易记录。\n\n帮我做一个 dashboard，显示：\n- 4 个 KPI 卡片：总营收、总开支、净利润、利润率\n- 月度盈亏走势\n- 按类别的开支分布\n\n做成一个干净、专业的老板 dashboard 的感觉。",
         notes: [
           "\"把 CSV 丢进你的项目文件夹。然后贴这个 prompt。不要自己改写 ； 用我的。\"",
           "图表渲染不出来，把 Claude 给的错误贴回同一个聊天。不要让学员自己修。",
@@ -1560,7 +1560,7 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
       {
         kind: "prompt",
         label: "Prompt pack ； step 1: build the UI",
-        code: "Use the Design skill.\n\nBuild me a [POS | Booking | Quotation] page for a [industry] business.\n\nUse Supabase so my data stays permanent. Pre-fill with 3 sample [products | services | items].\n\nSame pattern as yesterday ； fast, clean, works great on phones too.\n\nUse Next.js.",
+        code: "Use the Design skill.\n\nBuild me a [POS | Booking | Quotation] page for a [industry] business.\n\nUse Supabase so my data stays permanent. Pre-fill with 3 sample [products | services | items].\n\nSame feel as yesterday ； fast, clean, works great on phones too.",
         notes: [
           "Students PASTE this, then customize the bracket parts. Don't let them retype from scratch.",
           "Common mistake: forgetting to replace ALL bracket placeholders. Remind them.",
@@ -1569,7 +1569,7 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
       {
         kind: "prompt",
         label: "Prompt 包 ； 第 1 步：做 UI（中文版）",
-        code: "用 Design skill。\n\n帮我做一个 [POS | Booking | Quotation] 页面，给 [industry] 生意用。\n\n用 Supabase 让我的数据变永久。预填 3 个样本 [products | services | items]。\n\n跟昨天同一个 pattern ； 快、干净、手机上也好用。\n\n用 Next.js。",
+        code: "用 Design skill。\n\n帮我做一个 [POS | Booking | Quotation] 页面，给 [industry] 生意用。\n\n用 Supabase 让我的数据变永久。预填 3 个样本 [products | services | items]。\n\n跟昨天一样的感觉 ； 快、干净、手机上也好用。",
         notes: [
           "学员 PASTE 这个，然后自定义方括号部分。不要让他们从零重打。",
           "常见错误：忘记替换 ALL 方括号占位符。提醒他们。",
