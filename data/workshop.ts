@@ -97,8 +97,7 @@ export const SESSIONS: Session[] = [
         title: "1. 跟着我走的节奏",
         bullets: [
           "每个 prompt 我先示范，然后大家一起贴",
-          "Claude Pro quota 5 小时一个窗口 ； 满格才够撑一天",
-          "你跑太快 = 下午 HR 系统直接卡死",
+          "Claude Pro quota 5 小时一个窗口",
           "慢慢来，比较快",
         ],
         notes: [
