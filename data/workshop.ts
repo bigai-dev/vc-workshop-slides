@@ -1585,12 +1585,12 @@ export const SESSIONS: Session[] = [
       "\"昨晚谁把 app 发给别人？\" 能量检查",
       "AI 之前 ； RM 50k+,3-6 个月",
       "AI 之后 ； 一个周末，RM 20/月",
-      "5 个 prompting 原则",
+      "5 个升级 prompt 的开关",
       "Bad → OK → Great prompt 对比",
-      "Pro tip - 让 Claude 先反问你（英文版）",
-      "Pro tip - 让 Claude 先反问你（中文版）",
-      "Pro tip - 永远从生意背景开始（英文版）",
-      "Pro tip - 永远从生意背景开始（中文版）",
+      "Pro tip - 开关 4 让 Claude 先反问你（英文版）",
+      "Pro tip - 开关 4 让 Claude 先反问你（中文版）",
+      "Pro tip - 开关 1 从生意背景开始（英文版）",
+      "Pro tip - 开关 1 从生意背景开始（中文版）",
       "SME 自动化蓝图（KEY SLIDE)",
       "餐饮业例子 ； POS / 库存 / Dashboard",
       "服务业例子 ； 预约 / 客户档案 / Dashboard",
@@ -1612,16 +1612,7 @@ export const SESSIONS: Session[] = [
       { type: "say", text: "\"你现在听到的每个原则 ； 你昨天都已经活过了。这不是新理论。我只是在给你已经做过的事命名。\"" },
     ],
     slideDeck: [
-      {
-        kind: "title",
-        emoji: "🌅",
-        title: "Day 2",
-        subtitle: "昨天你做。今天你学 WHY 它行得通。",
-        notes: [
-          "先做能量检查：\"昨晚有谁把 app 链接发给别人？他们怎么说？\"拿 2-3 个故事。",
-          "2 分钟回顾 Day 1 ； 他们经历过，不要重讲课。",
-        ],
-      },
+      { kind: "title", title: "Vibe Coding Workshop", subtitle: "Day 2 · 19 April 2026", notes: ["轻音乐播放中，让大家安顿", "Assistants 帮忙处理名牌", "9:10 准时开始，哪怕还有人陆续到场"] },
       {
         kind: "title",
         title: "昨晚谁把 app 发给别人？",
@@ -1633,12 +1624,12 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "bullets",
-        title: "AI 之前",
+        title: "学会 Vibe Coding 之前",
         bullets: [
           "请开发团队：RM 50,000+",
           "做好时间：3-6 个月",
           "维护：每月付钱",
-          "为 你自己的生意量身定做？Good luck。",
+          "想为你自己的生意量身定做？Good luck。",
         ],
         notes: [
           "让这些落地 ； 他们 KNOW 这种痛。每个 bullet 后停一下。",
@@ -1647,12 +1638,12 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "bullets",
-        title: "AI 之后",
+        title: "学会 Vibe Coding 之后",
         bullets: [
           "你自己做",
           "做好时间：一个周末",
-          "费用：RM 20/月",
-          "为 你自己的生意量身定做？当然。",
+          "费用：As low as USD 20 per month",
+          "想为你自己的生意量身定做？没问题。",
         ],
         notes: [
           "\"你昨天就是这样做的。这不是假设 ； 你 LIVED 过了。\"",
@@ -1661,86 +1652,113 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "bullets",
-        title: "5 个 prompting 原则",
+        title: "5 个升级 prompt 的开关",
         bullets: [
-          "1. 先给背景 ； 告诉 Claude 你的生意",
-          "2. 具体 ； 点名工具、风格",
-          "3. 给例子 ； 贴样本，不要只描述",
-          "4. 继续推 ； 第一个结果是草稿，不是终版",
-          "5. 修复循环 ； 坏掉时把错误贴回",
+          "1. 先讲痛苦 ； 你的生意为什么需要它",
+          "2. 给具体数字 ； 2 员工、30 分钟、9am-6pm",
+          "3. 用 Skill ； \"Use the Design skill\"",
+          "4. 让 Claude 先反问你 ； \"Ask me to clarify first\"",
+          "5. 先要 plan，不要 build ； Plan mode",
         ],
         notes: [
-          "\"你现在听到的每个原则 ； 你昨天都已经活过了。我只是在给你已经做过的事命名。\"",
-          "每个原则对应 Day 1 的一个时刻：\"记得你的 prompt 行不通的时候吗？那就是原则 #3。\"",
-          "有需要就用中文例子 ； 全场双语。",
+          "\"这 5 个开关你昨天都 activate 过了。今天给你命名。\"",
+          "每一条都能点回 Day 1 的一个具体时刻：",
+          "  · #1 痛苦 = HR 系统 30 司机那个开场",
+          "  · #2 数字 = HR 底薪 RM 1,800 / OT RM 15",
+          "  · #3 Skill = Landing page 第一句 \"Use the Design skill\"",
+          "  · #4 反问 = 等下下一张 slide 的 Pro tip",
+          "  · #5 Plan = Session 5 切 Plan mode 那个流程",
+          "下一张 Bad → OK → Great ； Great 的卡里这 5 个开关全部打开。",
         ],
       },
       {
         kind: "raw",
-        title: "Bad → OK → Great",
         fragments: 3,
-        html: `<div style="display:flex;align-items:stretch;justify-content:center;gap:14px;width:100%;margin-top:8px">
-          <div data-f="1" style="background:linear-gradient(135deg,#7f1d1d,#b91c1c);border-radius:20px;flex:1;padding:28px 22px;display:flex;flex-direction:column;min-width:0">
-            <div style="font-size:14px;font-weight:800;letter-spacing:0.25em;color:#fecaca;margin-bottom:10px">BAD</div>
-            <div style="font-size:44px;margin-bottom:14px">😕</div>
-            <div style="font-size:20px;color:white;font-style:italic;line-height:1.4">"build a booking system"</div>
+        html: `<div style="display:flex;align-items:stretch;justify-content:center;gap:16px;width:100%">
+          <div data-f="1" style="background:linear-gradient(135deg,#7f1d1d,#b91c1c);border-radius:20px;flex:0.85;padding:26px 22px;display:flex;flex-direction:column;min-width:0">
+            <div style="font-size:15px;font-weight:800;letter-spacing:0.25em;color:#fecaca;margin-bottom:12px">BAD</div>
+            <div style="font-size:40px;margin-bottom:16px">😕</div>
+            <div style="font-size:24px;color:white;font-style:italic;line-height:1.4;white-space:pre-line">"Build a booking system."</div>
+            <div style="margin-top:18px;font-size:14px;color:#fecaca;font-style:normal;line-height:1.5">没有生意背景，没有痛点，Claude 乱猜。</div>
           </div>
           <div data-f="2" style="font-size:28px;color:#4b5563;flex-shrink:0;align-self:center">→</div>
-          <div data-f="2" style="background:linear-gradient(135deg,#78350f,#b45309);border-radius:20px;flex:1;padding:28px 22px;display:flex;flex-direction:column;min-width:0">
-            <div style="font-size:14px;font-weight:800;letter-spacing:0.25em;color:#fed7aa;margin-bottom:10px">OK</div>
-            <div style="font-size:44px;margin-bottom:14px">😐</div>
-            <div style="font-size:20px;color:white;font-style:italic;line-height:1.4">"build a booking system for a salon"</div>
+          <div data-f="2" style="background:linear-gradient(135deg,#78350f,#b45309);border-radius:20px;flex:0.95;padding:26px 22px;display:flex;flex-direction:column;min-width:0">
+            <div style="font-size:15px;font-weight:800;letter-spacing:0.25em;color:#fed7aa;margin-bottom:12px">OK</div>
+            <div style="font-size:40px;margin-bottom:16px">😐</div>
+            <div style="font-size:19px;color:white;font-style:italic;line-height:1.5;white-space:pre-line">"Build a salon booking system. Customers pick a service and time, get a confirmation."</div>
+            <div style="margin-top:18px;font-size:14px;color:#fed7aa;font-style:normal;line-height:1.5">有业务了，时段、人数、流程 Claude 还是得猜。</div>
           </div>
           <div data-f="3" style="font-size:28px;color:#4b5563;flex-shrink:0;align-self:center">→</div>
-          <div data-f="3" style="background:linear-gradient(135deg,#065f46,#059669);border-radius:20px;flex:1;padding:28px 22px;display:flex;flex-direction:column;min-width:0">
-            <div style="font-size:14px;font-weight:800;letter-spacing:0.25em;color:#a7f3d0;margin-bottom:10px">GREAT</div>
-            <div style="font-size:44px;margin-bottom:14px">🎯</div>
-            <div style="font-size:17px;color:white;font-style:italic;line-height:1.45">"salon booking. Next.js + Supabase. 3 services, 2 staff, 30-min slots 9am-6pm. WhatsApp confirm."</div>
+          <div data-f="3" style="background:linear-gradient(135deg,#065f46,#059669);border-radius:20px;flex:1.4;padding:26px 22px;display:flex;flex-direction:column;min-width:0">
+            <div style="font-size:15px;font-weight:800;letter-spacing:0.25em;color:#a7f3d0;margin-bottom:12px">GREAT</div>
+            <div style="font-size:40px;margin-bottom:16px">🎯</div>
+            <div style="font-size:16px;color:white;font-style:italic;line-height:1.55;white-space:pre-line">"Use the Design skill.
+
+Salon, 2 stylists, 3 services.
+
+My problems:
+- Customers WhatsApp at night
+- I double-book all the time
+- New customers don't know prices
+
+Mobile booking page: pick service, pick stylist, pick a 30-min slot 9am-6pm. WhatsApp auto-confirm.
+
+Ask me to clarify anything unclear. Then give me a plan first."</div>
+            <div style="margin-top:18px;font-size:14px;color:#a7f3d0;font-style:normal;line-height:1.5">5 个开关全部打开：痛苦 + 数字 + Skill + 反问 + Plan。</div>
           </div>
         </div>`,
         notes: [
           "每个 prompt 出现时大声读。让全场 FEEL 到差别。",
-          "BAD → \"Claude 会乱猜，结果你肯定讨厌。\"",
-          "OK → \"好一点。但一个 salon 预约系统真正需要什么还是很模糊。\"",
-          "GREAT → \"现在 Claude 精确知道你要什么。今天他们写的 Module #1 基本就是这样。\"",
+          "BAD → \"0 个开关打开。Claude 乱猜。\"",
+          "OK → \"1 个开关（业务）。其他 4 个还关着。Claude 还在猜。\"",
+          "GREAT → \"5 个开关全部打开：\"",
+          "  · 开关 1 痛苦 → \"Customers WhatsApp / I double-book / 新客不懂价格\"",
+          "  · 开关 2 数字 → \"2 stylists, 3 services, 30-min slot, 9am-6pm\"",
+          "  · 开关 3 Skill → \"Use the Design skill\"",
+          "  · 开关 4 反问 → \"Ask me to clarify anything unclear\"",
+          "  · 开关 5 Plan → \"Give me a plan first\"",
+          "收尾：\"你昨天学的每一个开关都在这里。只是换了一个生意。\"",
         ],
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip - make Claude ask you questions first",
+        label: "💡 开关 4 ； 让 Claude 先反问你",
         code: "Don't start yet. Ask me questions first to make sure you understand what I want.",
         notes: [
-          "This one line changes everything ； Claude clarifies before building",
-          "Live demo: type a vague prompt + this line, show Claude asking smart questions",
-          "Yesterday they pasted prompts. Today they WRITE prompts. This is the upgrade.",
-        ],
-      },
-      {
-        kind: "prompt",
-        label: "💡 Pro tip - 让 Claude 先反问你（中文版）",
-        code: "先别开始。先问我问题，确保你明白我要什么。",
-        notes: [
-          "这一句话改变一切 ； Claude 会在 build 前先澄清",
-          "现场 demo：打一个模糊 prompt + 这句话，展示 Claude 问出聪明的问题",
+          "这是刚才 Bad→OK→Great 里开关 4 的独立 prompt ； 可以贴在任何开头",
+          "一句话改变一切 ； Claude 会在 build 前先澄清",
+          "现场 demo：打一个模糊 prompt + 这句话，让学员看 Claude 问出聪明的问题",
           "昨天他们贴 prompt。今天他们 WRITE prompt。这是升级。",
         ],
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip - always start with business context",
-        code: "I run [YOUR BUSINESS NAME], a [industry] business in [city]. We have [X] staff and serve [type of customers].\n\nToday I'm building [what]. I'll give you more details next.",
+        label: "💡 开关 4 ； 让 Claude 先反问你（中文版）",
+        code: "先别开始。先问我问题，确保你明白我要什么。",
         notes: [
-          "Every new session should start this way ； give context, Claude answers better",
-          "It's not a memory feature ； just good prompting. Do it every time.",
+          "这是开关 4 的中文单行版 ； 贴在任何 prompt 开头都能用",
+          "一句话改变一切 ； Claude 会在 build 前先澄清",
+          "现场 demo：打一个模糊 prompt + 这句话，学员看 Claude 问出聪明的问题",
         ],
       },
       {
         kind: "prompt",
-        label: "💡 Pro tip - 永远从生意背景开始（中文版）",
+        label: "💡 开关 1 ； 从生意背景开始",
+        code: "I run [YOUR BUSINESS NAME], a [industry] business in [city]. We have [X] staff and serve [type of customers].\n\nToday I'm building [what]. I'll give you more details next.",
+        notes: [
+          "开关 1 的模板版 ； 每个新 session 都这样开头",
+          "不是 Claude 的记忆功能 ； 只是好 prompting。每次都要做。",
+          "填方括号 ； 让学员在自己的笔电上改成自己的生意",
+        ],
+      },
+      {
+        kind: "prompt",
+        label: "💡 开关 1 ； 从生意背景开始（中文版）",
         code: "我开的是 [YOUR BUSINESS NAME]，一间在 [city] 的 [industry] 生意。我们有 [X] 个员工，服务的客人是 [type of customers]。\n\n今天我要做 [what]。等下给你更多细节。",
         notes: [
-          "每个新 session 都应该这样开头 ； 给背景，Claude 答得更好",
+          "开关 1 的中文模板 ； 每个新 session 都这样开头",
           "不是记忆功能 ； 只是好 prompting。每次都要做。",
+          "让学员在笔电上把方括号填成自己的生意",
         ],
       },
       {
@@ -2021,7 +2039,6 @@ export const SESSIONS: Session[] = [
       "整合 prompt（英文版）",
       "整合 prompt（中文版）",
       "测试清单 ； 模块 1 动作 → 模块 2 看到",
-      "不行？简化它 ； 只读 dashboard 后备",
       "能用 > 完美 ； 让挣扎常态化",
       "进度追踪 ； 3 个里 2 个绿",
     ],
@@ -2096,7 +2113,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "bullets",
-        title: "测试清单",
+        title: "Testing Checklist",
         bullets: [
           "在模块 1 加一条记录",
           "打开模块 2 → 出现了吗？",
@@ -2106,16 +2123,6 @@ export const SESSIONS: Session[] = [
         notes: [
           "\"测试数据流：模块 1 动作 → 模块 2 看到结果。有更新吗？\"",
           "现在走动。预期举手比其他任何 session 都多。",
-        ],
-      },
-      {
-        kind: "title",
-        emoji: "🛟",
-        title: "不行？简化它。",
-        subtitle: "模块 2 = 一个读模块 1 的 dashboard。数量、清单、总计。一样有用。",
-        notes: [
-          "1 小时节点（2:30)，全场检查。没做出能用模块 2 的，转到 dashboard 后备。",
-          "3:15 前必须有东西部署上去。无例外。",
         ],
       },
       {
@@ -2336,7 +2343,6 @@ export const SESSIONS: Session[] = [
       {
         kind: "title",
         title: "你的完整生意系统已上线",
-        subtitle: "在互联网上。跑着。你的。",
         notes: [
           "让这一刻沉淀。掌声。他们一个周末做出完整的生意系统。",
           "过渡：\"来看看最好的那些在大屏幕上。\"",
@@ -2362,8 +2368,6 @@ export const SESSIONS: Session[] = [
     slides: [
       "Showcase 开场 ； 5 个系统，每个 2 分钟",
       "流程 ； 每人 2 分钟讲 + 现场展示",
-      "轮到你上场 ； 接上投大屏幕",
-      "影片见证 ； 30 秒原始分享",
       "\"We built this\" ； 最后合影",
     ],
     materials: [
@@ -2386,7 +2390,7 @@ export const SESSIONS: Session[] = [
         kind: "title",
         emoji: "🎤",
         title: "Showcase",
-        subtitle: "5 个系统。每个 2 分钟。你这个周末做的。",
+        subtitle: "5 个系统 - 每个 2 分钟",
         notes: [
           "录影机/三脚架已架好。这张 slide 前把第一位演讲者的屏幕投到大屏幕。",
           "Showcase 学员挑 DIVERSE 行业。不要挑 5 个餐饮。",
@@ -2404,25 +2408,6 @@ export const SESSIONS: Session[] = [
         notes: [
           "控紧 ； 每个 2-3 分钟。Jay 每个 demo 后加评论。",
           "Demo 也录下来（屏幕录或手机对投影仪）。营销用的黄金内容。",
-        ],
-      },
-      {
-        kind: "title",
-        emoji: "👉",
-        title: "轮到你上场",
-        subtitle: "接上 → 投到大屏幕 → 走",
-        notes: [
-          "休息时用一位学员的笔电测试线 ； 现在不要手忙脚乱搞线。",
-          "前 5 之后能量还高就问：\"还有谁想分享？\"自愿 30 秒 demo。",
-        ],
-      },
-      {
-        kind: "title",
-        title: "影片见证",
-        subtitle: "30 秒。你做了什么。感觉如何。",
-        notes: [
-          "快 FAST。每个 30 秒。原始、情感胜过精致。",
-          "摄像机前确认口头同意使用见证。手机充好电、无线麦克风准备好。",
         ],
       },
       {
@@ -2456,7 +2441,6 @@ export const SESSIONS: Session[] = [
       "你的工具包 ； 这些永远是你的",
       "你带走的东西（蓝图 / prompt / 模版 / 影片 / 重参加）",
       "接下来 ； 影片 / prompt 库 / 90 天社群 / 重参加",
-      "Ayen 赚了 RM 3,000 成功故事",
       "反馈表单 QR code",
       "\"2 天前你会请人做这个\" 情感高潮",
       "谢谢 ； 去建造未来吧",
@@ -2512,15 +2496,6 @@ export const SESSIONS: Session[] = [
         notes: [
           "社群让他们有责任感。\"90 天。跟另外 40 个人一起 ship。\"",
           "接下来过渡到成功故事 ； 证明 workshop 后行动会有回报。",
-        ],
-      },
-      {
-        kind: "title",
-        title: "Ayen 赚了 RM 3,000",
-        subtitle: "从她第一个客户。这个 workshop 之后 2 周。",
-        notes: [
-          "真故事、真人、真钱。让数字落地。",
-          "\"Ayen 2 周内从第一个客户赚了 RM 3,000。\"停顿。让他们想象。",
         ],
       },
       {
