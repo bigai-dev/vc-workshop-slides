@@ -830,7 +830,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ 问题 prompt",
-        code: "Use the Design skill.\n\nI run a logistics company with 30 drivers. My daily problems:\n\n- I don't know who clocked in today\n- Drivers claim allowances on WhatsApp — I lose track\n- OT calculation is manual and always wrong\n- Payroll day takes me 2 full days\n\nI want an app my drivers can use on their phones to handle these, and a page for me (the boss) to see everyone's payroll at a glance.\n\nAsk me clarifying questions first — numbers (base salary, OT rate, allowance cap), edge cases, anything ambiguous. Then give me a plan: what pages, what each page does, what data you'll track. Keep it simple — this is a workshop prototype.",
+        code: "Use the Design skill.\n\nI run a logistics company with 30 drivers. My daily problems:\n\n- I don't know who clocked in today\n- Drivers claim allowances on WhatsApp — I lose track\n- OT calculation is manual and always wrong\n- Payroll day takes me 2 full days\n\nI want an app my drivers can use on their phones to handle these, and a page for me (the boss) to see everyone's payroll at a glance.\n\nAsk me clarifying questions first — numbers (base salary, OT rate, allowance cap), edge cases, anything ambiguous. Then give me a plan: what pages, what each page does, what data you'll track.\n\nPrepare for Supabase.",
         notes: [
           "先确认大家已经切到 Plan mode（看到 ✓）。没切到的举手。",
           "Look at it ； not a single tech word. Just business pain + the outcome.",
@@ -842,7 +842,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ 问题 prompt（中文版）",
-        code: "用 Design skill。\n\n我开一间物流公司，有 30 个司机。我每天的问题：\n\n- 今天谁打卡我不知道\n- 司机在 WhatsApp 报 allowance，我追不到\n- OT 全部手算，算错是常事\n- 出粮日要我两整天\n\n我要一个 app，让司机用手机解决这些问题，也要一个页面给我老板看所有人的出粮。\n\n先问我几个问题 ； 数字（底薪、OT 费率、津贴上限）、边界情况、任何不清楚的地方。然后给我一份 plan：有哪些页面、每个页面做什么、你会记什么数据。简单就好 ； 这是 workshop 的原型。",
+        code: "用 Design skill。\n\n我开一间物流公司，有 30 个司机。我每天的问题：\n\n- 今天谁打卡我不知道\n- 司机在 WhatsApp 报 allowance，我追不到\n- OT 全部手算，算错是常事\n- 出粮日要我两整天\n\n我要一个 app，让司机用手机解决这些问题，也要一个页面给我老板看所有人的出粮。\n\n先问我几个问题 ； 数字（底薪、OT 费率、津贴上限）、边界情况、任何不清楚的地方。然后给我一份 plan：有哪些页面、每个页面做什么、你会记什么数据。\n\n为 Supabase 做准备（下个 session 我会接上去）。简单就好 ； 这是 workshop 的原型。",
         notes: [
           "先确认所有人已经切到 Plan mode（看到 ✓）。没切到的举手。",
           "看 prompt ； 没一个技术词。只有生意痛苦 + 结果。",
