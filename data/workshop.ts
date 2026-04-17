@@ -1400,7 +1400,7 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "Claude 问你许可时",
         bullets: [
-          "READ 它要做什么",
+          "理解它要做什么",
           "然后说 yes",
           "Connector 没你同意绝不会动",
         ],
@@ -1427,7 +1427,7 @@ export const SESSIONS: Session[] = [
         kind: "title",
         emoji: "📱",
         title: "THE BIG MOMENT",
-        subtitle: "在你 PHONE 上打开 URL。给自己打卡。发给朋友。",
+        subtitle: "在你手机打开看看，copy and paste 你的 URL 在我们的 WhatsApp 群里。",
         notes: [
           "所有人在 PHONE 上打开 ； 不是笔电。这是起鸡皮疙瘩时刻。",
           "不要让任何人省掉。走动确认手机都拿出来。",
@@ -1436,7 +1436,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "title",
         title: "你的 HR 系统已上线",
-        subtitle: "在互联网上。你几乎没点过东西。📸 立刻合影。",
+        subtitle: "分享给你的团队，让他们试用。",
         notes: [
           "合影是 MANDATORY ； 营销素材 + 情感锚点",
           "立刻发 WhatsApp",
@@ -1466,24 +1466,10 @@ export const SESSIONS: Session[] = [
         kind: "title",
         emoji: "🏆",
         title: "Milestone 4",
-        subtitle: "3 个 app。1 个 LIVE 在互联网上。RM 50,000+ 的工作量。一天。",
+        subtitle: "3 个 app，1 个 LIVE，RM 50,000+ 的 Productivity，全部一天搞定。",
         notes: [
           "巅峰 \"this is the future\" 时刻 ； 让掌声发生",
           "脑子里挑 5-6 个最好的 build，明天 showcase 用",
-        ],
-      },
-      {
-        kind: "bullets",
-        title: "Day 1 回顾",
-        bullets: [
-          "Landing page ✓",
-          "Dashboard ✓",
-          "HR 系统（LIVE) ✓",
-          "你做的。用你自己的手。一天内。",
-        ],
-        notes: [
-          "快速视觉回顾 ； 让成就感叠加起来",
-          "过渡到收尾能量",
         ],
       },
     ],
@@ -1520,22 +1506,22 @@ export const SESSIONS: Session[] = [
     slideDeck: [
       {
         kind: "bullets",
-        title: "Day 1 ； 你刚刚做的事",
+        title: "Day 1 回顾",
         bullets: [
-          "空笔电 → 3 个 app 上线",
-          "Landing page",
-          "Dashboard",
-          "HR 系统 ； LIVE 在互联网上",
+          "Landing page ✓",
+          "Dashboard ✓",
+          "HR 系统（LIVE) ✓",
+          "你指挥，Claude 做 90% 的工作 ✓",
         ],
         notes: [
-          "高能量结尾 ； 能量、掌声、兴奋",
-          "让他们看到整个旅程：今早空屏幕到现在 3 个 app",
+          "快速视觉回顾 ； 让成就感叠加起来",
+          "过渡到收尾能量",
         ],
       },
       {
         kind: "title",
-        title: "一个开发团队要 2-3 个月做这个",
-        subtitle: "加上 RM 50,000+。你一天搞定。",
+        title: "一个开发团队 = 2-3 个月 + RM 50,000",
+        subtitle: "你一天搞定。",
         notes: [
           "停顿 ； 让对比沉淀",
         ],
@@ -1544,7 +1530,7 @@ export const SESSIONS: Session[] = [
         kind: "title",
         emoji: "🌅",
         title: "明天：你自己的系统，你自己的行业",
-        subtitle: "今天你跟着我做。明天你为 你自己的生意做。",
+        subtitle: "今天你跟着我做。明天你亲自打造自己的商业系统。",
         notes: [
           "\"今天：跟着我做 3 个 app。明天：你自己的系统，你自己的行业。\"",
           "为 Day 2 制造期待",
@@ -1556,7 +1542,7 @@ export const SESSIONS: Session[] = [
         bullets: [
           "想想你的生意",
           "写下 3 个最大的痛点",
-          "明天我们修好",
+          "明天我们一起解决",
         ],
         notes: [
           "\"今晚：想想你生意里 3 个最大的痛点。写下来。\"",
@@ -1567,8 +1553,7 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "离开前",
         bullets: [
-          "今晚把笔电充电",
-          "明天带充电器",
+          "有什么问题可以来前面找我",
           "明天早上 9:00 准时见",
           "晚安 👋",
         ],
