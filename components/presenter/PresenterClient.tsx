@@ -410,7 +410,7 @@ export function PresenterClient({
 
         {/* Right column: notes */}
         <div className="min-h-0 rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
-          <NotesPanel session={session} slideNotes={currentSlide.notes} />
+          <NotesPanel slideNotes={currentSlide.notes} />
         </div>
       </div>
 

@@ -97,25 +97,97 @@ export const SESSIONS: Session[] = [
         bullets: [
           "Day 1：建好 3 个 app，1 个真正上线",
           "Day 2：你的行业，你的系统",
-          "求助顺序：Claude → 邻座 → Assistant → Jay",
           "今天下午 6 点前，上线一个web application",
         ],
         notes: [
           "能量拉高 ； \"今天下午 6 点前，你会有一个真正上线的网页应用，任何人用任何浏览器都能打开。\"",
-          "按名字和区域介绍 Assistants",
-          "强调求助顺序：先问 Claude，再问邻座，最后举手",
+          "按名字和区域介绍 Assistants（求助顺序下一段 House Rules 详细讲）",
+        ],
+      },
+      {
+        kind: "title",
+        emoji: "🛑",
+        title: "House Rules",
+        subtitle: "开始之前 4 件事",
+        notes: [
+          "停顿一下。让 \"House Rules\" 这几个字落地。",
+          "认真但不严肃 ； 像老板交代伙计，不是训话。",
+          "这是期望设定环节 ； 把 2 天后可能的抱怨前置掉。",
+        ],
+      },
+      {
+        kind: "bullets",
+        title: "1. 跟着我走的节奏",
+        bullets: [
+          "每个 prompt 我先示范，然后大家一起贴",
+          "你跑太快 ； 下午就 quota 不够用",
+          "提早做 = 提早卡死",
+        ],
+        notes: [
+          "Quota 是真的。Claude Pro 有 5-hour window limit ； 一个人狂跑会中午就爆。",
+          "直接点名：\"不要自己偷跑。跟着节奏。\"",
+          "如果有人已经在打字 ； 停他们：\"等一下。我们一起。\"",
+          "Blame shift ； 后面谁 quota 用完不能 blame workshop。",
+        ],
+      },
+      {
+        kind: "bullets",
+        title: "2. 你会遇到错误",
+        bullets: [
+          "2 天你会看到 20+ 个错误 ； 全部正常",
+          "如果今天一切顺利，明天你一个人就废了",
+          "我在这里 ； 让你看怎么处理，不是避开",
+        ],
+        notes: [
+          "这是最重要的一条。重新定义错误：从 \"workshop 坏了\" → \"workshop 按设计在跑\"。",
+          "\"一个人遇到错误 Google 2 小时放弃。今天举手 30 秒有人帮你。用够本。\"",
+          "提前 prime 他们：等下看到红色 error 不要慌，这是内容的一部分。",
+          "Blame shift ； 错误 = feature,不是 bug。",
+        ],
+      },
+      {
+        kind: "bullets",
+        title: "3. Claude 不是魔法",
+        bullets: [
+          "我不是卖你一个按钮 ； 按了就有 app",
+          "教的是怎么跟 Claude 讲话 ； 讲对 = 成功",
+          "2 天不会让你变 developer ； 让你用 Claude 跑生意",
+        ],
+        notes: [
+          "打预防针。等下 Session 2 demo 太震撼 ； 有人会以为 \"按按钮就有 app\"。",
+          "\"ROI 不是今天。是 2 周后你不再打开 Excel。\"",
+          "老板语言 ； 讲清楚：这是 skill,不是 pill。",
+          "Blame shift ； 结果取决于他们练不练，不是工具好不好。",
+        ],
+      },
+      {
+        kind: "bullets",
+        title: "4. 求助顺序",
+        bullets: [
+          "先问 Claude ； 它知道得比你多",
+          "再问邻座 ； 可能 5 秒前刚踩过一样的坑",
+          "还不行 → 举手，Assistant 过来"
+        ],
+        notes: [
+          "为什么这个顺序？培养独立。2 天后你一个人要扛。",
+          "不要第一时间举手 ； 先试一次问 Claude。",
+          "Assistants 人数 > Jay ； 直接找他们，不要等我。",
+          "按名字和区域介绍 Assistants。",
+          "Blame shift ； 不先问 Claude 就举手 = 浪费自己的机会。",
         ],
       },
       {
         kind: "bullets",
         title: "Setup 检查",
         bullets: [
+          "打开 https://handbook.joinvibecode.io/",
           "打开 Claude（确认有 Pro)",
           "打开 Terminal / PowerShell",
           "输入：python --version（需要 3.10+)",
           "输入：node -v（需要 18+)",
         ],
         notes: [
+          "Handbook 是他们这 2 天的参考资料 ； 保持打开",
           "在 WhatsApp 分享这张 slide，学员可以用手机看、笔电上打",
           "不要等 100% ； 90% 准备好就走。Assistants 继续帮落后的。",
           "Python + Node 是唯一硬性要求。GitHub/Supabase/Vercel 账号等下再处理。",
@@ -292,8 +364,8 @@ export const SESSIONS: Session[] = [
         kind: "bullets",
         title: "1. 开一个新 session",
         bullets: [
-          "点侧边栏的 \"+ New session\"（或 Cmd+N / Ctrl+N)",
-          "一个项目 = 一个 session。不要混在一起。",
+          "点侧边栏的 \"+ New session\"",
+          "一个项目 = 一个 session",
           "Claude 答不对了 → 开一个新 session",
         ],
         notes: [
@@ -320,8 +392,8 @@ export const SESSIONS: Session[] = [
         bullets: [
           "复制错误信息",
           "贴回同一个 session",
-          "告诉 Claude:\"Fix this.\" ； 就这样。",
-          "修错时不要开新 session",
+          "告诉 Claude: \"Fix this.\"",
+          "不要开新 session 来修bug",
         ],
         notes: [
           "这是他们最需要记住的事。今天重复 3 次。",
@@ -330,7 +402,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "title",
         emoji: "👍",
-        title: "就这样。开始 build。",
+        title: "Let's build something amazing!",
         subtitle: "其他东西，做着做着就会了。",
         notes: [
           "过渡能量 ； \"OK 讲够了。来，做你的第一个 app。\"",
@@ -1281,10 +1353,13 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ THE VERCEL HERO PROMPT",
-        code: "Put my HR app online using Vercel ； use my GitHub repo hr-[myname].\n\nMake sure it still connects to Supabase the same way it does on my laptop.\n\nGive me the live URL.",
+        code: "Put my HR app online using Vercel. Use my GitHub repo hr-[myname].\n\nIf the Vercel CLI isn't installed yet, install it with `npm i -g vercel`. If I'm not logged in, run `vercel login` and walk me through the browser popup.\n\nThen deploy with `vercel deploy --prod`. Auto-link the GitHub repo so future pushes auto-deploy. If it asks about team scope, pick my personal account.\n\nMake sure it still connects to Supabase the same way it does on my laptop. Give me the live URL.",
         notes: [
           "Everyone pastes now ； watch your URL appear",
-          "Vercel pulls from GitHub automatically (same account auth set up in Session 5)",
+          "Stealth install ； prompt quietly installs Vercel CLI + logs in if needed",
+          "vercel login opens a browser tab ； one-time click, then silent forever",
+          "`vercel deploy` auto-detects the GitHub remote and links the project ； no web UI needed",
+          "Once linked, every `git push` triggers an auto-deploy ； the \"ship it\" magic",
           "Claude handles the Supabase env var wiring in the background ； students don't touch those words",
           "Build failing is normal ； paste the error back, Claude fixes and redeploys",
           "Call out the first one to deploy successfully: \"[Name] is LIVE! Who's next?\"",
@@ -1293,10 +1368,13 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ VERCEL 主打 PROMPT（中文版）",
-        code: "用 Vercel 把我的 HR app 放上网 ； 用我的 GitHub repo hr-[myname]。\n\n确保它还是跟我笔电上一样连到 Supabase。\n\n给我 live URL。",
+        code: "用 Vercel 把我的 HR app 放上网。用我的 GitHub repo hr-[myname]。\n\n如果 Vercel CLI 还没装，帮我用 `npm i -g vercel` 装一下。如果我还没登录，跑 `vercel login` 然后一步一步带我走浏览器弹窗。\n\n然后跑 `vercel deploy --prod` 部署。自动把 GitHub repo link 好，这样以后 push 就自动部署。如果问我 team scope，选我个人账号。\n\n确保它还是跟我笔电上一样连到 Supabase。给我 live URL。",
         notes: [
           "所有人现在贴 ； 看你的 URL 出现",
-          "Vercel 自动从 GitHub 拉（跟 Session 5 设定的同一个账号授权）",
+          "Stealth install ； 这个 prompt 会悄悄装 Vercel CLI + 登录",
+          "vercel login 会开一个浏览器 tab ； 点一次就永远不用再点",
+          "`vercel deploy` 自己侦测 GitHub remote 自动 link ； 不用开网页",
+          "Link 好之后，每次 `git push` 就自动部署 ； 这就是 \"ship it\" 的魔法",
           "Claude 在幕后处理 Supabase 的 env var 接线 ； 学员不用碰那些词",
           "Build 失败是正常的 ； 错误贴回，Claude 修好再部署",
           "第一个部署成功的叫出名字：\"[Name] is LIVE！下一个是谁？\"",
