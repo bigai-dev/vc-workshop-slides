@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { Session } from "@/data/workshop";
-import { FrictionPanel } from "./FrictionPanel";
 
 export function SessionCard({ session }: { session: Session }) {
   const [open, setOpen] = useState(false);
@@ -58,13 +57,6 @@ export function SessionCard({ session }: { session: Session }) {
 
       {open && !isBreak && (
         <div className="mt-5 space-y-5 pl-6 border-l border-neutral-200 ml-1">
-          {session.frictionPrevention.length > 0 && (
-            <section>
-              <h4 className="text-xs font-bold tracking-wider text-orange-600 mb-2">⚡ FRICTION PREVENTION</h4>
-              <FrictionPanel items={session.frictionPrevention} />
-            </section>
-          )}
-
           {session.schedule.length > 0 && (
             <section>
               <h4 className="text-xs font-bold tracking-wider text-neutral-500 mb-2">SCHEDULE</h4>
@@ -82,37 +74,17 @@ export function SessionCard({ session }: { session: Session }) {
             </section>
           )}
 
-          {session.facilitatorNotes.length > 0 && (
+          {hasDeck && (
             <section>
-              <h4 className="text-xs font-bold tracking-wider text-amber-700 mb-2">FACILITATOR NOTES</h4>
-              <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
-                <ul className="space-y-2">
-                  {session.facilitatorNotes.map((n, i) => (
-                    <li key={i} className="text-base text-amber-950 leading-snug">• {n}</li>
-                  ))}
-                </ul>
-              </div>
-            </section>
-          )}
-
-          {session.slides.length > 0 && (
-            <section>
-              <h4 className="text-xs font-bold tracking-wider text-blue-600 mb-2">SLIDES NEEDED</h4>
+              <h4 className="text-xs font-bold tracking-wider text-blue-600 mb-2">SLIDES ({session.slideDeck!.length})</h4>
               <ul className="space-y-1.5 text-base text-neutral-700">
-                {session.slides.map((slide, i) => (
-                  <li key={i}>□ {slide}</li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          {session.materials.length > 0 && (
-            <section>
-              <h4 className="text-xs font-bold tracking-wider text-neutral-500 mb-2">MATERIALS</h4>
-              <ul className="space-y-1.5 text-base text-neutral-700">
-                {session.materials.map((m, i) => (
-                  <li key={i}>• {m}</li>
-                ))}
+                {session.slideDeck!.map((s, i) => {
+                  const label =
+                    ("title" in s && s.title) ||
+                    ("label" in s && s.label) ||
+                    "(untitled)";
+                  return <li key={i}>{i + 1}. {label}</li>;
+                })}
               </ul>
             </section>
           )}

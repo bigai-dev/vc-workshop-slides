@@ -1,9 +1,3 @@
-export type FrictionItem = {
-  type: "prepare" | "say" | "do";
-  text: string;
-  timing?: string;
-};
-
 export type ScheduleRow = { time: string; activity: string; details: string };
 
 export type Slide =
@@ -22,10 +16,6 @@ export type Session = {
   duration: string;
   type: "session" | "break" | "lunch";
   schedule: ScheduleRow[];
-  slides: string[];
-  materials: string[];
-  facilitatorNotes: string[];
-  frictionPrevention: FrictionItem[];
   slideDeck?: Slide[];
 };
 
@@ -62,32 +52,6 @@ export const SESSIONS: Session[] = [
       { time: "9:10-9:20", activity: "Jay 开场", details: "欢迎大家。快速介绍这两天的旅程。\"今天下午 6 点前，你会有一个真正上线的网页应用，任何人用任何浏览器都能打开。\"介绍 Assistants。讲解求助顺序（先问 Claude → 问邻座 → 举手）。" },
       { time: "9:20-9:30", activity: "Setup 检查", details: "大家一起：打开 Claude（确认有 Pro)，打开 Terminal / PowerShell，运行 `node -v`、`npm -v`、`git --version`。打开 GitHub、Supabase、Vercel 账号。" },
       { time: "9:30-9:40", activity: "同步检查 ； 大家都准备好了吗？", details: "放出 gate slide:\"有东西不能用的举手。\"Assistants 四处协助。处理环境问题，必要时换备用笔电。落后的跟能用的邻座配对。Session 2 开始前必须 90% 以上准备好。（Connector 验证放到 Session 5，真正要用时才处理。）" },
-    ],
-    slides: [
-      "欢迎 slide(Day 1 标题、日期、WiFi 密码）",
-      "\"你的 2 天旅程\" 路线图",
-      "Setup 检查命令（Claude Pro、Python、Node)",
-      "\"不能用就举手\" gate slide",
-    ],
-    materials: [
-      "Workshop 前作业邮件（3 天前发出） ； 安装 Claude Desktop（需要 Pro) + 安装截图指南，教 Supabase、Vercel、Claude in Chrome connectors 的安装，路径 Sidebar → Customize → Connectors。学员回复邮件附上 3 个都连接好的截图。",
-      "Connector 急救指南 ； 同一套截图指南，Assistants 用它来帮助卡住的学员。",
-    ],
-    facilitatorNotes: [
-      "Workshop 前的环境 + connector 安装 = 最大的风险降低措施。90% 以上准备好到场 → 这一天才顺畅。Connector gate 本身在 Session 5 我们第一次真正需要的时候才做。",
-      "Setup 检查：不要等 100%。90% 准备好 → 继续走。Assistants 继续帮助落后的。",
-      "任何 5 分钟内修不好的环境问题 → 跟能用的邻座配对，或换到备用笔电。不要拖慢全场。",
-      "能量建立：\"全部 OK 的举手！\" ； 让全场一起动起来。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "Workshop 前 3 天发作业邮件：(1) 安装 Claude Desktop 并开 Pro 订阅，(2) 跟着截图指南走 ； Sidebar → Customize → Connectors → 安装 Supabase、Vercel、Claude in Chrome,(3) 截图显示 3 个都连接好，(4) 回复邮件附上截图。追踪谁有回复 ； Day -1 追没回的。" },
-      { type: "prepare", text: "自己在干净的 Mac 和干净的 Windows 上做一次 connector 截图指南。一步一步：点 Sidebar → 点 Customize → 点 Connectors Tab → 搜索 'Supabase' → 点 Install → 授权。Vercel 和 Claude in Chrome 重复一遍。每一步都有自己的截图。这份指南必须防弹。" },
-      { type: "prepare", text: "Setup 检查 slide 分成 Mac 一栏和 Windows 一栏。每个命令附上 \"成功\" 长什么样的截图。9:20 在 WhatsApp 群里分享，学员可以在手机上看、笔电上打。" },
-      { type: "prepare", text: "准备 2 台干净安装、connectors 都配置好的备用笔电。如果学员的笔电根本坏了，换一台备用笔电用一整天。" },
-      { type: "say", text: "\"Node、Python 或 Claude Pro 有任何一个不能用的举手。不能用？手继续举着 ； Assistant 马上过来。\"", timing: "9:30" },
-      { type: "say", text: "\"今天下午 6 点前你会有一个上线的网页应用。但先 ； 确保你的笔电准备好。这个 session 就做这件事。\"" },
-      { type: "do", text: "Setup 检查时亲自走动检查 ； 不要靠自我汇报。非技术的人不会开口。", timing: "9:30" },
-      { type: "do", text: "任何Setup 检查 5 分钟内修不好的 → 换到备用笔电，或跟能用的邻座配对。不要拖慢全场。", timing: "9:35" },
     ],
     slideDeck: [
       { kind: "title", title: "Vibe Coding Workshop", subtitle: "Day 1 · 18 April 2026", notes: ["轻音乐播放中，让大家安顿", "Assistants 帮忙处理名牌", "9:10 准时开始，哪怕还有人陆续到场"] },
@@ -229,30 +193,6 @@ export const SESSIONS: Session[] = [
       { time: "9:45-10:10", activity: "现场 DEMO：你们的生意，你们的问题", details: "打开 2-3 个根据真实报名表资料预先做好的 demo。每个 demo:5-7 分钟，展示系统，解释背后的 prompt。当众点名学员。\"请一个Developer最少 RM 30,000 要做几个月。我用 Claude 每一个都 20 分钟搞定。\"" },
       { time: "10:10-10:20", activity: "\"下一个就是你\"", details: "\"今天下午 6 点前，你会做到一模一样的事 ； 而且真正上线，任何人都能访问。来吧。\"快速技术栈介绍（30 秒）:Claude → Supabase → Vercel。" },
     ],
-    slides: [
-      "\"Describe it. Claude builds it.\" 一句震撼话",
-      "\"这些是我昨晚专门为你做的\" demo 介绍",
-      "RM 30,000+ Developer价钱 vs 20 分钟",
-      "\"今天下午 6 点前\" 承诺 slide",
-      "技术栈介绍：你 → Claude → Supabase → Vercel",
-      "\"现在轮到你上场\" 过渡 slide",
-    ],
-    materials: [
-      "Workshop 前报名表资料 ； 前一晚复盘",
-      "预先做好的 demo 项目（已部署到 Vercel，随时可以现场展示）",
-    ],
-    facilitatorNotes: [
-      "你的杀手锏：demo 就是根据 THEIR 报名表做的 → \"他是为我做的\" 能量。",
-      "挑 2-3 位来自不同行业的学员。当众点名 ； 瞬间变明星。",
-      "Demo 挂了 → 不要慌。打开 Claude 现场修。一样有力。",
-      "忍住不要解释理论。他们还不需要知道 WHY ； 他们需要相信这行得通。",
-      "结束时说：\"谁想要一个属于 你自己的生意的？今天你就在做这件事。\"",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "前一晚部署好所有 demo。每个链接用无痕模式测一次。浏览器收藏夹存好，随时打开。" },
-      { type: "say", text: "Demo 时点名 2-3 位学员：\"C 桌的 [Name] 开面包店 ； 我昨晚 20 分钟就为他做好了。\"" },
-      { type: "do", text: "Demo 现场挂掉不要慌 ； 打开 Claude 在屏幕上修。\"看我怎么修。\"跟顺利的 demo 一样有力。" },
-    ],
     slideDeck: [
       { kind: "title", title: "Describe it. Claude builds it.", subtitle: "一句话，两天，至少三个真正上线的系统。", notes: ["停顿一下 ； 让这句话落地", "不要讲课模式。\"我示范，然后你们做。\"", "节奏要有力 ； 三段式读法：一句话（停顿）。2 天（停顿）。3 个真正上线的系统。"] },
       {
@@ -343,21 +283,6 @@ export const SESSIONS: Session[] = [
     schedule: [
       { time: "10:20-10:30", activity: "Claude app 导览", details: "Claude 桌面 app 快速介绍：开新 session、附加文件、处理错误。Skills/Plugins/Connectors 等下真正要用时再讲。大家在自己的笔电上跟着做。" },
     ],
-    slides: [
-      "Claude 快速上手开场",
-      "1. 开一个新 session",
-      "2. 附加文件和图片",
-      "3. 遇到问题的时候贴错误",
-      "\"就这样，开始 build\" 过渡",
-    ],
-    materials: [],
-    facilitatorNotes: [
-      "控制在 5-8 分钟。他们做中学，比看还有效。",
-      "结束前所有人都应该在自己屏幕上打开 Claude。",
-    ],
-    frictionPrevention: [
-      { type: "say", text: "\"现在打开你笔电上的 Claude。跟着我做。\"" },
-    ],
     slideDeck: [
       {
         kind: "title",
@@ -434,45 +359,6 @@ export const SESSIONS: Session[] = [
       { time: "10:40-11:00", activity: "参观 Customize 页面 + 认识 Design skill", details: "投影仪打开 Sidebar → Customize。走一遍 Skills / Connectors / Plugins 三个Tab，让学员 SEE 整排工具。然后：\"今天我们只用一个 ； Design。\"从 Plugins Tab安装。现场 demo:\"Use the Design skill. Build me a hero section for a fictional mamak chain.\"展示如何用 NAMING 的方式启动 ； 没有 slash command。" },
       { time: "11:00-12:15", activity: "做你自己的 landing page", details: "每个学员挑自己的生意（真的或想象的），用 'Use the Design skill.' 开头 prompt Claude 做一个 landing page:hero、卖点、特色、CTA、footer。这是他们生意的销售门面。" },
       { time: "12:15-12:30", activity: "Milestone 1:\"你做到了！\"", details: "大家都有一个本地跑起来的 landing page。Screenshot 发 WhatsApp 群。大家投票选出 3 个最好看的。" },
-    ],
-    slides: [
-      "Landing Page 开场 ； 你的第一个销售员",
-      "什么是 Skill？一个现成的大脑",
-      "为什么要用 Skill",
-      "打开 Sidebar → Customize ； Skills / Connectors / Plugins 工具架",
-      "今天选：Design plugin,NAMING 启动",
-      "找一个参考 ； 不要猜，抄风格",
-      "怎么找参考（Google + 截图）",
-      "Landing page 主打 prompt（英文版）",
-      "Landing page 主打 prompt（中文版）",
-      "还没有自己的生意？用朋友或家人的",
-      "遇到问题的时候：STOP → 贴错误 → Fix this",
-      "Pro tip - Screenshot",
-      "Milestone 1 ； 你做出一个 landing page",
-      "做完了？ 继续挑战",
-    ],
-    materials: [
-      "Day 1 Build Guide（电子版，WhatsApp 群分享） ； 每一个 prompt + skill 名字",
-      "Design skill 单页小抄 ； 哪里找（Customize → Plugins Tab）、怎么启动（在 prompt 里提名字）",
-      "生意原型清单（mamak、贸易、服务、电商、诊所、补习） ； Assistants 口头建议给卡在 \"做什么生意？\" 的学员",
-    ],
-    facilitatorNotes: [
-      "今天的 skill:Design。在 Customize → Plugins Tab。在 prompt 里提名字启动 ； 不是用 slash command。",
-      "40 人 = 你不可能一个一个教。Build Guide 是你的救命稻草。必须防弹。",
-      "130 分钟，没有 morning break。用好它 ； 让大家喘气、追上进度。",
-      "每 15-20 分钟同步检查：\"跟得上的举手！\"",
-      "快手学员 = 拉伸挑战：\"叫 Claude 加一个 pricing section。\"",
-      "常见错误：npm 问题、目录不对、port 冲突。Assistants 要烂熟。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "投影仪上走一遍 Sidebar → Customize ； 三个Tab(Skills / Connectors / Plugins）。现场安装 Design plugin。非技术学员需要亲眼 SEE 这个架子，才会相信它存在。" },
-      { type: "prepare", text: "Build Guide 是你的头号安全网。必须包含：(1) 每一步的确切 Claude prompt，以 'Use the Design skill.' 开头，(2) 每一轮后的 \"应该看到什么\" 截图，(3) \"常见错误\" 章节（白屏 = 没跑 npm run dev,module not found = 目录不对，port in use = 其他 app 在跑）。找一个非技术的人在 Mac + Windows 上端到端测试。" },
-      { type: "prepare", text: "预先写 3-4 个 \"紧急救援 prompt\" 给 Claude:\"我的 Next.js app 显示空白屏幕。这是 Claude 给我的错误：[paste]. Fix it.\"放在指南的 Troubleshooting 章节。" },
-      { type: "say", text: "\"今天你们学一个 skill:Design。没有 slash command。在 prompt 里提名字启动 ； 以 \"Use the Design skill.\" 开头，然后描述你的生意。Claude 会接手。\"", timing: "第一个 skill demo 前" },
-      { type: "say", text: "\"把 Claude 的回应贴进项目后，你必须存文件并检查浏览器。看到错误就 STOP。不要在坏掉的结果上继续贴下一个 prompt。举手。\"", timing: "第一个 prompt 前" },
-      { type: "do", text: "第一个 prompt 后全场暂停。\"看到 [这个画面] 的举手。\"超过 5 人卡住就全场暂停。2 分钟的暂停省掉 20 分钟的连环错误。", timing: "10:35" },
-      { type: "do", text: "跟 Assistants 走动。盯着空白 prompt 超过 90 秒的 → 坐下来帮他选生意。没人独自发呆。", timing: "11:00" },
-      { type: "do", text: "Assistants 每 10 分钟视觉扫一次 ； 不要等举手。非技术学员以为每个错误都是自己的错。" },
     ],
     slideDeck: [
       {
@@ -659,14 +545,6 @@ export const SESSIONS: Session[] = [
     duration: "60 min",
     type: "lunch",
     schedule: [],
-    slides: [],
-    materials: [],
-    facilitatorNotes: [
-      "午餐时走动跟学员聊天。了解他们的行业和痛点。",
-      "简报 Assistants:\"你的区域情况如何？谁在挣扎？谁很顺？\"",
-      "在 WhatsApp 群发午餐照片 + Milestone总结。",
-    ],
-    frictionPrevention: [],
   },
   {
     id: 5,
@@ -685,46 +563,6 @@ export const SESSIONS: Session[] = [
       { time: "2:40-2:50", activity: "并排对比", details: "投影仪分屏：原始 Excel vs 他们的 dashboard。\"这就是你会计师每月收你 RM 3,000 做的事。你 75 分钟做好了。\"Screenshot 发 WhatsApp。" },
       { time: "2:50-2:55", activity: "Claude in Chrome ； \"Claude 自己测试你的 dashboard\"", details: "Jay 在自己的 dashboard 上 demo:\"Open my dashboard in Chrome, take a screenshot of each chart, and tell me if anything looks broken.\"Claude 在屏幕上实时驱动浏览器。全场反应 = 回报时刻。时间允许，学员在自己的上试。" },
       { time: "2:55-3:00", activity: "Milestone 2", details: "\"CHIO anot?! 你刚做了一个 Power BI 替代品。\"同步检查。大家都应该看到自己的 dashboard 显示真实数据。" },
-    ],
-    slides: [
-      "Dashboard 开场 ； 把你的 Excel 变成 Power BI 级的 Dashboard",
-      "Connector 30 秒回顾 ； Claude 的双手",
-      "Connector 检查 ； Sidebar → Customize,3 个蓝点",
-      "举手 gate ； connector 不绿不准走",
-      "痛点：一堆 Excel、出粮噩梦",
-      "\"熟悉吧？\" 样本 CSV 预览",
-      "我们要做什么 ； 4 个 KPI + 图表",
-      "Dashboard 主打 prompt（英文版）",
-      "Dashboard 主打 prompt（中文版）",
-      "做成你自己的 ； 加自定义图表",
-      "自定义图表点子清单",
-      "Pro tip - 解释你做了什么（英文版）",
-      "Pro tip - 解释你做了什么（中文版）",
-      "Claude in Chrome ； Claude 测试你的 app（英文版）",
-      "Claude in Chrome ； Claude 测试你的 app（中文版）",
-      "Before/after:Excel → 你的 Dashboard",
-      "Milestone 2",
-    ],
-    materials: [
-      "sample-accounting.csv ； 2000+ 行的 SME 会计数据（6 个月，收入 + 开支，多类别）。1:40 预先丢 WhatsApp 群。",
-      "Dashboard prompt 模版（在 build guide 里）",
-      "图表库提示：Claude 很可能用 recharts 或 chart.js ； 都可以，不要钻牛角尖",
-    ],
-    facilitatorNotes: [
-      "非技术老板的 \"wow\" session。狠狠玩 CHIO 时刻 ； Excel → dashboard 是情感高潮。",
-      "复用 Session 3 的 Design skill。强化 = \"Use the Design skill.\" 这个 prompt 开头变成肌肉记忆。",
-      "CSV 解析会绊倒一些人。Claude 代码挂了 → 错误贴回 Claude。不要让学员自己修。",
-      "拉伸挑战：\"加一个 date range filter\" 或 \"加一个 dark mode toggle\"。",
-      "并排对比 → 用一个真的 STUDENT 的屏幕，不是你的。更有力。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "提前用 data/ 下的生成脚本做好 sample-accounting.csv。自己用 Excel 打开看一眼，确认看起来很乱 ； 这就是重点。至少 2000 行、6 个月的日期、8-10 个开支类别。测试一下：把它丢进 Claude 配 \"build me a dashboard\" prompt，确认结果真的能渲染。" },
-      { type: "prepare", text: "用老板语言预先写好 dashboard prompt:\"Use the Design skill. I have sample-accounting.csv ； 6 months of my business transactions. Turn it into a dashboard showing 4 KPI cards (revenue, expenses, profit, margin), a monthly P&L trend, and a spending breakdown by category. Use Next.js. \"大字体放在 slide 上。" },
-      { type: "prepare", text: "做好的 dashboard 截图，让学员知道目标长什么样。没有这个，他们不知道什么时候算完成。" },
-      { type: "say", text: "\"把 CSV 丢进你的项目文件夹。然后贴这个 prompt。不要自己改写 ； 用我的。我们学的是 PATTERN，不是措辞。\"", timing: "1:50" },
-      { type: "say", text: "\"图表渲染不出来，把 Claude 给你看的错误复制，贴回同一个聊天，说 \"fix this\"。不要自己读代码。那不是今天的 skill。\"" },
-      { type: "do", text: "2:15 学员开始自定义时，走动。任何一句话讲不清自己 widget 的 → Assistant 坐下来问：\"你每天早上在生意里会看哪个数字？\"就做那个 widget。", timing: "2:15" },
-      { type: "do", text: "2:40 并排对比用最好看的学员 dashboard，不是你的。叫他站起来。公开表扬 = 同侪推动力。", timing: "2:40" },
     ],
     slideDeck: [
       {
@@ -924,10 +762,6 @@ export const SESSIONS: Session[] = [
     duration: "15 min",
     type: "break",
     schedule: [],
-    slides: [],
-    materials: [],
-    facilitatorNotes: [],
-    frictionPrevention: [],
   },
   {
     id: 7,
@@ -945,40 +779,6 @@ export const SESSIONS: Session[] = [
       { time: "4:05-4:15", activity: "测试流程", details: "Scaffold prompt 自动种了 10 个假司机。现在真的 USE 这个 app：给 Ahmad 打卡、提津贴申请、记 OT、打开 payroll 页 ； 看他的总薪酬自动算好。\"真的可以用\" 时刻。" },
       { time: "4:15-4:25", activity: "Claude in Chrome ； \"Claude 扮演司机\"", details: "Prompt:\"Open my app in Chrome, log in as Ahmad, clock in, file an RM 20 allowance claim, and log 2 hours of OT. Then open the payroll page and read me Ahmad's total.\"Claude 实时驱动整个流程。这就是 \"my god\" 时刻 ； Claude 30 秒就帮你的 app 做了 QA 测试。" },
       { time: "4:25-4:30", activity: "Milestone 3", details: "\"你刚刚做的东西，HR SaaS 厂商卖 RM 8,000–15,000。Claude 还帮你测试了。下一个 session：我们把它 LIVE。\"" },
-    ],
-    slides: [
-      "HR 系统开场 ； 物流公司的问题",
-      "一家物流公司，30 个司机的痛",
-      "先切到 Plan mode",
-      "⭐ 问题 prompt（英文版）",
-      "⭐ 问题 prompt（中文版）",
-      "📖 读 Claude 的 plan",
-      "✍️ 改 plan 再执行（包含数字）",
-      "Pro tip - 卡在循环里？开新 session",
-      "Claude in Chrome ； Claude 扮演 Ahmad（英文版）",
-      "Claude in Chrome ； Claude 扮演 Ahmad（中文版）",
-      "Milestone 3 ； 出粮自动算好",
-    ],
-    materials: [
-      "物流公司情境小抄 ； 30 司机、底薪 RM 1800、OT RM 15/小时、津贴上限 RM 20/天。3:15 在 WhatsApp 分享。",
-      "10 个假司机名字（多族群、马来西亚语境）",
-      "本 session 的 build guide 章节（确切 prompts)",
-    ],
-    facilitatorNotes: [
-      "第三次用 Design skill → \"Use the Design skill.\" 这个 prompt 开头现在是肌肉记忆。",
-      "司机用例 = GOLD。每个人都认识有车队/厨房班/清洁队的人。大玩相关性。",
-      "今天不做生产级认证/权限。只做能用的原型。Session 6 = 部署。",
-      "出粮自动算好是情感高潮。给 \"真的成了\" 反应留时间。",
-      "观察：挑 3 个最好的 HR app，明天 showcase 用。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "把 scaffold prompt 预先分成两半：(1) 生意痛点（30 司机、打卡乱、WhatsApp 津贴、手动 OT、痛苦的出粮日）,(2) 4 页面需求（手机 app、打卡/津贴/OT/出粮、预填 10 位马来西亚司机、数据保存等下再说）。大字体放 slide 上 ； 一行一行揭露：先讲痛苦，再讲需求。" },
-      { type: "prepare", text: "4 个模块每个做好的截图。没有目标，学员会飘走。" },
-      { type: "prepare", text: "Scaffold prompt 之前用口头讲清楚 4 模块 + 数字。不需要数据模型图 ； 让 Claude 从 scaffold prompt 的自然语言自己搞清楚形状。" },
-      { type: "say", text: "\"司机用手机，不用笔电。每个画面都要在手机上能用。告诉 Claude:mobile-first。大按钮。手指友好。\"", timing: "3:40" },
-      { type: "say", text: "\"今天不担心登录、密码、权限。我们先做核心，下一个 session 再上线。\"" },
-      { type: "do", text: "4:05 做同步检查 ； \"浏览器里看到全部 4 个模块的举手。\" 低于 70% 就全部暂停、协助。Session 6 需要这个 app 存在。", timing: "4:05" },
-      { type: "do", text: "4:05-4:20 走动 ； 任何 payroll 页显示错数字的，叫他把 bug 贴回 Claude。教这个循环：看到 bug → 贴 → 修。" },
     ],
     slideDeck: [
       {
@@ -1140,64 +940,6 @@ export const SESSIONS: Session[] = [
       { time: "5:10-5:25", activity: "Vercel ； 放上线", details: "一个老板语言 prompt:\"Put my HR app online using Vercel ； use my GitHub repo hr-[myname]. Make sure it still connects to Supabase the same way it does on my laptop. Give me the live URL.\"Claude 从 GitHub 拉代码、接上 Supabase 凭据、部署。学员看着自己的 URL 出现。Build 失败 → 错误贴回，Claude 修好再部署。" },
       { time: "5:25-5:35", activity: "THE BIG MOMENT", details: "\"在你 PHONE 上打开你的 live URL。给自己打卡。现在发给一个朋友。你的 HR 系统 LIVE ON THE INTERNET ； 你几乎没碰过 dashboard。\"合影。" },
       { time: "5:35-5:45", activity: "Claude in Chrome 胜利圈", details: "最后一个 prompt:\"Open my live URL in Chrome, clock in a new driver called \"Jay Demo\", and screenshot the payroll page.\"Claude 端到端驱动 live 网站。巅峰 \"this is the future\" 时刻。Milestone 4:\"三个 app。一个上线。RM 50,000+ 的开发工作。一天。\"" },
-    ],
-    slides: [
-      "上线开场 ； 合笔电 app 就死掉",
-      "Pro tip - 上线前安全检查（英文版）",
-      "Pro tip - 上线前安全检查（中文版）",
-      "App 怎么运作 ； 餐厅比喻",
-      "Connectors = Claude 有双手",
-      "Connector 健康检查",
-      "⭐ SUPABASE 主打 prompt（英文版）",
-      "⭐ SUPABASE 主打 prompt（中文版）",
-      "测试 prompt ； show me the most recent check-in（英文版）",
-      "测试 prompt ； 显示最新 check-in（中文版）",
-      "你的数据 PERMANENT 庆祝 slide",
-      "部署前 ； 你的代码需要一个家（GitHub 介绍）",
-      "建 GitHub 仓库 ； 手动 90 秒步骤",
-      "⭐ GITHUB 推送 prompt（英文版）",
-      "⭐ GITHUB 推送 prompt（中文版）",
-      "⭐ VERCEL 主打 prompt（英文版）",
-      "⭐ VERCEL 主打 prompt（中文版）",
-      "Claude 问你许可时 ； 安心 bullets",
-      "Build 失败怎么办 ； 恢复循环",
-      "THE BIG MOMENT ； 在手机上打开 URL",
-      "你的 HR 系统已上线 ； 合影 slide",
-      "⭐ Claude in Chrome 胜利圈 prompt（英文版）",
-      "⭐ Claude in Chrome 胜利圈 prompt（中文版）",
-      "Milestone 4 ； 3 个 app,1 个 LIVE",
-      "Day 1 回顾 ； 3 个 app 全部打勾",
-    ],
-    materials: [
-      "4 个 hero prompt 在 WhatsApp 群分享 ； Supabase（数据永久）、GitHub 推送（贴 repo 链接）、Vercel（放上线）、Claude in Chrome（胜利圈）。学员复制贴，不重打。",
-      "后备手动指南（以防 connector 挂掉） ； 学员手动点 Supabase dashboard，然后叫 Claude 处理剩下的。藏在附录里。祈祷用不到。",
-    ],
-    facilitatorNotes: [
-      "Day 1 的顶点。Connector 最大回报 ； Session 2 里 Jay 点 dashboard，现在 Claude 替他们点。对比 = \"wow\"。",
-      "依赖 Session 5 的 connector 检查。现在 connector 还不能用的学员就惨了。Assistant 准备救援。",
-      "Supabase/Vercel connector 中途挂（授权、rate limit) → 那个学员切换到手动附录。不要拖垮全场。",
-      "Vercel build 错误还是常见。教这个循环：错误 → 贴给 Claude → Claude 通过 connector 修好 → 重新部署。",
-      "GitHub 第一次授权弹窗是这里唯一的摩擦点 ； 告诉学员说 \"walk me through it\",Claude 会引导浏览器登录。",
-      "\"在你 PHONE 上打开\" = 起鸡皮疙瘩时刻。不要省。",
-      "合影是 MANDATORY。营销素材 + 情感锚点。立刻发 WhatsApp。",
-      "5:35 的 Claude in Chrome 胜利圈是 Day 1 终章。不要为了时间切掉 ； 需要的话把收尾推后 2 分钟。",
-      "观察：挑 5-6 个最好的 build，明天 showcase 用。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "前一晚用一个全新的 throwaway Supabase 账号预跑 Supabase hero prompt。确认 Claude 能端到端处理 \"make my data permanent\" 这个需求，完全不用手把手 ； 建项目、开需要的东西、改代码。把任何小问题记进 build guide。" },
-      { type: "prepare", text: "预跑 GitHub push prompt。确认 Claude 能用学员提供的链接推到一个空的 private repo，并且能处理第一次浏览器弹窗授权。计时 ； 告诉学员大约 30-60 秒。" },
-      { type: "prepare", text: "预跑 Vercel hero prompt。确认 Claude 从 GitHub 拉代码、把 Supabase 凭据接过去、回传一个 live URL。计时 ； 让学员预期同样的等待。" },
-      { type: "prepare", text: "4 个 hero prompt 各自放在大字 slide 上 ； Supabase、GitHub push、Vercel、Claude in Chrome。学员从 slide 抄，贴进 Claude。零打字。" },
-      { type: "prepare", text: "写好手动后备附录，应付 connector 乱来的情况 ； 学员手动点 Supabase dashboard，然后叫 Claude 搞定 app 代码和部署步骤。每一步的截图。需要时发 WhatsApp。" },
-      { type: "prepare", text: "确认学员的 Supabase + Vercel 账号已经在 connector 配置里授权好。授权中途过期是头号失败模式 ； 4:30 全场一起重新授权一次。" },
-      { type: "say", text: "\"今早 Session 2 我给你看了一个部署好的 app，说我 20 分钟做好。秘密是 ； 我在 Supabase 或 Vercel 没点过一个按钮。Claude 点的。今天你也这样。\"", timing: "4:30" },
-      { type: "say", text: "\"Claude 暂停、问你许可时，READ 它要做什么，然后说 yes。Connector 没你同意不会动。\"", timing: "第一个 connector prompt 前" },
-      { type: "say", text: "\"Build 失败 ； 有些会 ；是正常的，把错误信息贴回 Claude。它能通过 connector 读你的 Vercel logs。让它自己修。\"" },
-      { type: "say", text: "第一个部署成功的人，叫出名字：\"[Name] is LIVE! 大家打开你的 Vercel URL ； 下一个是谁？\"", timing: "第一个部署成功时" },
-      { type: "do", text: "4:30 做 connector 健康检查 ； 所有人打开 Claude → Settings → Connectors，确认 3 个都绿。任何红色 NOW 修好，不要拖到 prompt 中途。", timing: "4:30" },
-      { type: "do", text: "5:00，任何 Supabase connector 步骤卡住的 → 切换到手动后备附录。不要让他卡在那等 connector。", timing: "5:00" },
-      { type: "do", text: "5:20 ； 所有人在 PHONE 上打开 Vercel URL。不是笔电。手机。起鸡皮疙瘩时刻。不要让任何人省掉。", timing: "5:20" },
-      { type: "do", text: "5:35,Claude in Chrome 胜利圈先在大屏幕上用 你自己的 live app 做一次 ； 让每个学员看到魔法。然后请志愿者在他们自己的上做。", timing: "5:35" },
     ],
     slideDeck: [
       {
@@ -1486,21 +1228,6 @@ export const SESSIONS: Session[] = [
       { time: "5:50-5:55", activity: "Day 2 预告", details: "\"今天：跟着我做 3 个 app。明天：你自己的系统，你自己的行业。你为自己的生意重新做一次 ； 离开的时候带着 3 个属于你自己的能用系统。\"" },
       { time: "5:55-6:00", activity: "作业", details: "\"今晚：想想你生意里 3 个最大的痛点。写下来。明天我们修好。\"" },
     ],
-    slides: [
-      "Day 1 回顾 ； 你刚刚做的事",
-      "一个开发团队要 2-3 个月，你一天搞定",
-      "Day 2 预告 ； 你自己的系统，你自己的行业",
-      "今晚作业 ； 写下 3 个最大痛点",
-      "离开前 ； 充电、明天见",
-    ],
-    materials: [],
-    facilitatorNotes: [
-      "高能量结尾。能量、掌声、兴奋。",
-      "提醒：今晚充好笔电电、明天带充电器。",
-      "今晚在 WhatsApp 群发 Day 1 回顾 + 合影。",
-      "简报 Assistants：什么有效、什么没、Day 2 的调整。",
-    ],
-    frictionPrevention: [],
     slideDeck: [
       {
         kind: "bullets",
@@ -1577,37 +1304,6 @@ export const SESSIONS: Session[] = [
       { time: "9:35-10:05", activity: "SME 自动化蓝图", details: "Jay 的核心 IP。走一遍一页版自动化蓝图。3 个行业例子 demo：餐饮、服务业、贸易。" },
       { time: "10:05-10:20", activity: "练习：设计你的系统", details: "每个学员填架构工作表。列出前 3 痛点、对应模块、画出数据流。" },
       { time: "10:20-10:30", activity: "志愿者分享", details: "Jay 挑 4-5 位志愿者（每人 30-60 秒）:\"我要做 X、Y、Z，因为 [痛点]。\"现场反馈。" },
-    ],
-    slides: [
-      "Day 2 开场 ； 昨天你做，今天学 WHY",
-      "\"昨晚谁把 app 发给别人？\" 能量检查",
-      "AI 之前 ； RM 50k+,3-6 个月",
-      "AI 之后 ； 一个周末，RM 20/月",
-      "5 个升级 prompt 的开关",
-      "Bad → OK → Great prompt 对比",
-      "Pro tip - 开关 4 让 Claude 先反问你（英文版）",
-      "Pro tip - 开关 4 让 Claude 先反问你（中文版）",
-      "Pro tip - 开关 1 从生意背景开始（英文版）",
-      "Pro tip - 开关 1 从生意背景开始（中文版）",
-      "SME 自动化蓝图（KEY SLIDE)",
-      "餐饮业例子 ； POS / 库存 / Dashboard",
-      "服务业例子 ； 预约 / 客户档案 / Dashboard",
-      "贸易业例子 ； 报价 / 订单追踪 / Dashboard",
-      "练习 ； 规划你自己的系统",
-    ],
-    materials: [
-      "架构蓝图工作表（电子版，WhatsApp 分享）",
-    ],
-    facilitatorNotes: [
-      "理论现在 HITS DIFFERENT。昨天他们盲做，还真的成功。现在你解释 \"why\"，他们就能连点成线。",
-      "每个原则都对应他们已经经历过的事。\"记得你的 prompt 行不通的时候吗？那就是原则 #3。\"",
-      "SME 自动化蓝图是你的核心 IP，最高价值的内容。",
-      "这里个人工作表比小组效果好 ； 每个生意都是独特的。",
-      "志愿者分享时，当众肯定每个计划。在 build session 前建立信心。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "架构工作表必须极其简单 ； 痛点框、模块框、之间的箭头。零模糊。学员应该 15 分钟完成。" },
-      { type: "say", text: "\"你现在听到的每个原则 ； 你昨天都已经活过了。这不是新理论。我只是在给你已经做过的事命名。\"" },
     ],
     slideDeck: [
       { kind: "title", title: "Vibe Coding Workshop", subtitle: "Day 2 · 19 April 2026", notes: ["轻音乐播放中，让大家安顿", "Assistants 帮忙处理名牌", "9:10 准时开始，哪怕还有人陆续到场"] },
@@ -1837,34 +1533,6 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
       { time: "12:00-12:15", activity: "数据永久保存", details: "学员叫 Claude 给模块加 Supabase ； 跟 Day 1 同一个老板语言 prompt。他们懂流程了。" },
       { time: "12:15-12:30", activity: "部署模块 #1", details: "Push → 部署。第一个模块上线。\"举手 ； 模块 1 部署好的有谁？\"庆祝。" },
     ],
-    slides: [
-      "模块 #1 开场 ； 你自己的系统主页面",
-      "用 prompt 包 ； 不要从零开始",
-      "选你的模块（按行业）",
-      "进度追踪 ； 3 个模块卡片（全空）",
-      "Prompt 包 ； 第 1 步做 UI（英文版）",
-      "Prompt 包 ； 第 1 步做 UI（中文版）",
-      "卡住了 ； 怎么办 bullets",
-      "让数据永久保存 ； 跟 Day 1 同一个 prompt",
-      "部署 → 庆祝 ； 模块 1 上线",
-      "进度追踪 ； 模块 1 ✅,2 & 3 空",
-    ],
-    materials: [
-      "行业 prompt 包：餐饮、服务、贸易、制造、通用",
-    ],
-    facilitatorNotes: [
-      "第一个 PERSONALISED session。35-40 人做不同的东西。会感觉乱。正常。",
-      "简报 Assistants:\"不要替他解决问题。帮他写更好的 Claude prompt。教他钓鱼。\"",
-      "鼓励邻座互助。",
-      "走动，脑子里记下浮现的最好的 5-6 个 build。Showcase 候选。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "行业 prompt 包是 SEQUENCES，不是独立 prompt。\"第 1 步：贴这个。第 2 步：贴这个。第 3 步：贴这个。\"就算学员不完全懂，跟着做也能做出能用的模块。" },
-      { type: "prepare", text: "GitHub 上放 3-4 个模版起手项目，落后太多的学员可以 fork。30 分钟节点如果需要就在 WhatsApp 作为后备分享。" },
-      { type: "say", text: "\"卡在 WHAT 做的，打开你的蓝图工作表 ； 你的第一个模块就是你 #1 痛点。卡在 HOW 的，用 prompt 包 ； 一步一步的食谱。\"" },
-      { type: "do", text: "Build 30 分钟节点（11:15)，举手检查：\"屏幕上有东西的？\"没有的 2 分钟内 Assistant 上门。", timing: "11:15" },
-      { type: "do", text: "学员完全迷失、prompt 包也不行，转向 \"通用\" 模块（客户 dashboard / 评论收集器）。做出 SOMETHING 比做到完美重要。" },
-    ],
     slideDeck: [
       {
         kind: "title",
@@ -2007,13 +1675,6 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
     duration: "60 min",
     type: "lunch",
     schedule: [],
-    slides: [],
-    materials: [],
-    facilitatorNotes: [
-      "找 5-6 个做得最好的学员。问：\"今天最后能不能帮忙做一个 2 分钟短 demo 和 video 见证？\"口头答应。",
-      "简报 Assistants 下午的计划。",
-    ],
-    frictionPrevention: [],
   },
   {
     id: 13,
@@ -2029,28 +1690,6 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
       { time: "1:45-2:45", activity: "BUILD 模块 #2", details: "每个学员做 SECOND 模块。必须从模块 1 的表 READ 或 WRITE 数据。用 Claude 设计连接。" },
       { time: "2:45-3:00", activity: "整合测试", details: "测试数据流：模块 1 动作 → 模块 2 看到。\"在 POS 加一笔销售。打开你的库存。有更新吗？\"" },
       { time: "3:00-3:15", activity: "部署", details: "Push + 部署。两个模块上线并互通。进度追踪现在显示 3 个里 2 个绿色，模块 3(dashboard）待完成。" },
-    ],
-    slides: [
-      "模块 #2 开场 ； 模块互通才强大",
-      "一站式系统例子（POS → 库存、预约 → CRM)",
-      "模块怎么连接 ； 共用 Supabase 表",
-      "整合 prompt（英文版）",
-      "整合 prompt（中文版）",
-      "测试清单 ； 模块 1 动作 → 模块 2 看到",
-      "能用 > 完美 ； 让挣扎常态化",
-      "进度追踪 ； 3 个里 2 个绿",
-    ],
-    materials: [],
-    facilitatorNotes: [
-      "整合是 HARDEST 的部分。预期举手比其他任何 session 都多。",
-      "整合做不出来的学员：简化。模块 2 只是显示模块 1 的数据（只读）。",
-      "高阶学员：实时订阅、自动触发器、计算字段。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "整合 prompt 模版（老板语言）:\"My app has two sections saving data in Supabase. When I add something new in [section 1 ； e.g. a new order], I want [section 2 ； e.g. my dashboard] to automatically update [what ； e.g. today's revenue]. Make these two talk to each other.\"" },
-      { type: "prepare", text: "简化版后备：\"Build Module 2 as a dashboard that READS from Module 1. Just display the data ； counts, lists, totals.\"45 分钟节点需要就在 WhatsApp 分享。" },
-      { type: "say", text: "\"整合是整个周末最难的事。做不到完美也 OK。一个读你数据的 dashboard 一样强大。我们追求能用，不是完美。\"" },
-      { type: "do", text: "1 小时节点（2:30)，全场检查。没做出能用模块 2 的，转到简化版 dashboard 后备。3:15 前必须有东西部署上去。", timing: "2:30" },
     ],
     slideDeck: [
       {
@@ -2165,12 +1804,6 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
     duration: "15 min",
     type: "break",
     schedule: [],
-    slides: [],
-    materials: [],
-    facilitatorNotes: [
-      "确认 5-6 位 showcase 学员。\"大约 90 分钟后，你会在大屏幕上展示你的系统。最爱的功能、解决什么问题，最多 2 分钟。\"",
-    ],
-    frictionPrevention: [],
   },
   {
     id: 15,
@@ -2186,32 +1819,6 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
       { time: "3:45-4:25", activity: "BUILD dashboard（模块 #3)", details: "Dashboard 从模块 1 + 2 拉数据。摘要统计、图表、最近活动、警报。用 dashboard prompt 模版。" },
       { time: "4:25-4:35", activity: "响应式设计 + 手机 app 预告", details: "\"Make this fully responsive and mobile-friendly.\"测不同尺寸。简短预告 PWA/Capacitor。" },
       { time: "4:35-4:45", activity: "最终部署", details: "Push → 部署。3 个模块都上线并互通。\"你的一站式生意系统 LIVE 了。\"进度追踪全绿。" },
-    ],
-    slides: [
-      "老板 Dashboard 开场 ； 一屏看全部",
-      "每个老板想要什么（营收 / 图表 / 活动 / 警报）",
-      "Dashboard 组件布局",
-      "Dashboard prompt（英文版）",
-      "Dashboard prompt（中文版）",
-      "一个 prompt 让它变 chio（英文版）",
-      "一个 prompt 让它变 chio（中文版）",
-      "从网页到手机 ； 响应式过渡",
-      "Pro tip - 手机检查（英文版）",
-      "Pro tip - 手机检查（中文版）",
-      "进度追踪 ； 3 个模块全绿（庆祝）",
-      "你的完整生意系统已上线",
-    ],
-    materials: [],
-    facilitatorNotes: [
-      "就算模块 2 整合不完美，dashboard 视觉上仍然惊艳。重点让它好看。",
-      "响应式时刻：每个人看到自己的系统自适应。为 workshop 之后的学习埋种子。",
-      "Assistants 帮还在追模块 1 或 2 的人。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "Dashboard prompt 包，3 个现成贴的 prompt:(1) 摘要统计卡片，(2) recharts 柱状图，(3) 最近活动清单。学员自定义方括号部分。" },
-      { type: "prepare", text: "还卡在模块 1/2 的学员，Assistants 帮他们做一个用 SAMPLE 数据（硬编码）的 dashboard。好看的 dashboard 配假数据 > showcase 时坏掉的连接。" },
-      { type: "say", text: "\"Dashboard 是 BOSS VIEW。这是你会给团队、给伙伴、给投资人看的。让它好看。叫 Claude:\"Make this professional and clean with a dark blue theme.\" 一个 prompt 就换了外观。\"" },
-      { type: "do", text: "4:20（响应式前 5 分钟），最后扫一遍：\"有谁需要帮忙让 ANYTHING 上屏？\"最后的救援机会。4:45 前每个人必须有东西部署上去。", timing: "4:20" },
     ],
     slideDeck: [
       {
@@ -2363,26 +1970,6 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
       { time: "5:15-5:25", activity: "影片见证", details: "录快速见证。\"30 秒告诉我：这个周末你做了什么、感觉如何？\"" },
       { time: "5:25-5:30", activity: "全体致敬", details: "\"看看 40 个非技术老板 2 天做出什么。\"最后合影：每个人展示自己的 app。" },
     ],
-    slides: [
-      "Showcase 开场 ； 5 个系统，每个 2 分钟",
-      "流程 ； 每人 2 分钟讲 + 现场展示",
-      "\"We built this\" ； 最后合影",
-    ],
-    materials: [
-      "手机/录影机 + 三脚架",
-      "无线麦克风",
-      "影片见证的授权表",
-    ],
-    facilitatorNotes: [
-      "Showcase 学员挑 DIVERSE 行业。不要挑 5 个餐饮。",
-      "见证：快 FAST。每个 30 秒。原始、情感。",
-      "Demo 也录下来（屏幕录或手机对投影仪）。内容黄金。",
-      "能量高就问：\"还有谁想分享？\"自愿 30 秒 demo。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "4:45 前手机充好电、三脚架架好、麦克风测试完。摄像机前确认口头同意使用见证。" },
-      { type: "do", text: "每个演讲者的屏幕提前投影（休息时用一位学员的笔电测试）。Showcase 时不要手忙脚乱搞线。" },
-    ],
     slideDeck: [
       {
         kind: "title",
@@ -2434,27 +2021,6 @@ Ask me to clarify anything unclear. Then give me a plan first."</div>
       { time: "5:40-5:50", activity: "接下来", details: "(1) 知识库，(2) 更多模块配 prompt 库，(3) 90 天社群，(4) 1 年免费重参加。\"Ayen 2 周内从第一个客户赚了 RM 3,000。\"" },
       { time: "5:50-5:55", activity: "反馈表单", details: "QR code 在屏幕上。\"2 分钟，麻烦填一下。\"" },
       { time: "5:55-6:00", activity: "结尾", details: "\"2 天前你会请人做这个。今晚你有 3 个上线系统。你自己做的。去换一种方式经营你的生意吧。\"掌声。最后合影。" },
-    ],
-    slides: [
-      "你的工具包 ； 这些永远是你的",
-      "你带走的东西（蓝图 / prompt / 模版 / 影片 / 重参加）",
-      "接下来 ； 影片 / prompt 库 / 90 天社群 / 重参加",
-      "反馈表单 QR code",
-      "\"2 天前你会请人做这个\" 情感高潮",
-      "谢谢 ； 去建造未来吧",
-    ],
-    materials: [
-      "反馈表单（Google Form) ； 链接 + QR code",
-      "知识库登录凭据",
-      "社群链接（WhatsApp/Telegram)",
-      "证书（如有）",
-    ],
-    facilitatorNotes: [
-      "高能量结尾。这是最后的印象。",
-      "确认反馈表单 QR 在房间后排也看得清楚。",
-    ],
-    frictionPrevention: [
-      { type: "prepare", text: "反馈表单 QR code 在 session 开始前用 2 部不同的手机测过。屏幕上显示大。" },
     ],
     slideDeck: [
       {
