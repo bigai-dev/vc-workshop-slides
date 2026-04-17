@@ -949,7 +949,7 @@ export const SESSIONS: Session[] = [
     slides: [
       "HR 系统开场 ； 物流公司的问题",
       "一家物流公司，30 个司机的痛",
-      "先切到 Plan mode（Shift+Cmd+M)",
+      "先切到 Plan mode",
       "⭐ 问题 prompt（英文版）",
       "⭐ 问题 prompt（中文版）",
       "📖 读 Claude 的 plan",
@@ -1015,10 +1015,11 @@ export const SESSIONS: Session[] = [
           "Plan mode = Claude 给你 plan，不会先动手",
         ],
         notes: [
-          "投影仪示范一次 ； 按 Shift+Cmd+M,菜单弹出，按 3,回到输入框。全场跟着做。",
+          "投影仪示范一次 ； 打开 Mode 菜单，选 Plan mode,回到输入框。全场跟着做。",
+          "看到 \"Plan mode ✓\" 才继续 ； 没切好的举手，Assistant 过来。",
           "切 mode 是 UI 动作，不是写在 prompt 里。prompt 里不用写 \"enter plan mode\"。",
-          "\"这是真正的老板工作流：你讲问题，它想方案，你批准了它才动手。\"",
-          "接下来：贴 prompt → 读 plan → 改 plan → approve。学这个流程比学任何 prompt 都值钱。",
+          "\"Plan mode = Claude 给你 plan,不会先动手写代码。这是真正的老板工作流。\"",
+          "接下来：贴 prompt → 读 plan → 改 plan → approve。",
         ],
       },
       {
