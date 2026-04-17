@@ -1000,7 +1000,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ THE SUPABASE HERO PROMPT",
-        code: "Make my HR app data permanent using Supabase.\n\nRight now when I close my laptop, everything disappears. I want it to STAY ； drivers, clock-ins, allowances, OT, payroll, all of it.\n\nFirst, look at my existing code to see what data the app actually stores. Ask me about anything ambiguous (e.g. what fields belong on each record). Then give me a plan before touching Supabase — what tables, what columns, what stays in local state.\n\nCall the Supabase project hr-[myname]. Once I approve the plan, handle all the setup ； I just want to stop losing my data.",
+        code: "Make my HR app data permanent using Supabase.\n\nRight now when I close my laptop, everything disappears. I want it to STAY ； drivers, clock-ins, allowances, OT, payroll, all of it.\n\nFirst, look at my existing app to see what it actually needs to remember. Ask me about anything unclear (e.g. what details belong on each driver or allowance). Then give me a plan before touching Supabase.\n\nCall the Supabase project hr-[myname]. Once I approve the plan, handle the tech ； I just want to stop losing my data.",
         notes: [
           "Everyone pastes now ； replace [myname] with your name",
           "Pure boss language ； \"stop losing my data\". Claude handles tables, schema, env vars, code changes. Students don't touch those words.",
@@ -1011,7 +1011,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ SUPABASE 主打 PROMPT（中文版）",
-        code: "用 Supabase 让我 HR app 的数据变永久。\n\n现在我合笔电，所有东西就不见。我要它 STAY ； 司机、打卡、allowance、OT、payroll，全部都要。\n\n先看我现有的代码，了解 app 真正存什么数据。有任何不明的地方先问我（例如每种记录该有什么字段）。然后在动 Supabase 之前，给我一份 plan ； 要哪些 table、什么 column、哪些还留在本地。\n\nSupabase 项目叫 hr-[myname]。我 approve 了 plan 你再开始 setup ； 我只是不想再弄丢我的数据。",
+        code: "用 Supabase 让我 HR app 的数据变永久。\n\n现在我合笔电，所有东西就不见。我要它 STAY ； 司机、打卡、allowance、OT、payroll，全部都要。\n\n先看我现有的 app,了解它真正需要记住什么。有任何不明的地方先问我（例如每个司机或每笔 allowance 要记什么）。然后在动 Supabase 之前，给我一份 plan。\n\nSupabase 项目叫 hr-[myname]。我 approve 了 plan 你再开始 ； 技术的你自己搞定 ； 我只是不想再弄丢我的数据。",
         notes: [
           "所有人现在贴 ； 把 [myname] 换成你的名字",
           "纯老板语言 ； \"stop losing my data\"。Claude 自己搞定 table、schema、env var、代码改动。学员不用碰那些词。",
@@ -1074,7 +1074,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ THE GITHUB PUSH PROMPT",
-        code: "Put my HR app on GitHub so Vercel can deploy it later.\n\nHere's my empty repo: [paste your repo URL here]\n\nBefore pushing, make sure .env and any secret files are in .gitignore — I don't want my Supabase keys or any credentials on a public repo.\n\nIf GitHub asks me to sign in, walk me through it.",
+        code: "Put my HR app on GitHub so Vercel can deploy it later.\n\nHere's my empty repo: [paste your repo URL here]\n\nBefore pushing, double-check that nothing private goes public — no passwords, no Supabase keys, no credentials. Handle the tech.\n\nIf GitHub asks me to sign in, walk me through it.",
         notes: [
           "Paste the link you copied into [paste your repo URL here]",
           "First push will pop GitHub sign-in ； Claude walks them through the browser popup (Windows uses Git Credential Manager, Mac uses Keychain for the real auth)",
@@ -1085,7 +1085,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ GITHUB 推送 PROMPT（中文版）",
-        code: "把我的 HR app 放上 GitHub，这样等下 Vercel 才能部署。\n\n这是我的空 repo:[paste your repo URL here]\n\n推送之前，确保 .env 和任何秘密文件都在 .gitignore 里 ； 我不想把 Supabase key 或任何凭证放上公开 repo。\n\n如果 GitHub 叫我登录，一步一步带我走。",
+        code: "把我的 HR app 放上 GitHub，这样等下 Vercel 才能部署。\n\n这是我的空 repo:[paste your repo URL here]\n\n推送前再三确认 ； 任何私密的东西（密码、Supabase key、凭证）都不要上公开 repo。技术的你自己搞定。\n\n如果 GitHub 叫我登录，一步一步带我走。",
         notes: [
           "把你复制的链接贴到 [paste your repo URL here] 那里",
           "第一次推送会弹 GitHub 登录 ； Claude 会引导他们过浏览器弹窗（Windows 用 Git Credential Manager,Mac 用 Keychain 处理真正的授权）",
@@ -1096,7 +1096,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ THE VERCEL HERO PROMPT",
-        code: "Put my HR app online using Vercel. Use my GitHub repo hr-[myname].\n\nIf the Vercel CLI isn't installed yet, install it with `npm i -g vercel`. If I'm not logged in, run `vercel login` and walk me through the browser popup.\n\nIMPORTANT — env vars: read my .env.local, then add every Supabase variable to the Vercel project (production, preview, development) BEFORE you deploy. Deploy will fail without them. Confirm with me which keys are safe to upload if any look ambiguous.\n\nThen deploy with `vercel deploy --prod`. Auto-link the GitHub repo so future pushes auto-deploy. If it asks about team scope, pick my personal account.\n\nGive me the live URL when it's up.",
+        code: "Put my HR app online using Vercel. Use my GitHub repo hr-[myname].\n\nHandle the tech — install whatever you need, log me in if you have to, walk me through any browser popup.\n\nBefore deploying, make sure my Supabase connection details also exist on Vercel so the live site can reach my data (the laptop version does; the live one needs the same). Ask me if anything is ambiguous.\n\nSet it up so future changes I push to GitHub auto-deploy. If anything asks which account/team to use, pick my personal one.\n\nGive me the live URL when it's up.",
         notes: [
           "Everyone pastes now ； watch your URL appear",
           "Stealth install ； prompt quietly installs Vercel CLI + logs in if needed",
@@ -1111,7 +1111,7 @@ export const SESSIONS: Session[] = [
       {
         kind: "prompt",
         label: "⭐ VERCEL 主打 PROMPT（中文版）",
-        code: "用 Vercel 把我的 HR app 放上网。用我的 GitHub repo hr-[myname]。\n\n如果 Vercel CLI 还没装，帮我用 `npm i -g vercel` 装一下。如果我还没登录，跑 `vercel login` 然后一步一步带我走浏览器弹窗。\n\n重要 ； env vars: 读我的 .env.local,然后把所有 Supabase 变量加到 Vercel 项目（production, preview, development) ； 先加再 deploy,不然一定失败。有什么 key 不确定能不能上传，先问我。\n\n然后跑 `vercel deploy --prod` 部署。自动把 GitHub repo link 好，这样以后 push 就自动部署。如果问我 team scope，选我个人账号。\n\n上线后给我 live URL。",
+        code: "用 Vercel 把我的 HR app 放上网。用我的 GitHub repo hr-[myname]。\n\n技术的你自己搞定 ； 需要装什么就装，需要登录就带我走浏览器弹窗。\n\n部署前，确保我笔电那套 Supabase 连接设定，在 Vercel 那边也有一份 ； 线上的 app 也要能连到我的数据。有不确定的先问我。\n\n帮我设好：以后 push 去 GitHub 就自动部署。如果问我要用哪个账号 / team，选我个人的。\n\n上线后给我 live URL。",
         notes: [
           "所有人现在贴 ； 看你的 URL 出现",
           "Stealth install ； 这个 prompt 会悄悄装 Vercel CLI + 登录",
