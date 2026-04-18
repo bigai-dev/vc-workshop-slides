@@ -1287,37 +1287,55 @@ export const SESSIONS: Session[] = [
         kind: "raw",
         title: "从零到 LIVE 的流程",
         html: `<style>
-          .vf-wrap{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:4px}
-          .vf-step{display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(72%,780px);padding:14px 26px;border-radius:14px;color:white}
-          .vf-num{font-size:14px;font-weight:800;color:rgba(255,255,255,0.55);letter-spacing:0.15em;min-width:36px}
-          .vf-body{flex:1;display:flex;align-items:baseline;justify-content:space-between;gap:18px;min-width:0}
-          .vf-label{font-size:19px;font-weight:800;letter-spacing:0.03em}
-          .vf-sub{font-size:13px;color:rgba(255,255,255,0.7);text-align:right}
-          .vf-arrow{font-size:22px;color:#d1d5db;line-height:1;padding:2px 0}
-          .vf-finale{box-shadow:0 0 0 2px rgba(251,191,36,0.5)}
-          .vf-banner{margin-top:14px;background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.35);border-radius:12px;padding:10px 20px;color:#fed7aa;font-size:14px;line-height:1.5;text-align:center;width:min(72%,780px)}
+          .fc-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:2px;font-size:15px;color:white}
+          .fc-box{padding:14px 22px;border-radius:14px;font-weight:800;text-align:center;letter-spacing:0.02em;line-height:1.25}
+          .fc-sub{font-size:12px;font-weight:500;color:rgba(255,255,255,0.72);margin-top:3px;letter-spacing:0}
+          .fc-arrow{font-size:22px;color:#d1d5db;line-height:1}
+          .fc-note{font-size:12px;color:#fdba74;letter-spacing:0.1em;margin:2px 0}
+          .fc-loop{display:flex;align-items:center;gap:16px}
+          .fc-loop-arrow{display:flex;flex-direction:column;align-items:center;font-size:22px;color:#f59e0b;font-weight:800;line-height:1.1}
+          .fc-diamond{padding:14px 26px;border-radius:14px;border:2px solid #f59e0b;background:rgba(251,191,36,0.08);color:#fde68a;font-weight:800;font-size:16px;text-align:center}
+          .fc-branch{display:grid;grid-template-columns:1fr 1fr;gap:36px;width:min(560px,86%);margin-top:2px}
+          .fc-branch-col{display:flex;flex-direction:column;align-items:center;gap:6px}
+          .fc-yes{color:#6ee7b7;font-weight:800;font-size:14px;letter-spacing:0.1em}
+          .fc-no{color:#cbd5e1;font-weight:800;font-size:14px;letter-spacing:0.1em}
+          .fc-merge{font-size:22px;color:#d1d5db;line-height:1}
+          .fc-finale{box-shadow:0 0 0 2px rgba(251,191,36,0.5)}
+          .fc-skip{padding:12px 22px;border-radius:14px;border:1px dashed rgba(255,255,255,0.25);color:rgba(255,255,255,0.55);font-size:13px;font-weight:500}
         </style>
-        <div class="vf-wrap">
-          <div class="vf-step" style="background:linear-gradient(90deg,#4c1d95,#6d28d9)"><div class="vf-num">01</div><div class="vf-body"><div class="vf-label">描述你的问题</div><div class="vf-sub">用生意话，不是代码</div></div></div>
-          <div class="vf-arrow">↓</div>
-          <div class="vf-step" style="background:linear-gradient(90deg,#5b21b6,#7c3aed)"><div class="vf-num">02</div><div class="vf-body"><div class="vf-label">Claude 写 code</div><div class="vf-sub">你 review,批准</div></div></div>
-          <div class="vf-arrow">↓</div>
-          <div class="vf-step" style="background:linear-gradient(90deg,#0369a1,#0284c7)"><div class="vf-num">03</div><div class="vf-body"><div class="vf-label">在你笔电跑起来</div><div class="vf-sub">能点能看到东西</div></div></div>
-          <div class="vf-arrow">↓</div>
-          <div class="vf-step" style="background:linear-gradient(90deg,#064e3b,#059669)"><div class="vf-num">04</div><div class="vf-body"><div class="vf-label">接上 Supabase</div><div class="vf-sub">数据永久保存</div></div></div>
-          <div class="vf-arrow">↓</div>
-          <div class="vf-step" style="background:linear-gradient(90deg,#1f2937,#374151)"><div class="vf-num">05</div><div class="vf-body"><div class="vf-label">推上 GitHub</div><div class="vf-sub">代码有家</div></div></div>
-          <div class="vf-arrow">↓</div>
-          <div class="vf-step" style="background:linear-gradient(90deg,#0f172a,#1e40af)"><div class="vf-num">06</div><div class="vf-body"><div class="vf-label">Vercel 部署</div><div class="vf-sub">从 GitHub 拉 + 上线</div></div></div>
-          <div class="vf-arrow">↓</div>
-          <div class="vf-step vf-finale" style="background:linear-gradient(90deg,#b45309,#f59e0b)"><div class="vf-num">07</div><div class="vf-body"><div class="vf-label">LIVE URL</div><div class="vf-sub">全世界都能打开</div></div></div>
-          <div class="vf-banner"><span style="font-weight:700;color:#fdba74">这就是昨天你走的路</span> ； 一次走到底，没跳步。</div>
+        <div class="fc-wrap">
+          <div class="fc-loop">
+            <div class="fc-box" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)">描述你要什么<div class="fc-sub">review 结果</div></div>
+            <div class="fc-loop-arrow"><span>⇄</span><span style="font-size:11px;color:#fde68a;font-weight:700">反复</span></div>
+            <div class="fc-box" style="background:linear-gradient(135deg,#5b21b6,#7c3aed)">Claude 写 / 改 code<div class="fc-sub">你 review,批准</div></div>
+          </div>
+          <div class="fc-note">满意了</div>
+          <div class="fc-arrow">↓</div>
+          <div class="fc-box" style="background:linear-gradient(135deg,#1f2937,#374151)">推上 GitHub<div class="fc-sub">代码有家</div></div>
+          <div class="fc-arrow">↓</div>
+          <div class="fc-diamond">需要保存数据吗？</div>
+          <div class="fc-branch">
+            <div class="fc-branch-col">
+              <div class="fc-yes">是 ↓</div>
+              <div class="fc-box" style="background:linear-gradient(135deg,#064e3b,#059669);width:100%;box-sizing:border-box">接上 Supabase<div class="fc-sub">数据永久保存</div></div>
+              <div class="fc-merge">↘</div>
+            </div>
+            <div class="fc-branch-col">
+              <div class="fc-no">否 ↓</div>
+              <div class="fc-skip">不需要数据库<br/>（例如 landing page)</div>
+              <div class="fc-merge">↙</div>
+            </div>
+          </div>
+          <div class="fc-box" style="background:linear-gradient(135deg,#0f172a,#1e40af)">Vercel 部署<div class="fc-sub">从 GitHub 拉 + 上线</div></div>
+          <div class="fc-arrow">↓</div>
+          <div class="fc-box fc-finale" style="background:linear-gradient(135deg,#b45309,#f59e0b)">LIVE URL<div class="fc-sub">全世界都能打开</div></div>
         </div>`,
         notes: [
-          "7 步从零到 LIVE ； 昨天他们一步步都走过。今天给流程一个干净的图。",
-          "从上往下念 ； 每一步停一秒。",
-          "不要讲 frontend / backend / API 这些词。老板语言就够。",
-          "结尾：\"这不是什么黑科技。你昨天一次走完了。今天换成你自己的生意再走一次。\"",
+          "先讲最上面的 loop ； vibe coding 不是一 shot 到位,是 \"讲 ↔ 改\" 来回 N 次，满意了才往下走。",
+          "然后推 GitHub ； 代码有家，这步永远要做。",
+          "到 diamond 停一下：\"有些 app 要存数据（HR、dashboard、CRM），有些不用（landing page、计算器）\"",
+          "两条路最后都通到 Vercel ； 不管走哪条，最后都是一个 LIVE URL。",
+          "\"这就是你昨天走过的完整路。今天用自己的生意再走一次。\"",
         ],
       },
       {
