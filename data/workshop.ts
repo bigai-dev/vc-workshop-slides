@@ -1346,7 +1346,7 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "raw",
-        title: "Github · Supabase · Vercel ； 三样到底是什么",
+        title: "Github · Supabase · Vercel",
         html: `<div style="display:flex;gap:14px;width:100%;margin-top:-4px;align-items:stretch">
           <div style="flex:1;background:linear-gradient(180deg,#111827,#030712);border:1px solid #374151;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0">
             <div style="padding:14px 18px;background:linear-gradient(90deg,#1f2937,#111827);border-bottom:1px solid #374151;display:flex;align-items:center;gap:12px">
@@ -1356,9 +1356,9 @@ export const SESSIONS: Session[] = [
             <div style="padding:16px 18px;display:flex;flex-direction:column;gap:14px;flex:1">
               <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#6b7280;margin-bottom:6px">WHAT</div><div style="font-size:14px;line-height:1.45;color:#e5e7eb">代码的云端储存室。每次你改 code 都留一份底。</div></div>
               <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#9ca3af;margin-bottom:6px">WHY</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
-                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 电脑烧了代码也不会丢</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 电脑烧了代码也不会不见</li>
                 <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 改错了可以回到以前版本</li>
-                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> Vercel 从这里读 code 部署</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> Vercel 从这里读 code 做 deployment</li>
               </ul></div>
               <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#60a5fa;margin-bottom:6px">WHEN</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
                 <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">▸</span> 每次 Claude 改完 code</li>
@@ -1373,9 +1373,9 @@ export const SESSIONS: Session[] = [
               <div><div style="font-size:22px;font-weight:800;color:white;line-height:1">Supabase</div><div style="font-size:11px;color:#6ee7b7;letter-spacing:0.1em;margin-top:3px">数据的家</div></div>
             </div>
             <div style="padding:16px 18px;display:flex;flex-direction:column;gap:14px;flex:1">
-              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#6ee7b7;margin-bottom:6px">WHAT</div><div style="font-size:14px;line-height:1.45;color:#e5e7eb">数据的云端储存室。用户、订单、打卡、上传的图片都在这里。</div></div>
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#6ee7b7;margin-bottom:6px">WHAT</div><div style="font-size:14px;line-height:1.45;color:#e5e7eb">数据的云端储存室。用户email、用户密码、订单、打卡、上传的图片都在这里。</div></div>
               <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#a7f3d0;margin-bottom:6px">WHY</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
-                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 合笔电数据还在</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 永久保存数据</li>
                 <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 多台设备同步同一份数据</li>
                 <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 自带登录 + 文件存储 + 通知</li>
               </ul></div>
@@ -1395,7 +1395,7 @@ export const SESSIONS: Session[] = [
               <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#93c5fd;margin-bottom:6px">WHAT</div><div style="font-size:14px;line-height:1.45;color:#e5e7eb">把你的网页放上网,给全世界任何浏览器打开。</div></div>
               <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#bfdbfe;margin-bottom:6px">WHY</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
                 <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">✓</span> 不用管服务器</li>
-                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">✓</span> git push → 几秒就上线</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">✓</span> 快速上线</li>
                 <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">✓</span> 免费方案够 SME 起步</li>
               </ul></div>
               <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#93c5fd;margin-bottom:6px">WHEN</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
