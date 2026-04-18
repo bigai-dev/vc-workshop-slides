@@ -61,7 +61,7 @@ export const SESSIONS: Session[] = [
         kind: "title",
         emoji: "📶",
         title: "WiFi",
-        subtitle: "AIM.BIG_Guest · 密码待更新",
+        subtitle: "AIM.BIG_Guest · ai888888",
         notes: [
           "把这张 slide 开着，让学员一入场就能连上",
           "Assistants 走动帮忙处理连不上的",
