@@ -1285,67 +1285,56 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "raw",
-        html: `<div style="display:flex;justify-content:center;margin-top:-12px"><svg viewBox="0 0 820 680" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:920px;height:auto;max-height:660px;font-family:inherit">
+        html: `<div style="display:flex;justify-content:center;margin-top:-8px"><svg viewBox="0 0 1620 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:100%;height:auto;max-height:640px;font-family:inherit">
           <defs>
-            <marker id="fc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/></marker>
-            <marker id="fc-arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/></marker>
-            <linearGradient id="fc-purple1" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#4c1d95"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
-            <linearGradient id="fc-purple2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#5b21b6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
-            <linearGradient id="fc-gray" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#1f2937"/><stop offset="1" stop-color="#374151"/></linearGradient>
-            <linearGradient id="fc-green" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#064e3b"/><stop offset="1" stop-color="#059669"/></linearGradient>
-            <linearGradient id="fc-blue" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e40af"/></linearGradient>
-            <linearGradient id="fc-gold" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#b45309"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
-            <symbol id="ico-github" viewBox="0 0 24 24"><path fill="white" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+            <marker id="fc-arrow-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+            <marker id="fc-arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/></marker>
+            <symbol id="ico-github" viewBox="0 0 24 24"><path fill="#1f2937" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
             <symbol id="ico-supabase" viewBox="0 0 24 24"><path fill="#3ecf8e" d="M11.9 1.7 1.9 13.7h10v8.6l10-12h-10z"/></symbol>
-            <symbol id="ico-vercel" viewBox="0 0 24 24"><polygon fill="white" points="12,1.5 23,22.5 1,22.5"/></symbol>
+            <symbol id="ico-vercel" viewBox="0 0 24 24"><polygon fill="#1f2937" points="12,1.5 23,22.5 1,22.5"/></symbol>
           </defs>
-          <rect x="70" y="15" width="280" height="72" rx="14" fill="url(#fc-purple1)"/>
-          <text x="92" y="56" font-size="28">🧠</text>
-          <text x="235" y="46" text-anchor="middle" fill="white" font-size="18" font-weight="800">思考 + 描述你要什么</text>
-          <text x="235" y="70" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="12">review 结果</text>
-          <rect x="470" y="15" width="280" height="72" rx="14" fill="url(#fc-purple2)"/>
-          <text x="492" y="56" font-size="28">✍️</text>
-          <text x="635" y="46" text-anchor="middle" fill="white" font-size="18" font-weight="800">Claude 写 / 改 code</text>
-          <text x="635" y="70" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="12">你 review,批准</text>
-          <path d="M 360 42 L 460 42" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-gold)"/>
-          <path d="M 460 66 L 360 66" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-gold)"/>
-          <text x="410" y="12" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="800" letter-spacing="1">反复</text>
-          <text x="410" y="108" text-anchor="middle" fill="#fdba74" font-size="12" font-weight="700" letter-spacing="2">满意了</text>
-          <path d="M 410 113 L 410 142" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
-          <rect x="270" y="146" width="280" height="68" rx="14" fill="url(#fc-gray)"/>
-          <use href="#ico-github" x="294" y="164" width="32" height="32"/>
-          <text x="435" y="178" text-anchor="middle" fill="white" font-size="18" font-weight="800">Push to GitHub</text>
-          <text x="435" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="12">代码有家</text>
-          <path d="M 410 216 L 410 242" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
-          <polygon points="410,246 555,312 410,378 265,312" fill="rgba(251,191,36,0.1)" stroke="#f59e0b" stroke-width="2.5"/>
-          <text x="410" y="306" text-anchor="middle" fill="#fde68a" font-size="17" font-weight="800">需要保存</text>
-          <text x="410" y="330" text-anchor="middle" fill="#fde68a" font-size="17" font-weight="800">数据吗？</text>
-          <path d="M 340 350 L 220 408" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
-          <text x="300" y="382" fill="#6ee7b7" font-size="14" font-weight="800">是</text>
-          <path d="M 480 350 L 600 408" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
-          <text x="515" y="382" fill="#cbd5e1" font-size="14" font-weight="800">否</text>
-          <rect x="80" y="412" width="280" height="66" rx="14" fill="url(#fc-green)"/>
-          <use href="#ico-supabase" x="104" y="429" width="32" height="32"/>
-          <text x="245" y="443" text-anchor="middle" fill="white" font-size="17" font-weight="800">Connect to Supabase</text>
-          <text x="245" y="464" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="12">数据永久保存</text>
-          <rect x="460" y="412" width="280" height="66" rx="14" fill="none" stroke="rgba(203,213,225,0.4)" stroke-width="1.5" stroke-dasharray="6 6"/>
-          <text x="600" y="443" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="15" font-weight="600">不需要数据库</text>
-          <text x="600" y="464" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11">（例如 landing page)</text>
-          <path d="M 220 480 Q 220 512 400 525" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
-          <path d="M 600 480 Q 600 512 420 525" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
-          <rect x="270" y="530" width="280" height="50" rx="14" fill="url(#fc-blue)"/>
-          <use href="#ico-vercel" x="296" y="542" width="26" height="26"/>
-          <text x="438" y="562" text-anchor="middle" fill="white" font-size="18" font-weight="800">Vercel 部署</text>
-          <path d="M 410 582 L 410 606" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
-          <rect x="240" y="610" width="340" height="52" rx="16" fill="url(#fc-gold)" stroke="rgba(251,191,36,0.65)" stroke-width="2.5"/>
-          <text x="410" y="642" text-anchor="middle" fill="white" font-size="20" font-weight="800">LIVE URL 🎉</text>
-          <g transform="translate(0,670)">
-            <text x="260" y="0" text-anchor="end" fill="#fecaca" font-size="13" font-family="ui-monospace,SFMono-Regular,monospace">localhost:3000</text>
-            <text x="275" y="0" fill="#ef4444" font-size="16" font-weight="900">✗</text>
-            <text x="320" y="0" fill="rgba(255,255,255,0.5)" font-size="16">→</text>
-            <text x="360" y="0" fill="#bbf7d0" font-size="13" font-family="ui-monospace,SFMono-Regular,monospace">xxx.vercel.app</text>
-            <text x="555" y="0" fill="#22c55e" font-size="16" font-weight="900">✓</text>
-          </g>
+          <rect x="15" y="90" width="225" height="240" rx="16" fill="#bfdbfe" stroke="#60a5fa" stroke-width="2"/>
+          <rect x="40" y="125" width="175" height="60" rx="12" fill="#fecaca" stroke="#f87171" stroke-width="2"/>
+          <text x="62" y="161" font-size="22">🧠</text>
+          <text x="137" y="152" text-anchor="middle" fill="#111" font-size="15" font-weight="700">思考 + 描述</text>
+          <text x="137" y="173" text-anchor="middle" fill="#111" font-size="15" font-weight="700">你要什么</text>
+          <rect x="40" y="235" width="175" height="60" rx="12" fill="#fecaca" stroke="#f87171" stroke-width="2"/>
+          <text x="62" y="271" font-size="22">✍️</text>
+          <text x="137" y="262" text-anchor="middle" fill="#111" font-size="15" font-weight="700">Claude 写 / 改</text>
+          <text x="137" y="283" text-anchor="middle" fill="#111" font-size="15" font-weight="700">code</text>
+          <path d="M 115 185 L 115 235" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#fc-arrow-dark)"/>
+          <path d="M 155 235 L 155 185" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#fc-arrow-dark)"/>
+          <text x="298" y="195" text-anchor="middle" fill="#111" font-size="15" font-weight="700">想一想</text>
+          <path d="M 240 210 L 370 210" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#fc-arrow-dark)"/>
+          <polygon points="440,140 515,210 440,280 365,210" fill="#fef08a" stroke="#eab308" stroke-width="2"/>
+          <text x="440" y="207" text-anchor="middle" fill="#111" font-size="16" font-weight="800">完成了</text>
+          <text x="440" y="226" text-anchor="middle" fill="#111" font-size="16" font-weight="800">吗?</text>
+          <text x="270" y="40" text-anchor="middle" fill="#111" font-size="15" font-weight="700">还没！我还要加东西</text>
+          <path d="M 440 140 L 440 60 L 128 60 L 128 90" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#fc-arrow-dark)"/>
+          <text x="605" y="197" text-anchor="middle" fill="#111" font-size="14" font-weight="700">完成了,沒有東西加了</text>
+          <path d="M 515 210 L 705 210" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#fc-arrow-dark)"/>
+          <polygon points="775,140 850,210 775,280 700,210" fill="#fef08a" stroke="#eab308" stroke-width="2"/>
+          <text x="775" y="203" text-anchor="middle" fill="#111" font-size="15" font-weight="800">需要保存</text>
+          <text x="775" y="222" text-anchor="middle" fill="#111" font-size="15" font-weight="800">数据吗?</text>
+          <text x="905" y="197" text-anchor="middle" fill="#111" font-size="15" font-weight="700">需要</text>
+          <path d="M 850 210 L 960 210" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#fc-arrow-dark)"/>
+          <rect x="960" y="180" width="200" height="60" rx="12" fill="#fecaca" stroke="#f87171" stroke-width="2"/>
+          <use href="#ico-supabase" x="976" y="195" width="28" height="28"/>
+          <text x="1070" y="218" text-anchor="middle" fill="#111" font-size="15" font-weight="800">Connect to Supabase</text>
+          <path d="M 1160 210 L 1215 210" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#fc-arrow-orange)"/>
+          <rect x="1215" y="180" width="175" height="60" rx="12" fill="#fecaca" stroke="#f87171" stroke-width="2"/>
+          <use href="#ico-github" x="1233" y="195" width="28" height="28"/>
+          <text x="1315" y="218" text-anchor="middle" fill="#111" font-size="15" font-weight="800">Push to github</text>
+          <path d="M 775 280 L 775 355 L 1302 355 L 1302 240" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#fc-arrow-orange)"/>
+          <text x="1040" y="378" text-anchor="middle" fill="#111" font-size="14" font-weight="700">不需要,我只是普通的 website</text>
+          <path d="M 1390 210 L 1440 210" stroke="#1f2937" stroke-width="2" fill="none" marker-end="url(#fc-arrow-dark)"/>
+          <rect x="1440" y="180" width="170" height="60" rx="12" fill="#fecaca" stroke="#f87171" stroke-width="2"/>
+          <use href="#ico-vercel" x="1456" y="195" width="28" height="28"/>
+          <text x="1538" y="218" text-anchor="middle" fill="#111" font-size="15" font-weight="800">Deploy to Vercel</text>
+          <path d="M 1525 240 L 1525 290" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#fc-arrow-orange)"/>
+          <rect x="1400" y="295" width="215" height="70" rx="14" fill="#bbf7d0" stroke="#22c55e" stroke-width="2.5"/>
+          <text x="1507" y="322" text-anchor="middle" fill="#111" font-size="18" font-weight="800">LIVE URL</text>
+          <text x="1507" y="346" text-anchor="middle" fill="#111" font-size="12" font-weight="700">🎉 https://abcde.vercel.app</text>
         </svg></div>`,
         notes: [
           "先讲最上面的 loop ； vibe coding 不是一 shot 到位,是 \"讲 ↔ 改\" 来回 N 次，满意了才往下走。",
