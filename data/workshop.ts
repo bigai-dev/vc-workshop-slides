@@ -1285,42 +1285,41 @@ export const SESSIONS: Session[] = [
       },
       {
         kind: "raw",
-        title: "昨天你建了什么",
-        html: `<div style="display:flex;flex-direction:column;gap:22px;margin-top:8px">
-          <div style="display:flex;align-items:stretch;justify-content:center;gap:14px;width:100%">
-            <div style="background:linear-gradient(135deg,#1f2937,#111827);border:1px solid #374151;border-radius:20px;flex:1;padding:22px 20px;display:flex;flex-direction:column;min-width:0">
-              <div style="font-size:40px;margin-bottom:10px">📦</div>
-              <div style="font-size:22px;font-weight:800;color:white;margin-bottom:4px">GitHub</div>
-              <div style="font-size:13px;letter-spacing:0.2em;font-weight:700;color:#9ca3af;margin-bottom:14px">代码的家</div>
-              <div style="font-size:15px;color:#e5e7eb;line-height:1.45;margin-bottom:8px">你写的 code 存这里，所有版本都留底。</div>
-              <div style="margin-top:auto;padding-top:14px;border-top:1px solid #374151;font-size:12px;color:#6b7280;letter-spacing:0.1em">≈ Repository (源代码)</div>
-            </div>
-            <div style="font-size:28px;color:#f59e0b;flex-shrink:0;align-self:center">→</div>
-            <div style="background:linear-gradient(135deg,#0f172a,#020617);border:1px solid #1e40af;border-radius:20px;flex:1.1;padding:22px 20px;display:flex;flex-direction:column;min-width:0">
-              <div style="font-size:40px;margin-bottom:10px">▲</div>
-              <div style="font-size:22px;font-weight:800;color:white;margin-bottom:4px">Vercel</div>
-              <div style="font-size:13px;letter-spacing:0.2em;font-weight:700;color:#93c5fd;margin-bottom:14px">服务器 · 服务员</div>
-              <div style="font-size:15px;color:#e5e7eb;line-height:1.45;margin-bottom:8px">从 GitHub 拉 code,部署给全世界打开。用户看到的页面 + 背后的 API,都在这里。</div>
-              <div style="margin-top:auto;padding-top:14px;border-top:1px solid #1e40af;font-size:12px;color:#60a5fa;letter-spacing:0.1em">≈ Frontend + Backend API</div>
-            </div>
-            <div style="font-size:28px;color:#10b981;flex-shrink:0;align-self:center">↔</div>
-            <div style="background:linear-gradient(135deg,#064e3b,#022c22);border:1px solid #065f46;border-radius:20px;flex:1;padding:22px 20px;display:flex;flex-direction:column;min-width:0">
-              <div style="font-size:40px;margin-bottom:10px">🗄️</div>
-              <div style="font-size:22px;font-weight:800;color:white;margin-bottom:4px">Supabase</div>
-              <div style="font-size:13px;letter-spacing:0.2em;font-weight:700;color:#6ee7b7;margin-bottom:14px">数据的家</div>
-              <div style="font-size:15px;color:#e5e7eb;line-height:1.45;margin-bottom:8px">司机、打卡、津贴、OT、payroll ； 全部永久保存，合笔电也在。</div>
-              <div style="margin-top:auto;padding-top:14px;border-top:1px solid #065f46;font-size:12px;color:#6ee7b7;letter-spacing:0.1em">≈ Database</div>
-            </div>
+        title: "从零到 LIVE 的流程",
+        html: `<style>
+          .flow-box{border-radius:14px;padding:14px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;flex:1;gap:6px}
+          .flow-emoji{font-size:30px;line-height:1}
+          .flow-label{font-size:13px;font-weight:800;letter-spacing:0.08em;color:white;text-align:center;line-height:1.2}
+          .flow-sub{font-size:11px;color:rgba(255,255,255,0.7);text-align:center;line-height:1.3}
+          .flow-arrow{font-size:24px;color:#9ca3af;flex-shrink:0;align-self:center}
+        </style>
+        <div style="display:flex;flex-direction:column;gap:18px;margin-top:4px">
+          <div style="display:flex;align-items:stretch;gap:8px;width:100%">
+            <div class="flow-box" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)"><div class="flow-emoji">🗣️</div><div class="flow-label">描述你的问题</div><div class="flow-sub">用生意话，不是代码</div></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#5b21b6,#7c3aed)"><div class="flow-emoji">🤖</div><div class="flow-label">Claude 写 code</div><div class="flow-sub">你 review,批准</div></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#0369a1,#0284c7)"><div class="flow-emoji">💻</div><div class="flow-label">在你笔电跑起来</div><div class="flow-sub">能点能看到东西</div></div>
           </div>
-          <div style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.35);border-radius:14px;padding:14px 20px;text-align:center;color:#fed7aa;font-size:16px;line-height:1.5">
-            <span style="font-weight:700;color:#fdba74">三个加起来</span> = 你昨天做好的 HR app,从 GitHub 上的一行 code,到全马来西亚任何人手机都能打开的 live URL。
+          <div style="display:flex;justify-content:flex-end;padding-right:14%"><div style="font-size:32px;color:#f59e0b">↓</div></div>
+          <div style="display:flex;align-items:stretch;gap:8px;width:100%">
+            <div class="flow-box" style="background:linear-gradient(135deg,#064e3b,#059669)"><div class="flow-emoji">🗄️</div><div class="flow-label">接上 Supabase</div><div class="flow-sub">数据永久保存</div></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#1f2937,#374151)"><div class="flow-emoji">📦</div><div class="flow-label">推上 GitHub</div><div class="flow-sub">代码有家</div></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#0f172a,#1e40af)"><div class="flow-emoji">▲</div><div class="flow-label">Vercel 部署</div><div class="flow-sub">从 GitHub 拉 + 上线</div></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#b45309,#f59e0b);box-shadow:0 0 0 2px rgba(251,191,36,0.4)"><div class="flow-emoji">🌍</div><div class="flow-label">LIVE URL</div><div class="flow-sub">全世界都能打开</div></div>
+          </div>
+          <div style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.35);border-radius:12px;padding:12px 18px;text-align:center;color:#fed7aa;font-size:15px;line-height:1.5">
+            <span style="font-weight:700;color:#fdba74">这就是昨天你走的路</span> ； 一次走到底，没跳步。
           </div>
         </div>`,
         notes: [
-          "昨天他们经历过整个流程 ； 现在给这流程命名。",
-          "从左到右讲：\"你 push 到 GitHub → Vercel 从 GitHub 拉 → Vercel 上的 app 跟 Supabase 要数据。\"",
-          "开发者语汇放在卡片底部（Repository / Frontend + Backend / Database）— 让他们以后看别的文章能对得上号。",
-          "结尾一句：\"这不是什么黑科技。全世界的 SaaS 都这样拼起来。你昨天已经做过一次了。\"",
+          "昨天他们经历过整个流程 ； 今天给这流程一个可视化。",
+          "一步一步读出来：\"描述问题 → Claude 写 → 笔电跑 → 接上 Supabase → 推 GitHub → Vercel 部署 → LIVE URL。\"",
+          "不要讲 frontend / backend / API 这些词 ； 老板语言就够。",
+          "结尾：\"这不是什么黑科技。你昨天一次走完了。今天我们再走一次，换成你自己的生意。\"",
         ],
       },
       {
