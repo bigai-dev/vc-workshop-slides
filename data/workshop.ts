@@ -1284,6 +1284,46 @@ export const SESSIONS: Session[] = [
         ],
       },
       {
+        kind: "raw",
+        title: "昨天你建了什么",
+        html: `<div style="display:flex;flex-direction:column;gap:22px;margin-top:8px">
+          <div style="display:flex;align-items:stretch;justify-content:center;gap:14px;width:100%">
+            <div style="background:linear-gradient(135deg,#1f2937,#111827);border:1px solid #374151;border-radius:20px;flex:1;padding:22px 20px;display:flex;flex-direction:column;min-width:0">
+              <div style="font-size:40px;margin-bottom:10px">📦</div>
+              <div style="font-size:22px;font-weight:800;color:white;margin-bottom:4px">GitHub</div>
+              <div style="font-size:13px;letter-spacing:0.2em;font-weight:700;color:#9ca3af;margin-bottom:14px">代码的家</div>
+              <div style="font-size:15px;color:#e5e7eb;line-height:1.45;margin-bottom:8px">你写的 code 存这里，所有版本都留底。</div>
+              <div style="margin-top:auto;padding-top:14px;border-top:1px solid #374151;font-size:12px;color:#6b7280;letter-spacing:0.1em">≈ Repository (源代码)</div>
+            </div>
+            <div style="font-size:28px;color:#f59e0b;flex-shrink:0;align-self:center">→</div>
+            <div style="background:linear-gradient(135deg,#0f172a,#020617);border:1px solid #1e40af;border-radius:20px;flex:1.1;padding:22px 20px;display:flex;flex-direction:column;min-width:0">
+              <div style="font-size:40px;margin-bottom:10px">▲</div>
+              <div style="font-size:22px;font-weight:800;color:white;margin-bottom:4px">Vercel</div>
+              <div style="font-size:13px;letter-spacing:0.2em;font-weight:700;color:#93c5fd;margin-bottom:14px">服务器 · 服务员</div>
+              <div style="font-size:15px;color:#e5e7eb;line-height:1.45;margin-bottom:8px">从 GitHub 拉 code,部署给全世界打开。用户看到的页面 + 背后的 API,都在这里。</div>
+              <div style="margin-top:auto;padding-top:14px;border-top:1px solid #1e40af;font-size:12px;color:#60a5fa;letter-spacing:0.1em">≈ Frontend + Backend API</div>
+            </div>
+            <div style="font-size:28px;color:#10b981;flex-shrink:0;align-self:center">↔</div>
+            <div style="background:linear-gradient(135deg,#064e3b,#022c22);border:1px solid #065f46;border-radius:20px;flex:1;padding:22px 20px;display:flex;flex-direction:column;min-width:0">
+              <div style="font-size:40px;margin-bottom:10px">🗄️</div>
+              <div style="font-size:22px;font-weight:800;color:white;margin-bottom:4px">Supabase</div>
+              <div style="font-size:13px;letter-spacing:0.2em;font-weight:700;color:#6ee7b7;margin-bottom:14px">数据的家</div>
+              <div style="font-size:15px;color:#e5e7eb;line-height:1.45;margin-bottom:8px">司机、打卡、津贴、OT、payroll ； 全部永久保存，合笔电也在。</div>
+              <div style="margin-top:auto;padding-top:14px;border-top:1px solid #065f46;font-size:12px;color:#6ee7b7;letter-spacing:0.1em">≈ Database</div>
+            </div>
+          </div>
+          <div style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.35);border-radius:14px;padding:14px 20px;text-align:center;color:#fed7aa;font-size:16px;line-height:1.5">
+            <span style="font-weight:700;color:#fdba74">三个加起来</span> = 你昨天做好的 HR app,从 GitHub 上的一行 code,到全马来西亚任何人手机都能打开的 live URL。
+          </div>
+        </div>`,
+        notes: [
+          "昨天他们经历过整个流程 ； 现在给这流程命名。",
+          "从左到右讲：\"你 push 到 GitHub → Vercel 从 GitHub 拉 → Vercel 上的 app 跟 Supabase 要数据。\"",
+          "开发者语汇放在卡片底部（Repository / Frontend + Backend / Database）— 让他们以后看别的文章能对得上号。",
+          "结尾一句：\"这不是什么黑科技。全世界的 SaaS 都这样拼起来。你昨天已经做过一次了。\"",
+        ],
+      },
+      {
         kind: "bullets",
         title: "学会 Vibe Coding 之前",
         bullets: [
