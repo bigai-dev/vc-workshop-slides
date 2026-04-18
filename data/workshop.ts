@@ -1300,21 +1300,21 @@ export const SESSIONS: Session[] = [
         </style>
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:2px">
           <div class="flow-row">
-            <div class="flow-box" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)"><div class="flow-emoji">🗣️</div><div class="flow-label">描述你的问题</div><div class="flow-sub">用生意话，不是代码</div></div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)"><div class="flow-label">描述你的问题</div><div class="flow-sub">用生意话，不是代码</div></div>
             <div class="flow-arrow">→</div>
-            <div class="flow-box" style="background:linear-gradient(135deg,#5b21b6,#7c3aed)"><div class="flow-emoji">🤖</div><div class="flow-label">Claude 写 code</div><div class="flow-sub">你 review,批准</div></div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#5b21b6,#7c3aed)"><div class="flow-label">Claude 写 code</div><div class="flow-sub">你 review,批准</div></div>
             <div class="flow-arrow">→</div>
-            <div class="flow-box" style="background:linear-gradient(135deg,#0369a1,#0284c7)"><div class="flow-emoji">💻</div><div class="flow-label">在你笔电跑起来</div><div class="flow-sub">能点能看到东西</div></div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#0369a1,#0284c7)"><div class="flow-label">在你笔电跑起来</div><div class="flow-sub">能点能看到东西</div></div>
           </div>
           <div class="flow-corner"><div class="elbow"></div></div>
           <div class="flow-row" style="flex-direction:row-reverse">
-            <div class="flow-box" style="background:linear-gradient(135deg,#b45309,#f59e0b);box-shadow:0 0 0 2px rgba(251,191,36,0.45)"><div class="flow-emoji">🌍</div><div class="flow-label">LIVE URL 🎉</div><div class="flow-sub">全世界都能打开</div></div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#b45309,#f59e0b);box-shadow:0 0 0 2px rgba(251,191,36,0.45)"><div class="flow-label">LIVE URL</div><div class="flow-sub">全世界都能打开</div></div>
             <div class="flow-arrow">←</div>
-            <div class="flow-box" style="background:linear-gradient(135deg,#0f172a,#1e40af)"><div class="flow-emoji">▲</div><div class="flow-label">Vercel 部署</div><div class="flow-sub">从 GitHub 拉 + 上线</div></div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#0f172a,#1e40af)"><div class="flow-label">Vercel 部署</div><div class="flow-sub">从 GitHub 拉 + 上线</div></div>
             <div class="flow-arrow">←</div>
-            <div class="flow-box" style="background:linear-gradient(135deg,#1f2937,#374151)"><div class="flow-emoji">📦</div><div class="flow-label">推上 GitHub</div><div class="flow-sub">代码有家</div></div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#1f2937,#374151)"><div class="flow-label">推上 GitHub</div><div class="flow-sub">代码有家</div></div>
             <div class="flow-arrow">←</div>
-            <div class="flow-box" style="background:linear-gradient(135deg,#064e3b,#059669)"><div class="flow-emoji">🗄️</div><div class="flow-label">接上 Supabase</div><div class="flow-sub">数据永久保存</div></div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#064e3b,#059669)"><div class="flow-label">接上 Supabase</div><div class="flow-sub">数据永久保存</div></div>
           </div>
           <div style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.35);border-radius:12px;padding:12px 18px;margin-top:12px;text-align:center;color:#fed7aa;font-size:15px;line-height:1.5">
             <span style="font-weight:700;color:#fdba74">这就是昨天你走的路</span> ； 一次走到底，没跳步。
