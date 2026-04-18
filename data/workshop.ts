@@ -1287,37 +1287,42 @@ export const SESSIONS: Session[] = [
         kind: "raw",
         title: "从零到 LIVE 的流程",
         html: `<style>
-          .flow-box{border-radius:14px;padding:14px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;flex:1;gap:6px}
-          .flow-emoji{font-size:30px;line-height:1}
-          .flow-label{font-size:13px;font-weight:800;letter-spacing:0.08em;color:white;text-align:center;line-height:1.2}
-          .flow-sub{font-size:11px;color:rgba(255,255,255,0.7);text-align:center;line-height:1.3}
-          .flow-arrow{font-size:24px;color:#9ca3af;flex-shrink:0;align-self:center}
+          .flow-box{border-radius:14px;padding:16px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;flex:1;gap:6px}
+          .flow-emoji{font-size:34px;line-height:1}
+          .flow-label{font-size:14px;font-weight:800;letter-spacing:0.05em;color:white;text-align:center;line-height:1.2}
+          .flow-sub{font-size:11px;color:rgba(255,255,255,0.72);text-align:center;line-height:1.3}
+          .flow-arrow{font-size:26px;color:#d1d5db;flex-shrink:0;align-self:center;font-weight:700}
+          .flow-row{display:flex;align-items:stretch;gap:10px;width:100%}
+          .flow-corner{position:relative;height:24px;width:100%}
+          .flow-corner .elbow{position:absolute;right:8%;top:-12px;height:48px;width:42%;border-right:3px solid #f59e0b;border-bottom:3px solid #f59e0b;border-bottom-right-radius:14px}
+          .flow-corner .down{position:absolute;right:calc(8% - 12px);top:20px;color:#f59e0b;font-size:28px;line-height:1}
+          .flow-corner .left{position:absolute;left:calc(50% - 20px);top:36px;color:#f59e0b;font-size:28px;line-height:1}
         </style>
-        <div style="display:flex;flex-direction:column;gap:18px;margin-top:4px">
-          <div style="display:flex;align-items:stretch;gap:8px;width:100%">
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:2px">
+          <div class="flow-row">
             <div class="flow-box" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)"><div class="flow-emoji">🗣️</div><div class="flow-label">描述你的问题</div><div class="flow-sub">用生意话，不是代码</div></div>
             <div class="flow-arrow">→</div>
             <div class="flow-box" style="background:linear-gradient(135deg,#5b21b6,#7c3aed)"><div class="flow-emoji">🤖</div><div class="flow-label">Claude 写 code</div><div class="flow-sub">你 review,批准</div></div>
             <div class="flow-arrow">→</div>
             <div class="flow-box" style="background:linear-gradient(135deg,#0369a1,#0284c7)"><div class="flow-emoji">💻</div><div class="flow-label">在你笔电跑起来</div><div class="flow-sub">能点能看到东西</div></div>
           </div>
-          <div style="display:flex;justify-content:flex-end;padding-right:14%"><div style="font-size:32px;color:#f59e0b">↓</div></div>
-          <div style="display:flex;align-items:stretch;gap:8px;width:100%">
-            <div class="flow-box" style="background:linear-gradient(135deg,#064e3b,#059669)"><div class="flow-emoji">🗄️</div><div class="flow-label">接上 Supabase</div><div class="flow-sub">数据永久保存</div></div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-box" style="background:linear-gradient(135deg,#1f2937,#374151)"><div class="flow-emoji">📦</div><div class="flow-label">推上 GitHub</div><div class="flow-sub">代码有家</div></div>
-            <div class="flow-arrow">→</div>
+          <div class="flow-corner"><div class="elbow"></div></div>
+          <div class="flow-row" style="flex-direction:row-reverse">
+            <div class="flow-box" style="background:linear-gradient(135deg,#b45309,#f59e0b);box-shadow:0 0 0 2px rgba(251,191,36,0.45)"><div class="flow-emoji">🌍</div><div class="flow-label">LIVE URL 🎉</div><div class="flow-sub">全世界都能打开</div></div>
+            <div class="flow-arrow">←</div>
             <div class="flow-box" style="background:linear-gradient(135deg,#0f172a,#1e40af)"><div class="flow-emoji">▲</div><div class="flow-label">Vercel 部署</div><div class="flow-sub">从 GitHub 拉 + 上线</div></div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-box" style="background:linear-gradient(135deg,#b45309,#f59e0b);box-shadow:0 0 0 2px rgba(251,191,36,0.4)"><div class="flow-emoji">🌍</div><div class="flow-label">LIVE URL</div><div class="flow-sub">全世界都能打开</div></div>
+            <div class="flow-arrow">←</div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#1f2937,#374151)"><div class="flow-emoji">📦</div><div class="flow-label">推上 GitHub</div><div class="flow-sub">代码有家</div></div>
+            <div class="flow-arrow">←</div>
+            <div class="flow-box" style="background:linear-gradient(135deg,#064e3b,#059669)"><div class="flow-emoji">🗄️</div><div class="flow-label">接上 Supabase</div><div class="flow-sub">数据永久保存</div></div>
           </div>
-          <div style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.35);border-radius:12px;padding:12px 18px;text-align:center;color:#fed7aa;font-size:15px;line-height:1.5">
+          <div style="background:rgba(234,88,12,0.12);border:1px solid rgba(234,88,12,0.35);border-radius:12px;padding:12px 18px;margin-top:12px;text-align:center;color:#fed7aa;font-size:15px;line-height:1.5">
             <span style="font-weight:700;color:#fdba74">这就是昨天你走的路</span> ； 一次走到底，没跳步。
           </div>
         </div>`,
         notes: [
           "昨天他们经历过整个流程 ； 今天给这流程一个可视化。",
-          "一步一步读出来：\"描述问题 → Claude 写 → 笔电跑 → 接上 Supabase → 推 GitHub → Vercel 部署 → LIVE URL。\"",
+          "手指沿着箭头走：描述问题 → Claude 写 → 笔电跑 → [转角] → 接 Supabase → 推 GitHub → Vercel 部署 → LIVE URL。",
           "不要讲 frontend / backend / API 这些词 ； 老板语言就够。",
           "结尾：\"这不是什么黑科技。你昨天一次走完了。今天我们再走一次，换成你自己的生意。\"",
         ],
