@@ -1345,6 +1345,75 @@ export const SESSIONS: Session[] = [
         ],
       },
       {
+        kind: "raw",
+        title: "Github · Supabase · Vercel ； 三样到底是什么",
+        html: `<div style="display:flex;gap:14px;width:100%;margin-top:-4px;align-items:stretch">
+          <div style="flex:1;background:linear-gradient(180deg,#111827,#030712);border:1px solid #374151;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0">
+            <div style="padding:14px 18px;background:linear-gradient(90deg,#1f2937,#111827);border-bottom:1px solid #374151;display:flex;align-items:center;gap:12px">
+              <svg viewBox="0 0 24 24" style="width:30px;height:30px"><path fill="white" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <div><div style="font-size:22px;font-weight:800;color:white;line-height:1">GitHub</div><div style="font-size:11px;color:#9ca3af;letter-spacing:0.1em;margin-top:3px">代码的家</div></div>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;gap:14px;flex:1">
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#6b7280;margin-bottom:6px">WHAT</div><div style="font-size:14px;line-height:1.45;color:#e5e7eb">代码的云端储存室。每次你改 code 都留一份底。</div></div>
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#9ca3af;margin-bottom:6px">WHY</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 电脑烧了代码也不会丢</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 改错了可以回到以前版本</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> Vercel 从这里读 code 部署</li>
+              </ul></div>
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#60a5fa;margin-bottom:6px">WHEN</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">▸</span> 每次 Claude 改完 code</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">▸</span> 准备 deploy 上 Vercel 前</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">▸</span> 想 backup 你的工作</li>
+              </ul></div>
+            </div>
+          </div>
+          <div style="flex:1;background:linear-gradient(180deg,#064e3b,#022c22);border:1px solid #059669;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0">
+            <div style="padding:14px 18px;background:linear-gradient(90deg,#047857,#064e3b);border-bottom:1px solid #059669;display:flex;align-items:center;gap:12px">
+              <svg viewBox="0 0 24 24" style="width:30px;height:30px"><path fill="#3ecf8e" d="M11.9 1.7 1.9 13.7h10v8.6l10-12h-10z"/></svg>
+              <div><div style="font-size:22px;font-weight:800;color:white;line-height:1">Supabase</div><div style="font-size:11px;color:#6ee7b7;letter-spacing:0.1em;margin-top:3px">数据的家</div></div>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;gap:14px;flex:1">
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#6ee7b7;margin-bottom:6px">WHAT</div><div style="font-size:14px;line-height:1.45;color:#e5e7eb">数据的云端储存室。用户、订单、打卡、上传的图片都在这里。</div></div>
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#a7f3d0;margin-bottom:6px">WHY</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 合笔电数据还在</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 多台设备同步同一份数据</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#10b981;font-weight:700">✓</span> 自带登录 + 文件存储 + 通知</li>
+              </ul></div>
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#6ee7b7;margin-bottom:6px">WHEN</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#6ee7b7;font-weight:700">▸</span> 要存用户 / 订单 / 记录</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#6ee7b7;font-weight:700">▸</span> 要登录系统</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#6ee7b7;font-weight:700">▸</span> 团队多个人一起用</li>
+              </ul></div>
+            </div>
+          </div>
+          <div style="flex:1;background:linear-gradient(180deg,#0f172a,#020617);border:1px solid #1e40af;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0">
+            <div style="padding:14px 18px;background:linear-gradient(90deg,#1e293b,#0f172a);border-bottom:1px solid #1e40af;display:flex;align-items:center;gap:12px">
+              <svg viewBox="0 0 24 24" style="width:30px;height:30px"><polygon fill="white" points="12,1.5 23,22.5 1,22.5"/></svg>
+              <div><div style="font-size:22px;font-weight:800;color:white;line-height:1">Vercel</div><div style="font-size:11px;color:#93c5fd;letter-spacing:0.1em;margin-top:3px">公开的网址</div></div>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;gap:14px;flex:1">
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#93c5fd;margin-bottom:6px">WHAT</div><div style="font-size:14px;line-height:1.45;color:#e5e7eb">把你的网页放上网,给全世界任何浏览器打开。</div></div>
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#bfdbfe;margin-bottom:6px">WHY</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">✓</span> 不用管服务器</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">✓</span> git push → 几秒就上线</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#60a5fa;font-weight:700">✓</span> 免费方案够 SME 起步</li>
+              </ul></div>
+              <div><div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#93c5fd;margin-bottom:6px">WHEN</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#93c5fd;font-weight:700">▸</span> 做完要给客户 / 团队用</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#93c5fd;font-weight:700">▸</span> 需要一个公开 URL</li>
+                <li style="font-size:13px;line-height:1.4;color:#e5e7eb"><span style="color:#93c5fd;font-weight:700">▸</span> Landing / Dashboard / 任何网页 app</li>
+              </ul></div>
+            </div>
+          </div>
+        </div>`,
+        notes: [
+          "昨天他们碰过这三个，但不一定搞懂每个在做什么 ； 今天花 3 分钟给每个一个生意语言的定义。",
+          "从左到右讲：\"GitHub 存 code,Supabase 存 data,Vercel 端给访客。\"",
+          "WHEN 是重点 ； 告诉他们什么时候该用哪个。不是每个 app 都要 Supabase（landing page 就不用）。",
+          "收尾：\"昨天你已经用过三个了。今天只是给它们取名字。\"",
+        ],
+      },
+      {
         kind: "bullets",
         title: "学会 Vibe Coding 之前",
         bullets: [
