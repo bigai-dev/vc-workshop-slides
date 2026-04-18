@@ -1286,55 +1286,57 @@ export const SESSIONS: Session[] = [
       {
         kind: "raw",
         title: "从零到 LIVE 的流程",
-        html: `<style>
-          .fc-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:2px;font-size:15px;color:white}
-          .fc-box{padding:14px 22px;border-radius:14px;font-weight:800;text-align:center;letter-spacing:0.02em;line-height:1.25}
-          .fc-sub{font-size:12px;font-weight:500;color:rgba(255,255,255,0.72);margin-top:3px;letter-spacing:0}
-          .fc-arrow{font-size:22px;color:#d1d5db;line-height:1}
-          .fc-note{font-size:12px;color:#fdba74;letter-spacing:0.1em;margin:2px 0}
-          .fc-loop{display:flex;align-items:center;gap:16px}
-          .fc-loop-arrow{display:flex;flex-direction:column;align-items:center;font-size:22px;color:#f59e0b;font-weight:800;line-height:1.1}
-          .fc-diamond{padding:14px 26px;border-radius:14px;border:2px solid #f59e0b;background:rgba(251,191,36,0.08);color:#fde68a;font-weight:800;font-size:16px;text-align:center}
-          .fc-branch{display:grid;grid-template-columns:1fr 1fr;gap:36px;width:min(560px,86%);margin-top:2px}
-          .fc-branch-col{display:flex;flex-direction:column;align-items:center;gap:6px}
-          .fc-yes{color:#6ee7b7;font-weight:800;font-size:14px;letter-spacing:0.1em}
-          .fc-no{color:#cbd5e1;font-weight:800;font-size:14px;letter-spacing:0.1em}
-          .fc-merge{font-size:22px;color:#d1d5db;line-height:1}
-          .fc-finale{box-shadow:0 0 0 2px rgba(251,191,36,0.5)}
-          .fc-skip{padding:12px 22px;border-radius:14px;border:1px dashed rgba(255,255,255,0.25);color:rgba(255,255,255,0.55);font-size:13px;font-weight:500}
-        </style>
-        <div class="fc-wrap">
-          <div class="fc-loop">
-            <div class="fc-box" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)">描述你要什么<div class="fc-sub">review 结果</div></div>
-            <div class="fc-loop-arrow"><span>⇄</span><span style="font-size:11px;color:#fde68a;font-weight:700">反复</span></div>
-            <div class="fc-box" style="background:linear-gradient(135deg,#5b21b6,#7c3aed)">Claude 写 / 改 code<div class="fc-sub">你 review,批准</div></div>
-          </div>
-          <div class="fc-note">满意了</div>
-          <div class="fc-arrow">↓</div>
-          <div class="fc-box" style="background:linear-gradient(135deg,#1f2937,#374151)">推上 GitHub<div class="fc-sub">代码有家</div></div>
-          <div class="fc-arrow">↓</div>
-          <div class="fc-diamond">需要保存数据吗？</div>
-          <div class="fc-branch">
-            <div class="fc-branch-col">
-              <div class="fc-yes">是 ↓</div>
-              <div class="fc-box" style="background:linear-gradient(135deg,#064e3b,#059669);width:100%;box-sizing:border-box">接上 Supabase<div class="fc-sub">数据永久保存</div></div>
-              <div class="fc-merge">↘</div>
-            </div>
-            <div class="fc-branch-col">
-              <div class="fc-no">否 ↓</div>
-              <div class="fc-skip">不需要数据库<br/>（例如 landing page)</div>
-              <div class="fc-merge">↙</div>
-            </div>
-          </div>
-          <div class="fc-box" style="background:linear-gradient(135deg,#0f172a,#1e40af)">Vercel 部署<div class="fc-sub">从 GitHub 拉 + 上线</div></div>
-          <div class="fc-arrow">↓</div>
-          <div class="fc-box fc-finale" style="background:linear-gradient(135deg,#b45309,#f59e0b)">LIVE URL<div class="fc-sub">全世界都能打开</div></div>
-        </div>`,
+        html: `<div style="display:flex;justify-content:center;margin-top:-8px"><svg viewBox="0 0 820 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:900px;height:auto;max-height:620px;font-family:inherit">
+          <defs>
+            <marker id="fc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/></marker>
+            <marker id="fc-arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/></marker>
+            <linearGradient id="fc-purple1" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#4c1d95"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
+            <linearGradient id="fc-purple2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#5b21b6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+            <linearGradient id="fc-gray" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#1f2937"/><stop offset="1" stop-color="#374151"/></linearGradient>
+            <linearGradient id="fc-green" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#064e3b"/><stop offset="1" stop-color="#059669"/></linearGradient>
+            <linearGradient id="fc-blue" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e40af"/></linearGradient>
+            <linearGradient id="fc-gold" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#b45309"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+          </defs>
+          <g>
+            <rect x="70" y="15" width="280" height="72" rx="14" fill="url(#fc-purple1)"/>
+            <text x="210" y="50" text-anchor="middle" fill="white" font-size="21" font-weight="800">描述你要什么</text>
+            <text x="210" y="74" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="13">review 结果</text>
+            <rect x="470" y="15" width="280" height="72" rx="14" fill="url(#fc-purple2)"/>
+            <text x="610" y="50" text-anchor="middle" fill="white" font-size="21" font-weight="800">Claude 写 / 改 code</text>
+            <text x="610" y="74" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="13">你 review,批准</text>
+            <path d="M 360 42 L 460 42" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-gold)"/>
+            <path d="M 460 66 L 360 66" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow-gold)"/>
+            <text x="410" y="12" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="800" letter-spacing="1">反复</text>
+          </g>
+          <text x="410" y="108" text-anchor="middle" fill="#fdba74" font-size="12" font-weight="700" letter-spacing="2">满意了</text>
+          <path d="M 410 113 L 410 142" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
+          <rect x="270" y="146" width="280" height="70" rx="14" fill="url(#fc-gray)"/>
+          <text x="410" y="180" text-anchor="middle" fill="white" font-size="21" font-weight="800">推上 GitHub</text>
+          <text x="410" y="204" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="13">代码有家</text>
+          <path d="M 410 218 L 410 244" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
+          <polygon points="410,248 555,318 410,388 265,318" fill="rgba(251,191,36,0.1)" stroke="#f59e0b" stroke-width="2.5"/>
+          <text x="410" y="313" text-anchor="middle" fill="#fde68a" font-size="17" font-weight="800">需要保存</text>
+          <text x="410" y="336" text-anchor="middle" fill="#fde68a" font-size="17" font-weight="800">数据吗？</text>
+          <path d="M 340 358 L 220 418" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
+          <text x="305" y="390" fill="#6ee7b7" font-size="14" font-weight="800">是</text>
+          <path d="M 480 358 L 600 418" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
+          <text x="510" y="390" fill="#cbd5e1" font-size="14" font-weight="800">否</text>
+          <rect x="80" y="422" width="280" height="70" rx="14" fill="url(#fc-green)"/>
+          <text x="220" y="455" text-anchor="middle" fill="white" font-size="19" font-weight="800">接上 Supabase</text>
+          <text x="220" y="478" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="12">数据永久保存</text>
+          <rect x="460" y="422" width="280" height="70" rx="14" fill="none" stroke="rgba(203,213,225,0.4)" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <text x="600" y="455" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="15" font-weight="600">不需要数据库</text>
+          <text x="600" y="478" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11">（例如 landing page)</text>
+          <path d="M 220 495 Q 220 530 400 548" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
+          <path d="M 600 495 Q 600 530 420 548" stroke="#cbd5e1" stroke-width="2.5" fill="none" marker-end="url(#fc-arrow)"/>
+          <rect x="240" y="553" width="340" height="42" rx="14" fill="url(#fc-gold)" stroke="rgba(251,191,36,0.6)" stroke-width="2.5"/>
+          <text x="410" y="581" text-anchor="middle" fill="white" font-size="19" font-weight="800">Vercel 部署 → LIVE URL 🎉</text>
+        </svg></div>`,
         notes: [
           "先讲最上面的 loop ； vibe coding 不是一 shot 到位,是 \"讲 ↔ 改\" 来回 N 次，满意了才往下走。",
           "然后推 GitHub ； 代码有家，这步永远要做。",
-          "到 diamond 停一下：\"有些 app 要存数据（HR、dashboard、CRM），有些不用（landing page、计算器）\"",
-          "两条路最后都通到 Vercel ； 不管走哪条，最后都是一个 LIVE URL。",
+          "到菱形停一下：\"有些 app 要存数据（HR、dashboard、CRM），有些不用（landing page、计算器）\"",
+          "两条路最后都 merge 到 Vercel ； 不管走哪条，最后都是一个 LIVE URL。",
           "\"这就是你昨天走过的完整路。今天用自己的生意再走一次。\"",
         ],
       },
